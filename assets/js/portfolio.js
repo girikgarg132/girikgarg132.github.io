@@ -173,7 +173,8 @@ function initMobileNav() {
 
   if (!toggle || !navLinks) return;
 
-  toggle.addEventListener('click', () => {
+  toggle.addEventListener('click', (e) => {
+    e.stopPropagation();
     navLinks.classList.toggle('active');
     const isOpen = navLinks.classList.contains('active');
     toggle.innerHTML = isOpen ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
@@ -184,6 +185,22 @@ function initMobileNav() {
       navLinks.classList.remove('active');
       toggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
     });
+  });
+
+  // Close when clicking outside of the active mobile drawer
+  document.addEventListener('click', (e) => {
+    if (navLinks.classList.contains('active') && !navLinks.contains(e.target) && !toggle.contains(e.target)) {
+      navLinks.classList.remove('active');
+      toggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+    }
+  });
+
+  // Reset if resized back to desktop viewport
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768 && navLinks.classList.contains('active')) {
+      navLinks.classList.remove('active');
+      toggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+    }
   });
 }
 

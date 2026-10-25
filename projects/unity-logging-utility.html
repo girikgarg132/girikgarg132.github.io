@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unity Logging Utility - High-Performance Structured Logging &amp; [Conditional] Stripping | Girik Garg Portfolio</title>
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700&family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/portfolio.css">
+  <link rel="stylesheet" href="../assets/css/project-detail.css">
+
+  <!-- Immediate Theme Initialization (prevents flash of wrong theme) -->
+  <script>
+    (function() {
+      var savedTheme = localStorage.getItem('girik_theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+  </script>
+</head>
+<body>
+
+  <div class="site-wrapper">
+    <!-- Top Bar Navigation -->
+    <header class="project-top-bar">
+      <div class="container top-bar-content">
+        <a href="../index.html" class="back-link">
+          <i class="fa-solid fa-arrow-left"></i> <span>Back to Home</span>
+        </a>
+        <div class="top-bar-right">
+          <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle Day / Night Mode" title="Toggle Day / Night Mode">
+            <i class="fa-solid fa-sun icon-sun"></i>
+            <i class="fa-solid fa-moon icon-moon"></i>
+          </button>
+          <a href="../index.html" class="brand-logo" style="font-size: 1.05rem;">
+            <div class="brand-icon"><i class="fa-solid fa-gamepad"></i></div>
+            <span>Girik Garg</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Project Hero -->
+    <main class="container">
+      <section class="project-hero">
+        <div class="project-hero-header">
+          <div class="project-meta-pills">
+            <span class="badge pulse-badge"><span class="dot"></span> Open-Source Tool</span>
+            <span class="badge badge-purple">MIT License</span>
+            <span class="tag-pill">UPM Package</span>
+            <span class="tag-pill">Zero GC Allocations</span>
+            <span class="tag-pill">[Conditional] Stripping</span>
+          </div>
+
+          <h1 class="project-hero-title">Unity Logging Utility</h1>
+          <p class="project-hero-tagline">
+            A high-performance structured logging architecture and code generator for Unity. Eliminates console noise through color-coded categories, dynamic editor toggles, and zero-allocation compile-time stripping in release builds.
+          </p>
+
+          <div class="project-actions-bar">
+            <a href="https://github.com/girikgarg132/UnityLoggingUtility" target="_blank" class="btn btn-primary">
+              <i class="fa-brands fa-github"></i> View on GitHub
+            </a>
+            <a href="https://github.com/girikgarg132/UnityLoggingUtility/releases" target="_blank" class="btn btn-secondary">
+              <i class="fa-solid fa-download"></i> Releases &amp; Tarball
+            </a>
+            <a href="../index.html#contact" class="btn btn-outline-cyan">
+              <i class="fa-solid fa-envelope"></i> Discuss Tooling &amp; Architecture
+            </a>
+          </div>
+        </div>
+
+        <!-- Visual Feature Banner -->
+        <div class="gallery-section" style="margin-top: 25px; margin-bottom: 45px;">
+          <div class="gallery-item" style="max-height: 520px; border-radius: var(--radius-lg); overflow: hidden;">
+            <img src="../images/unity-logging-utility-banner.png" alt="Unity Logging Utility Overview Banner" style="width: 100%; height: auto; aspect-ratio: 16/9; object-fit: cover;">
+            <div class="gallery-caption">
+              <span><i class="fa-solid fa-terminal"></i> Color-Coded Subsystem Logs, Dynamic Filters &amp; [Conditional] Compile Stripping</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main Content & Case Study Grid -->
+        <div class="project-content-grid">
+          <!-- Left: Deep Dive -->
+          <div class="case-study-body">
+            
+            <div class="case-study-block">
+              <h2><i class="fa-solid fa-shield-virus"></i> The Problem: Default Debug.Log in Production</h2>
+              <p>
+                In production Unity projects, standard <code>Debug.Log</code> calls present three critical drawbacks that harm both development velocity and shipping performance:
+              </p>
+              <ul>
+                <li><strong>Unformatted Console Noise:</strong> As projects expand across networking, audio, AI, UI, and physics, the console quickly becomes a wall of white text. Crucial warnings and runtime exceptions are buried under routine status messages.</li>
+                <li><strong>Garbage Collection &amp; Memory Allocation:</strong> String concatenations and string interpolations (e.g. <code>$"Player position: {pos}"</code>) allocate heap memory every execution. In high-frequency game loops, this causes constant GC allocations and frame stutter.</li>
+                <li><strong>Severe Release Build Penalties:</strong> Unlike some compiled languages, Unity's default <code>Debug.Log</code> statements execute in production builds unless explicitly wrapped in preprocessor defines. This wastes CPU cycles on mobile devices and leaks proprietary game logic, packet structures, or API payloads into logcat and crash reports.</li>
+              </ul>
+            </div>
+
+            <div class="case-study-block">
+              <h2><i class="fa-solid fa-microchip"></i> Architectural Capabilities &amp; Features</h2>
+              <p>
+                <strong>UnityLoggingUtility</strong> was built to provide high-clarity console visibility during development while guaranteeing zero performance impact in release builds:
+              </p>
+
+              <div class="feature-cards-grid">
+                <div class="feature-mini-card">
+                  <div class="feature-mini-icon"><i class="fa-solid fa-palette"></i></div>
+                  <h4>Color-Coded Categories</h4>
+                  <p>Assign custom hex colors and bracket tags to categories (e.g., <code>[Network]</code>, <code>[Combat]</code>, <code>[UI]</code>) for instant visual scanning in the console.</p>
+                </div>
+
+                <div class="feature-mini-card">
+                  <div class="feature-mini-icon"><i class="fa-solid fa-toggle-on"></i></div>
+                  <h4>Live Category Toggles</h4>
+                  <p>Toggle individual log categories on or off on the fly during play mode to silence noisy subsystems while debugging specific features.</p>
+                </div>
+
+                <div class="feature-mini-card">
+                  <div class="feature-mini-icon"><i class="fa-solid fa-scissors"></i></div>
+                  <h4>Compile-Time Stripping</h4>
+                  <p>Decorated with C# <code>[Conditional]</code> attributes. In release builds, the compiler completely strips log calls and string arguments with 0 GC and 0 CPU overhead.</p>
+                </div>
+
+                <div class="feature-mini-card">
+                  <div class="feature-mini-icon"><i class="fa-solid fa-code"></i></div>
+                  <h4>Automated CodeGen</h4>
+                  <p>Configure categories, colors, and stripping rules in a centralized settings window to automatically generate <code>GGLog</code> and <code>GGLogCategory</code> helper scripts.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="case-study-block">
+              <h2><i class="fa-solid fa-code"></i> Implementation &amp; Code Architecture</h2>
+              <p>
+                The utility auto-generates dedicated, strongly-typed static logging methods decorated with conditional attributes tied to compiler symbols:
+              </p>
+
+              <div class="code-window">
+                <div class="code-window-header">
+                  <div class="window-dots">
+                    <span class="window-dot dot-red"></span>
+                    <span class="window-dot dot-yellow"></span>
+                    <span class="window-dot dot-green"></span>
+                  </div>
+                  <span class="code-window-title">Generated Logging Architecture (GGLog.cs)</span>
+                </div>
+                <pre><code>// Auto-generated helper with compile-time stripping
+[System.Diagnostics.Conditional("ENABLE_LOG_NETWORK")]
+public static void LogNetwork(string message, UnityEngine.Object context = null)
+{
+    if (!IsCategoryEnabled(GGLogCategory.Network)) return;
+    
+    // Rich-text color formatting applied automatically
+    UnityEngine.Debug.Log($"&lt;color=#38bdf8&gt;[Network]&lt;/color&gt; {message}", context);
+}
+
+[System.Diagnostics.Conditional("ENABLE_LOG_COMBAT")]
+public static void LogCombat(string message, UnityEngine.Object context = null)
+{
+    if (!IsCategoryEnabled(GGLogCategory.Combat)) return;
+    UnityEngine.Debug.Log($"&lt;color=#fb7185&gt;[Combat]&lt;/color&gt; {message}", context);
+}</code></pre>
+              </div>
+
+              <div class="code-window">
+                <div class="code-window-header">
+                  <div class="window-dots">
+                    <span class="window-dot dot-red"></span>
+                    <span class="window-dot dot-yellow"></span>
+                    <span class="window-dot dot-green"></span>
+                  </div>
+                  <span class="code-window-title">Clean Gameplay Calling Code</span>
+                </div>
+                <pre><code>// In your gameplay and network scripts:
+GGLog.LogNetwork($"Host listening on port {listenPort} (Relay Connected)");
+GGLog.LogCombat($"Player {playerID} dealt {damage} elemental damage to {target.name}");
+
+// In release builds:
+// The compiler completely removes both the method call AND string allocations!</code></pre>
+              </div>
+            </div>
+
+            <div class="case-study-block">
+              <h2><i class="fa-solid fa-download"></i> Installation via Unity Package Manager (UPM)</h2>
+              <p>
+                Add this package directly into your project using the Unity Package Manager Git dependency:
+              </p>
+
+              <div class="code-window">
+                <div class="code-window-header">
+                  <div class="window-dots">
+                    <span class="window-dot dot-red"></span>
+                    <span class="window-dot dot-yellow"></span>
+                    <span class="window-dot dot-green"></span>
+                  </div>
+                  <span class="code-window-title">Unity Package Manager — Git URL</span>
+                </div>
+                <pre><code>https://github.com/girikgarg132/UnityLoggingUtility.git#v1.0.0</code></pre>
+              </div>
+
+              <p><strong>Setup &amp; Workflow:</strong></p>
+              <ul>
+                <li>Open the centralized settings window in Unity.</li>
+                <li>Add your project categories (e.g., UI, Audio, Combat, Network, AI) and assign colors.</li>
+                <li>Configure your build-stripping rules per build target and scripting define symbols.</li>
+                <li>Click Generate to create your strongly-typed <code>GGLog</code> utility.</li>
+              </ul>
+            </div>
+
+          </div>
+
+          <!-- Right Sidebar: Quick Specs -->
+          <aside class="project-sidebar">
+            <div class="specs-card">
+              <h3>Package Specs</h3>
+              
+              <div class="spec-item">
+                <span class="spec-label">Author</span>
+                <span class="spec-value">Girik Garg</span>
+              </div>
+
+              <div class="spec-item">
+                <span class="spec-label">License</span>
+                <span class="spec-value">MIT Open Source</span>
+              </div>
+
+              <div class="spec-item">
+                <span class="spec-label">Compatibility</span>
+                <span class="spec-value">Unity 2021.3+, 2022.3 LTS, Unity 6</span>
+              </div>
+
+              <div class="spec-item">
+                <span class="spec-label">Overhead</span>
+                <span class="spec-value" style="color: var(--accent-emerald);">0 GC Allocations (Release)</span>
+              </div>
+
+              <div class="spec-item">
+                <span class="spec-label">Repository</span>
+                <span class="spec-value">
+                  <a href="https://github.com/girikgarg132/UnityLoggingUtility" target="_blank" style="color: var(--accent-primary); text-decoration: none;">
+                    GitHub <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem;"></i>
+                  </a>
+                </span>
+              </div>
+            </div>
+
+            <div class="specs-card">
+              <h3>Tech Stack &amp; Concepts</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">Unity C#</span>
+                <span class="skill-tag">[Conditional] Attribute</span>
+                <span class="skill-tag">Compile Stripping</span>
+                <span class="skill-tag">Zero-Allocation</span>
+                <span class="skill-tag">Console Rich-Text</span>
+                <span class="skill-tag">Script Generation</span>
+                <span class="skill-tag">UPM Packaging</span>
+              </div>
+            </div>
+
+            <div class="sidebar-box">
+              <h3 class="sidebar-box-title"><i class="fa-brands fa-github"></i> Open Source Repository</h3>
+              <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 16px;">
+                Clone the repository, inspect the code generation logic, or integrate it into your Unity projects.
+              </p>
+              <a href="https://github.com/girikgarg132/UnityLoggingUtility" target="_blank" class="btn btn-secondary btn-sm" style="width: 100%; justify-content: center;">
+                <i class="fa-brands fa-github"></i> girikgarg132/UnityLoggingUtility
+              </a>
+            </div>
+          </aside>
+        </div>
+
+        <!-- Next / Prev Pagination -->
+        <div class="project-pagination">
+          <div class="pagination-grid">
+            <a href="unity-preferences-utility.html" class="pagination-card">
+              <span class="pagination-dir"><i class="fa-solid fa-arrow-left"></i> Previous Project</span>
+              <span class="pagination-title">Unity Preferences Utility</span>
+            </a>
+            <a href="bhide-scooter-race.html" class="pagination-card next">
+              <span class="pagination-dir">Next Project <i class="fa-solid fa-arrow-right"></i></span>
+              <span class="pagination-title">Bhide Scooter Race (Physics Racing)</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <div class="footer-info">
+          <p>© Girik Garg • Technical Director &amp; Game Systems Programmer.</p>
+        </div>
+        <div class="footer-social-links">
+          <a href="https://github.com/girikgarg132" target="_blank" class="social-icon-btn" title="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/girik-garg132/" target="_blank" class="social-icon-btn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="mailto:girikgarg1@gmail.com" class="social-icon-btn" title="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="../assets/js/portfolio.js"></script>
+</body>
+</html>

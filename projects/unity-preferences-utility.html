@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unity Preferences Utility - Strongly-Typed PlayerPrefs &amp; EditorPrefs Code Generator | Girik Garg Portfolio</title>
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700&family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/portfolio.css">
+  <link rel="stylesheet" href="../assets/css/project-detail.css">
+
+  <!-- Immediate Theme Initialization (prevents flash of wrong theme) -->
+  <script>
+    (function() {
+      var savedTheme = localStorage.getItem('girik_theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+  </script>
+</head>
+<body>
+
+  <div class="site-wrapper">
+    <!-- Top Bar Navigation -->
+    <header class="project-top-bar">
+      <div class="container top-bar-content">
+        <a href="../index.html" class="back-link">
+          <i class="fa-solid fa-arrow-left"></i> <span>Back to Home</span>
+        </a>
+        <div class="top-bar-right">
+          <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle Day / Night Mode" title="Toggle Day / Night Mode">
+            <i class="fa-solid fa-sun icon-sun"></i>
+            <i class="fa-solid fa-moon icon-moon"></i>
+          </button>
+          <a href="../index.html" class="brand-logo" style="font-size: 1.05rem;">
+            <div class="brand-icon"><i class="fa-solid fa-gamepad"></i></div>
+            <span>Girik Garg</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Project Hero -->
+    <main class="container">
+      <section class="project-hero">
+        <div class="project-hero-header">
+          <div class="project-meta-pills">
+            <span class="badge pulse-badge"><span class="dot"></span> Open-Source Tool</span>
+            <span class="badge badge-purple">MIT License</span>
+            <span class="tag-pill">UPM Package</span>
+            <span class="tag-pill">C# Code Generator</span>
+            <span class="tag-pill">Type Safety &amp; Inspector</span>
+          </div>
+
+          <h1 class="project-hero-title">Unity Preferences Utility</h1>
+          <p class="project-hero-tagline">
+            A visual editor window and automated C# code generator for Unity's PlayerPrefs and EditorPrefs. Organizes project preferences inside version-controlled <code>.prefsdef</code> asset files with strongly-typed properties and support for non-primitive data types.
+          </p>
+
+          <div class="project-actions-bar">
+            <a href="https://github.com/girikgarg132/UnityPreferencesUtility" target="_blank" class="btn btn-primary">
+              <i class="fa-brands fa-github"></i> View on GitHub
+            </a>
+            <a href="https://github.com/girikgarg132/UnityPreferencesUtility/releases" target="_blank" class="btn btn-secondary">
+              <i class="fa-solid fa-download"></i> Releases &amp; Tarball
+            </a>
+            <a href="../index.html#contact" class="btn btn-outline-cyan">
+              <i class="fa-solid fa-envelope"></i> Discuss Tooling &amp; Architecture
+            </a>
+          </div>
+        </div>
+
+        <!-- Visual Feature Banner -->
+        <div class="gallery-section" style="margin-top: 25px; margin-bottom: 45px;">
+          <div class="gallery-item" style="max-height: 520px; border-radius: var(--radius-lg); overflow: hidden;">
+            <img src="../images/unity-preferences-utility-banner.png" alt="Unity Preferences Utility Overview Banner" style="width: 100%; height: auto; aspect-ratio: 16/9; object-fit: cover;">
+            <div class="gallery-caption">
+              <span><i class="fa-solid fa-code"></i> Visual Definition Inspector &amp; Generated Strongly-Typed C# Wrapper Properties</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main Content & Case Study Grid -->
+        <div class="project-content-grid">
+          <!-- Left: Deep Dive -->
+          <div class="case-study-body">
+            
+            <div class="case-study-block">
+              <h2><i class="fa-solid fa-triangle-exclamation"></i> The Problem: Magic Strings &amp; PlayerPrefs Fragility</h2>
+              <p>
+                Unity's built-in <code>PlayerPrefs</code> and <code>EditorPrefs</code> are standard tools for persisting small settings, game options, and user states. However, standard usage introduces recurring architectural flaws in production codebases:
+              </p>
+              <ul>
+                <li><strong>Magic String Vulnerabilities:</strong> Accessing preferences requires typing string literals (e.g. <code>PlayerPrefs.GetFloat("User_Sfx_Volume", 1.0f)</code>). A single typo in a key string fails silently, returning the default value with zero compiler warnings or runtime errors.</li>
+                <li><strong>No Central Source of Truth:</strong> Keys are scattered across gameplay, UI, audio, and save managers without unified documentation or schema verification.</li>
+                <li><strong>Limited Primitive Types:</strong> Standard <code>PlayerPrefs</code> only natively stores <code>int</code>, <code>float</code>, and <code>string</code>. Saving common types such as <code>bool</code>, <code>enum</code>, <code>DateTime</code>, or structured objects requires repetitive boilerplate casts and manual serialization.</li>
+                <li><strong>Opaque In-Editor Inspection:</strong> Inspecting or wiping saved values during play mode testing requires either digging into the Windows Registry / macOS plist files or writing custom debug inspector scripts.</li>
+              </ul>
+            </div>
+
+            <div class="case-study-block">
+              <h2><i class="fa-solid fa-wand-magic-sparkles"></i> Architectural Solution &amp; Key Features</h2>
+              <p>
+                <strong>UnityPreferencesUtility</strong> solves these pain points by pairing a version-controlled definition asset with automated compile-time C# code generation:
+              </p>
+
+              <div class="feature-cards-grid">
+                <div class="feature-mini-card">
+                  <div class="feature-mini-icon"><i class="fa-solid fa-file-code"></i></div>
+                  <h4>.prefsdef Asset Schema</h4>
+                  <p>Define all project preferences, key strings, and default fallback values in a version-controlled <code>.prefsdef</code> asset file that tracks cleanly in Git.</p>
+                </div>
+
+                <div class="feature-mini-card">
+                  <div class="feature-mini-icon"><i class="fa-solid fa-bolt"></i></div>
+                  <h4>Automated C# CodeGen</h4>
+                  <p>Generates clean, strongly-typed static wrapper properties (e.g., <code>GGPlayerPrefs.MasterVolume</code>) with IDE autocomplete and compile-time verification.</p>
+                </div>
+
+                <div class="feature-mini-card">
+                  <div class="feature-mini-icon"><i class="fa-solid fa-shapes"></i></div>
+                  <h4>Extended Type Support</h4>
+                  <p>Natively serializes types not supported by default <code>PlayerPrefs</code>, including <code>bool</code>, custom <code>enum</code>s, <code>DateTime</code>, and complex classes.</p>
+                </div>
+
+                <div class="feature-mini-card">
+                  <div class="feature-mini-icon"><i class="fa-solid fa-eye"></i></div>
+                  <h4>Visual Editor Inspector</h4>
+                  <p>Inspect, edit, and reset active preference values in real time within the Unity Editor under <code>Window &gt; Preferences Utility</code>.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="case-study-block">
+              <h2><i class="fa-solid fa-code-compare"></i> Before vs. After Code Comparison</h2>
+              <p>
+                Eliminating magic strings and type-casting boilerplate replaces error-prone calls with clean, self-documenting C# accessors:
+              </p>
+
+              <div class="code-window">
+                <div class="code-window-header">
+                  <div class="window-dots">
+                    <span class="window-dot dot-red"></span>
+                    <span class="window-dot dot-yellow"></span>
+                    <span class="window-dot dot-green"></span>
+                  </div>
+                  <span class="code-window-title">Traditional Error-Prone PlayerPrefs Approach</span>
+                </div>
+                <pre><code>// ❌ Scattered magic strings, fragile typing, and manual bool conversion
+string volumeKey = "Vol_Sfx_Master";
+float sfxVolume = PlayerPrefs.GetFloat(volumeKey, 1.0f);
+
+// Storing a boolean requires manual integer mapping
+bool isTutorialDone = PlayerPrefs.GetInt("Tutorial_Completed", 0) == 1;
+PlayerPrefs.SetInt("Tutorial_Completed", isTutorialDone ? 1 : 0);
+PlayerPrefs.Save();</code></pre>
+              </div>
+
+              <div class="code-window">
+                <div class="code-window-header">
+                  <div class="window-dots">
+                    <span class="window-dot dot-red"></span>
+                    <span class="window-dot dot-yellow"></span>
+                    <span class="window-dot dot-green"></span>
+                  </div>
+                  <span class="code-window-title">With UnityPreferencesUtility Code Generation</span>
+                </div>
+                <pre><code>//  Strongly-typed, autocomplete-friendly, compile-time verified
+float sfxVolume = GGPlayerPrefs.MasterVolume;
+GGPlayerPrefs.MasterVolume = 0.85f;
+
+// Native bools, enums, and timestamps without boilerplate
+if (!GGPlayerPrefs.CompletedTutorial) 
+{
+    LaunchTutorialSequence();
+    GGPlayerPrefs.CompletedTutorial = true;
+}
+
+GGPlayerPrefs.GraphicsQuality = QualityTier.High;
+GGPlayerPrefs.LastLoginTime = DateTime.UtcNow;</code></pre>
+              </div>
+            </div>
+
+            <div class="case-study-block">
+              <h2><i class="fa-solid fa-download"></i> Installation via Unity Package Manager (UPM)</h2>
+              <p>
+                Install directly into any Unity project using the Unity Package Manager Git dependency:
+              </p>
+
+              <div class="code-window">
+                <div class="code-window-header">
+                  <div class="window-dots">
+                    <span class="window-dot dot-red"></span>
+                    <span class="window-dot dot-yellow"></span>
+                    <span class="window-dot dot-green"></span>
+                  </div>
+                  <span class="code-window-title">Unity Package Manager — Git URL</span>
+                </div>
+                <pre><code>https://github.com/girikgarg132/UnityPreferencesUtility.git#v1.0.0</code></pre>
+              </div>
+
+              <p><strong>Usage Workflow:</strong></p>
+              <ul>
+                <li>Open <strong>Window &gt; Preferences Utility</strong> in the top menu.</li>
+                <li>Create or select your <code>.prefsdef</code> asset file inside your project.</li>
+                <li>Add your desired keys, types (Float, Int, Bool, Enum, String, DateTime), and defaults.</li>
+                <li>Click <strong>Generate C# Code</strong> — the utility generates strongly-typed wrappers in your chosen scripts folder.</li>
+              </ul>
+            </div>
+
+          </div>
+
+          <!-- Right Sidebar: Quick Specs -->
+          <aside class="project-sidebar">
+            <div class="specs-card">
+              <h3>Package Specs</h3>
+              
+              <div class="spec-item">
+                <span class="spec-label">Author</span>
+                <span class="spec-value">Girik Garg</span>
+              </div>
+
+              <div class="spec-item">
+                <span class="spec-label">License</span>
+                <span class="spec-value">MIT Open Source</span>
+              </div>
+
+              <div class="spec-item">
+                <span class="spec-label">Compatibility</span>
+                <span class="spec-value">Unity 2021.3+, 2022.3 LTS, Unity 6</span>
+              </div>
+
+              <div class="spec-item">
+                <span class="spec-label">Menu Access</span>
+                <span class="spec-value">Window &gt; Preferences Utility</span>
+              </div>
+
+              <div class="spec-item">
+                <span class="spec-label">Repository</span>
+                <span class="spec-value">
+                  <a href="https://github.com/girikgarg132/UnityPreferencesUtility" target="_blank" style="color: var(--accent-primary); text-decoration: none;">
+                    GitHub <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem;"></i>
+                  </a>
+                </span>
+              </div>
+            </div>
+
+            <div class="specs-card">
+              <h3>Tech Stack &amp; Features</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">Unity C#</span>
+                <span class="skill-tag">Code Generation</span>
+                <span class="skill-tag">PlayerPrefs</span>
+                <span class="skill-tag">EditorPrefs</span>
+                <span class="skill-tag">Custom Inspector</span>
+                <span class="skill-tag">Type Serialization</span>
+                <span class="skill-tag">UPM Packaging</span>
+              </div>
+            </div>
+
+            <div class="sidebar-box">
+              <h3 class="sidebar-box-title"><i class="fa-brands fa-github"></i> Open Source Repository</h3>
+              <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 16px;">
+                Check out the repository, star the project, or explore the source code and releases.
+              </p>
+              <a href="https://github.com/girikgarg132/UnityPreferencesUtility" target="_blank" class="btn btn-secondary btn-sm" style="width: 100%; justify-content: center;">
+                <i class="fa-brands fa-github"></i> girikgarg132/UnityPreferencesUtility
+              </a>
+            </div>
+          </aside>
+        </div>
+
+        <!-- Next / Prev Pagination -->
+        <div class="project-pagination">
+          <div class="pagination-grid">
+            <a href="unity-scene-navigation-utility.html" class="pagination-card">
+              <span class="pagination-dir"><i class="fa-solid fa-arrow-left"></i> Previous Project</span>
+              <span class="pagination-title">Unity Scene Navigation Utility</span>
+            </a>
+            <a href="unity-logging-utility.html" class="pagination-card next">
+              <span class="pagination-dir">Next Project <i class="fa-solid fa-arrow-right"></i></span>
+              <span class="pagination-title">Unity Logging Utility</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <div class="footer-info">
+          <p>© Girik Garg • Technical Director &amp; Game Systems Programmer.</p>
+        </div>
+        <div class="footer-social-links">
+          <a href="https://github.com/girikgarg132" target="_blank" class="social-icon-btn" title="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/girik-garg132/" target="_blank" class="social-icon-btn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="mailto:girikgarg1@gmail.com" class="social-icon-btn" title="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="../assets/js/portfolio.js"></script>
+</body>
+</html>

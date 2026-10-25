@@ -41,8 +41,8 @@
       <ul class="nav-links">
         <li><a href="#hero" class="nav-link active">Home</a></li>
         <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#architecture" class="nav-link">Architecture</a></li>
         <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#architecture" class="nav-link">Architecture</a></li>
         <li><a href="#skills" class="nav-link">Skills</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
@@ -77,11 +77,11 @@
           </h1>
 
           <p class="hero-lead">
-            Hi, I'm <strong>Girik Garg</strong> - Technical Director & Unity Systems Programmer with 4+ years of industry experience. Leading engineering for <em>Elebend</em> (Steam & Mobile RTS) and previously scaled <em>Ludo Super Star</em> to <strong>100M+ downloads</strong>.
+            Hi, I'm <strong>Girik Garg</strong> - Technical Director & Unity Systems Programmer with 4+ years of industry experience. Leading engineering for <strong><em>Elebend</em></strong> (Steam & Mobile RTS) and previously scaled <strong><em>Ludo Super Star</em> to 100M+ downloads</strong>.
           </p>
 
           <p class="hero-bio">
-            I specialize in building deterministic multiplayer architectures, zero-allocation C# memory pipelines, and locking 60 FPS on low-end mobile hardware. Proficient in <strong>Netcode for GameObjects (NGO)</strong>, <strong>Photon PUN</strong>, Universal Render Pipeline (URP), and over-the-air Addressables deployment.
+            I specialize in building deterministic multiplayer architectures, zero-allocation C# memory pipelines, and locking 60 FPS on low-end mobile hardware. Proficient in <strong>Netcode for GameObjects (NGO)</strong>, <strong>Photon PUN</strong>, <strong>Universal Render Pipeline (URP)</strong>, and <strong>over-the-air Addressables deployment.</strong>
           </p>
 
           <div class="hero-actions">
@@ -91,9 +91,9 @@
             <a href="#contact" class="btn btn-secondary">
               <i class="fa-regular fa-envelope"></i> Let's Talk
             </a>
-            <button class="btn btn-outline btn-copy-email">
-              <i class="fa-regular fa-copy"></i> Copy Email
-            </button>
+            <!-- <button class="btn btn-outline btn-copy-email"> -->
+              <!-- <i class="fa-regular fa-copy"></i> Copy Email -->
+            <!-- </button> -->
           </div>
         </div>
 
@@ -131,7 +131,7 @@
           <div class="metric-label">Commercial & Indie Titles Shipped</div>
         </div>
         <div class="metric-card">
-          <div class="metric-value">60<span>FPS</span></div>
+          <div class="metric-value">60<span> FPS</span></div>
           <div class="metric-label">High-Performance Mobile Profiling</div>
         </div>
       </div>
@@ -145,18 +145,19 @@
       
       <div class="section-header">
         <span class="section-tag"><i class="fa-solid fa-cube"></i> Portfolio Showcase</span>
-        <h2 class="section-title">Shipped Titles & Case Studies</h2>
+        <h2 class="section-title">Shipped Titles, Developer Tools &amp; Case Studies</h2>
         <p class="section-subtitle">
-          Commercial studio titles, massive live-ops ecosystems, and indie prototypes. Click any card to explore its dedicated deep-dive case study with gameplay video breakdowns.
+          Commercial studio titles, massive live-ops ecosystems, indie prototypes, and open-source Unity editor developer tools. Click any card to explore its dedicated deep-dive case study.
         </p>
       </div>
 
       <!-- Category Filter -->
       <div class="projects-filter-bar">
         <div class="filter-group">
-          <button class="filter-btn active" data-filter="all">All Projects (8)</button>
-          <button class="filter-btn" data-filter="commercial">Commercial & Studio (4)</button>
-          <button class="filter-btn" data-filter="indie">Indie & Prototypes (4)</button>
+          <button class="filter-btn active" data-filter="all">All Projects (11)</button>
+          <button class="filter-btn" data-filter="commercial">Commercial &amp; Studio (4)</button>
+          <button class="filter-btn" data-filter="indie">Indie &amp; Prototypes (4)</button>
+          <button class="filter-btn" data-filter="tools">Editor Tools &amp; Packages (3)</button>
         </div>
       </div>
 
@@ -235,7 +236,106 @@
           </div>
         </a>
 
-        <!-- 3. Bhide Scooter Race -->
+        <!-- 3. Unity Scene Navigation Utility -->
+        <a href="projects/unity-scene-navigation-utility.html" class="project-card" data-category="tools">
+          <div class="project-thumb-box">
+            <img src="images/unity-scene-navigation-utility-banner.png" alt="Unity Scene Navigation Utility" class="project-thumb">
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-top-meta">
+              <span class="badge-pill badge-theme-accent">EDITOR EXTENSION / UPM</span>
+            </div>
+            <div class="project-title-row">
+              <h3 class="project-title">Unity Scene Navigation Utility</h3>
+              <i class="fa-solid fa-arrow-up-right-from-square" style="color: var(--text-muted); font-size: 0.9rem;"></i>
+            </div>
+            <p class="project-card-desc">
+              Fast-access workflow extension embedding active scene indicators, Build Scene jump lists, and customizable testbed bookmarks directly into Unity's main toolbar and File menu.
+            </p>
+            <div class="project-tags-strip">
+              <span class="tech-tag">Editor GUI</span>
+              <span class="tech-tag">Toolbar API</span>
+              <span class="tech-tag">Scene Management</span>
+              <span class="tech-tag">UPM Package</span>
+            </div>
+            <div class="project-card-footer">
+              <span class="case-study-cta">Read Case Study <i class="fa-solid fa-arrow-right"></i></span>
+              <div class="card-store-links">
+                <span onclick="event.stopPropagation(); window.open('https://github.com/girikgarg132/UnitySceneNavigationUtility', '_blank');" class="ext-store-link" title="GitHub Repository">
+                  <i class="fa-brands fa-github"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- 4. Unity Preferences Utility -->
+        <a href="projects/unity-preferences-utility.html" class="project-card" data-category="tools">
+          <div class="project-thumb-box">
+            <img src="images/unity-preferences-utility-banner.png" alt="Unity Preferences Utility" class="project-thumb">
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-top-meta">
+              <span class="badge-pill badge-theme-accent">C# CODEGEN / TYPE SAFETY</span>
+            </div>
+            <div class="project-title-row">
+              <h3 class="project-title">Unity Preferences Utility</h3>
+              <i class="fa-solid fa-arrow-up-right-from-square" style="color: var(--text-muted); font-size: 0.9rem;"></i>
+            </div>
+            <p class="project-card-desc">
+              Visual editor and automated C# code generator for PlayerPrefs and EditorPrefs. Organizes schema in version-controlled <code>.prefsdef</code> assets with support for bools, enums, and timestamps.
+            </p>
+            <div class="project-tags-strip">
+              <span class="tech-tag">PlayerPrefs / EditorPrefs</span>
+              <span class="tech-tag">C# CodeGen</span>
+              <span class="tech-tag">Custom Inspector</span>
+              <span class="tech-tag">Type Safety</span>
+            </div>
+            <div class="project-card-footer">
+              <span class="case-study-cta">Read Case Study <i class="fa-solid fa-arrow-right"></i></span>
+              <div class="card-store-links">
+                <span onclick="event.stopPropagation(); window.open('https://github.com/girikgarg132/UnityPreferencesUtility', '_blank');" class="ext-store-link" title="GitHub Repository">
+                  <i class="fa-brands fa-github"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- 5. Unity Logging Utility -->
+        <a href="projects/unity-logging-utility.html" class="project-card" data-category="tools">
+          <div class="project-thumb-box">
+            <img src="images/unity-logging-utility-banner.png" alt="Unity Logging Utility" class="project-thumb">
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-top-meta">
+              <span class="badge-pill badge-theme-accent">ZERO GC / RELEASE STRIPPING</span>
+            </div>
+            <div class="project-title-row">
+              <h3 class="project-title">Unity Logging Utility</h3>
+              <i class="fa-solid fa-arrow-up-right-from-square" style="color: var(--text-muted); font-size: 0.9rem;"></i>
+            </div>
+            <p class="project-card-desc">
+              High-performance structured logging architecture featuring color-coded categories, in-editor live toggles, and compile-time <code>[Conditional]</code> stripping for zero GC release builds.
+            </p>
+            <div class="project-tags-strip">
+              <span class="tech-tag">Conditional Stripping</span>
+              <span class="tech-tag">Zero Allocation</span>
+              <span class="tech-tag">Console UX</span>
+              <span class="tech-tag">CodeGen (GGLog)</span>
+            </div>
+            <div class="project-card-footer">
+              <span class="case-study-cta">Read Case Study <i class="fa-solid fa-arrow-right"></i></span>
+              <div class="card-store-links">
+                <span onclick="event.stopPropagation(); window.open('https://github.com/girikgarg132/UnityLoggingUtility', '_blank');" class="ext-store-link" title="GitHub Repository">
+                  <i class="fa-brands fa-github"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- 6. Bhide Scooter Race -->
         <a href="projects/bhide-scooter-race.html" class="project-card" data-category="commercial">
           <div class="project-thumb-box">
             <img src="images/Bhide Scooter Race.webp" alt="Bhide Scooter Race" class="project-thumb">
@@ -271,7 +371,7 @@
           </div>
         </a>
 
-        <!-- 4. TMKOC Clubhouse -->
+        <!-- 7. TMKOC Clubhouse -->
         <a href="projects/tmkoc-clubhouse.html" class="project-card" data-category="commercial">
           <div class="project-thumb-box">
             <img src="images/tmkoc-clubhouse-banner.jpg" alt="TMKOC Clubhouse Platform" class="project-thumb">
@@ -304,7 +404,7 @@
           </div>
         </a>
 
-        <!-- 5. Bolts and Bullets -->
+        <!-- 8. Bolts and Bullets -->
         <a href="projects/bolts-and-bullets.html" class="project-card" data-category="indie">
           <div class="project-thumb-box">
             <img src="images/bolts-and-bullets-header.jpg" alt="Bolts and Bullets" class="project-thumb">
@@ -335,7 +435,7 @@
           </div>
         </a>
 
-        <!-- 6. Tower Bizarre Adventure -->
+        <!-- 9. Tower Bizarre Adventure -->
         <a href="projects/tower-bizarre-adventure.html" class="project-card" data-category="indie">
           <div class="project-thumb-box">
             <img src="images/tower-bizarre-header.jpg" alt="Tower Bizarre Adventure" class="project-thumb">
@@ -365,7 +465,7 @@
           </div>
         </a>
 
-        <!-- 7. Platform Factory -->
+        <!-- 10. Platform Factory -->
         <a href="projects/platform-factory.html" class="project-card" data-category="indie">
           <div class="project-thumb-box">
             <img src="images/platform-factory-header.jpg" alt="Platform Factory" class="project-thumb">
@@ -396,7 +496,7 @@
           </div>
         </a>
 
-        <!-- 8. Hell Racer -->
+        <!-- 11. Hell Racer -->
         <a href="projects/hell-racer.html" class="project-card" data-category="indie">
           <div class="project-thumb-box">
             <img src="images/hell-racer-header.jpg" alt="Hell Racer" class="project-thumb">
@@ -428,83 +528,6 @@
         </a>
 
       </div>
-    </div>
-  </section>
-
-  <!-- Technical Architecture (4 Pillars) -->
-  <section id="architecture" class="section" style="background: rgba(16, 18, 26, 0.4);">
-    <div class="container">
-      
-      <div class="section-header">
-        <span class="section-tag"><i class="fa-solid fa-layer-group"></i> Engineering Standards</span>
-        <h2 class="section-title">How I Build Game Systems That Scale</h2>
-        <p class="section-subtitle">
-          Proven architectural principles forged across 4+ years of shipping commercial products under device fragmentation, server spikes, and strict mobile memory budgets.
-        </p>
-      </div>
-
-      <div class="arch-grid">
-        <!-- 01 Multiplayer -->
-        <div class="arch-card">
-          <div class="arch-icon-wrap"><i class="fa-solid fa-network-wired"></i></div>
-          <h3 class="arch-title">Authoritative Multiplayer & State Sync</h3>
-          <p class="arch-desc">
-            Deterministic client-side prediction, latency compensation, lag-buffered state interpolation, and server reconciliation. Built using Unity Netcode for GameObjects (NGO) and Photon PUN to prevent desyncs and cheat vectors in competitive environments.
-          </p>
-          <div class="arch-pills">
-            <span class="tech-tag">Netcode for GameObjects</span>
-            <span class="tech-tag">Client Prediction</span>
-            <span class="tech-tag">Photon PUN</span>
-            <span class="tech-tag">Delta Compression</span>
-          </div>
-        </div>
-
-        <!-- 02 Memory & GC -->
-        <div class="arch-card">
-          <div class="arch-icon-wrap"><i class="fa-solid fa-microchip"></i></div>
-          <h3 class="arch-title">Zero-Allocation Loops & Profiling</h3>
-          <p class="arch-desc">
-            Strict 0 Bytes/frame garbage collection allocation policy in <code>Update()</code> and <code>FixedUpdate()</code> loops. Architected with custom generic object pools, struct arrays, avoiding boxing/unboxing, and rigorous verification in the Unity Memory Profiler.
-          </p>
-          <div class="arch-pills">
-            <span class="tech-tag">0 GC Allocations</span>
-            <span class="tech-tag">Generic Object Pooling</span>
-            <span class="tech-tag">Memory Profiler</span>
-            <span class="tech-tag">Burst & SIMD</span>
-          </div>
-        </div>
-
-        <!-- 03 Mobile & Rendering -->
-        <div class="arch-card">
-          <div class="arch-icon-wrap"><i class="fa-solid fa-gauge-high"></i></div>
-          <h3 class="arch-title">Draw-Call Batching & URP Modernization</h3>
-          <p class="arch-desc">
-            Migrating legacy pipelines to the Universal Render Pipeline (URP). Combining materials into texture atlases, enabling dynamic batching and GPU instancing to keep total draw calls under 45, locking a consistent 60 FPS on low-tier 2018 Snapdragon devices.
-          </p>
-          <div class="arch-pills">
-            <span class="tech-tag">URP Migration</span>
-            <span class="tech-tag">GPU Instancing</span>
-            <span class="tech-tag">Draw-Call Profiling</span>
-            <span class="tech-tag">Shader Graph</span>
-          </div>
-        </div>
-
-        <!-- 04 Live-Ops & Bridges -->
-        <div class="arch-card">
-          <div class="arch-icon-wrap"><i class="fa-solid fa-cloud-arrow-down"></i></div>
-          <h3 class="arch-title">Addressables, Cloud Code & Native Bridges</h3>
-          <p class="arch-desc">
-            Decoupling binary sizes via Unity Addressables for smooth over-the-air content delivery. Developing native two-way bridges between Flutter/native OS and the Unity runtime, integrating Cloud Code for serverless backend actions, and automated CI/CD builds.
-          </p>
-          <div class="arch-pills">
-            <span class="tech-tag">Addressables OTA</span>
-            <span class="tech-tag">Flutter-Unity Bridge</span>
-            <span class="tech-tag">Unity Cloud Code</span>
-            <span class="tech-tag">CI/CD Pipelines</span>
-          </div>
-        </div>
-      </div>
-
     </div>
   </section>
 
@@ -602,8 +625,85 @@
     </div>
   </section>
 
+  <!-- Technical Architecture (4 Pillars) -->
+  <section id="architecture" class="section">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-layer-group"></i> Engineering Standards</span>
+        <h2 class="section-title">How I Build Game Systems That Scale</h2>
+        <p class="section-subtitle">
+          Proven architectural principles forged across 4+ years of shipping commercial products under device fragmentation, server spikes, and strict mobile memory budgets.
+        </p>
+      </div>
+
+      <div class="arch-grid">
+        <!-- 01 Multiplayer -->
+        <div class="arch-card">
+          <div class="arch-icon-wrap"><i class="fa-solid fa-network-wired"></i></div>
+          <h3 class="arch-title">Authoritative Multiplayer & State Sync</h3>
+          <p class="arch-desc">
+            Deterministic client-side prediction, latency compensation, lag-buffered state interpolation, and server reconciliation. Built using Unity Netcode for GameObjects (NGO) and Photon PUN to prevent desyncs and cheat vectors in competitive environments.
+          </p>
+          <div class="arch-pills">
+            <span class="tech-tag">Netcode for GameObjects</span>
+            <span class="tech-tag">Client Prediction</span>
+            <span class="tech-tag">Photon PUN</span>
+            <span class="tech-tag">Delta Compression</span>
+          </div>
+        </div>
+
+        <!-- 02 Memory & GC -->
+        <div class="arch-card">
+          <div class="arch-icon-wrap"><i class="fa-solid fa-microchip"></i></div>
+          <h3 class="arch-title">Zero-Allocation Loops & Profiling</h3>
+          <p class="arch-desc">
+            Strict 0 Bytes/frame garbage collection allocation policy in <code>Update()</code> and <code>FixedUpdate()</code> loops. Architected with custom generic object pools, struct arrays, avoiding boxing/unboxing, and rigorous verification in the Unity Memory Profiler.
+          </p>
+          <div class="arch-pills">
+            <span class="tech-tag">0 GC Allocations</span>
+            <span class="tech-tag">Generic Object Pooling</span>
+            <span class="tech-tag">Memory Profiler</span>
+            <span class="tech-tag">Burst & SIMD</span>
+          </div>
+        </div>
+
+        <!-- 03 Mobile & Rendering -->
+        <div class="arch-card">
+          <div class="arch-icon-wrap"><i class="fa-solid fa-gauge-high"></i></div>
+          <h3 class="arch-title">Draw-Call Batching & URP Modernization</h3>
+          <p class="arch-desc">
+            Migrating legacy pipelines to the Universal Render Pipeline (URP). Combining materials into texture atlases, enabling dynamic batching and GPU instancing to keep total draw calls under 45, locking a consistent 60 FPS on low-tier 2018 Snapdragon devices.
+          </p>
+          <div class="arch-pills">
+            <span class="tech-tag">URP Migration</span>
+            <span class="tech-tag">GPU Instancing</span>
+            <span class="tech-tag">Draw-Call Profiling</span>
+            <span class="tech-tag">Shader Graph</span>
+          </div>
+        </div>
+
+        <!-- 04 Live-Ops & Bridges -->
+        <div class="arch-card">
+          <div class="arch-icon-wrap"><i class="fa-solid fa-cloud-arrow-down"></i></div>
+          <h3 class="arch-title">Addressables, Cloud Code & Native Bridges</h3>
+          <p class="arch-desc">
+            Decoupling binary sizes via Unity Addressables for smooth over-the-air content delivery. Developing native two-way bridges between Flutter/native OS and the Unity runtime, integrating Cloud Code for serverless backend actions, and automated CI/CD builds.
+          </p>
+          <div class="arch-pills">
+            <span class="tech-tag">Addressables OTA</span>
+            <span class="tech-tag">Flutter-Unity Bridge</span>
+            <span class="tech-tag">Unity Cloud Code</span>
+            <span class="tech-tag">CI/CD Pipelines</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
   <!-- Technical Arsenal (Skills) -->
-  <section id="skills" class="section" style="background: rgba(16, 18, 26, 0.4);">
+  <section id="skills" class="section">
     <div class="container">
       
       <div class="section-header">
@@ -659,13 +759,15 @@
 
         <!-- Category 4 -->
         <div class="skill-category-card">
-          <h4 class="skill-category-title"><i class="fa-solid fa-gears"></i> Tools & SDKs</h4>
+          <h4 class="skill-category-title"><i class="fa-solid fa-gears"></i> Tools &amp; SDKs</h4>
           <div class="skill-tags-group">
             <span class="skill-pill">Unity Editor Scripting</span>
+            <span class="skill-pill">Custom Editor Tools (UPM)</span>
+            <span class="skill-pill">C# CodeGen Tools</span>
             <span class="skill-pill">Flutter-Unity Bridge</span>
             <span class="skill-pill">Steamworks SDK</span>
             <span class="skill-pill">Google Play Billing</span>
-            <span class="skill-pill">AdMob & Unity Ads</span>
+            <span class="skill-pill">AdMob &amp; Unity Ads</span>
             <span class="skill-pill">Facebook iOS SDK</span>
             <span class="skill-pill">Git / CI/CD</span>
           </div>

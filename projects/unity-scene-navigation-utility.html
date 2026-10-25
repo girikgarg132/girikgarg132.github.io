@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unity Scene Navigation Utility - Fast-Access Editor Toolbar &amp; Menus | Girik Garg Portfolio</title>
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700&family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/portfolio.css">
+  <link rel="stylesheet" href="../assets/css/project-detail.css">
+
+  <!-- Immediate Theme Initialization (prevents flash of wrong theme) -->
+  <script>
+    (function() {
+      var savedTheme = localStorage.getItem('girik_theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+  </script>
+</head>
+<body>
+
+  <div class="site-wrapper">
+    <!-- Top Bar Navigation -->
+    <header class="project-top-bar">
+      <div class="container top-bar-content">
+        <a href="../index.html" class="back-link">
+          <i class="fa-solid fa-arrow-left"></i> <span>Back to Home</span>
+        </a>
+        <div class="top-bar-right">
+          <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle Day / Night Mode" title="Toggle Day / Night Mode">
+            <i class="fa-solid fa-sun icon-sun"></i>
+            <i class="fa-solid fa-moon icon-moon"></i>
+          </button>
+          <a href="../index.html" class="brand-logo" style="font-size: 1.05rem;">
+            <div class="brand-icon"><i class="fa-solid fa-gamepad"></i></div>
+            <span>Girik Garg</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Project Hero -->
+    <main class="container">
+      <section class="project-hero">
+        <div class="project-hero-header">
+          <div class="project-meta-pills">
+            <span class="badge pulse-badge"><span class="dot"></span> Open-Source Tool</span>
+            <span class="badge badge-purple">MIT License</span>
+            <span class="tag-pill">UPM Package</span>
+            <span class="tag-pill">Unity 2021+ / 2022+ LTS</span>
+            <span class="tag-pill">Toolbar &amp; Menu APIs</span>
+          </div>
+
+          <h1 class="project-hero-title">Unity Scene Navigation Utility</h1>
+          <p class="project-hero-tagline">
+            A developer-focused Unity Editor extension that streamlines scene switching and testing workflows. Injects active scene indicators and one-click Build Scene navigation directly into the native Unity toolbar and File menu.
+          </p>
+
+          <div class="project-actions-bar">
+            <a href="https://github.com/girikgarg132/UnitySceneNavigationUtility" target="_blank" class="btn btn-primary">
+              <i class="fa-brands fa-github"></i> View on GitHub
+            </a>
+            <a href="https://github.com/girikgarg132/UnitySceneNavigationUtility/releases" target="_blank" class="btn btn-secondary">
+              <i class="fa-solid fa-download"></i> Releases &amp; Tarball
+            </a>
+            <a href="../index.html#contact" class="btn btn-outline-cyan">
+              <i class="fa-solid fa-envelope"></i> Discuss Tooling &amp; Architecture
+            </a>
+          </div>
+        </div>
+
+        <!-- Visual Feature Banner -->
+        <div class="gallery-section" style="margin-top: 25px; margin-bottom: 45px;">
+          <div class="gallery-item" style="max-height: 520px; border-radius: var(--radius-lg); overflow: hidden;">
+            <img src="../images/unity-scene-navigation-utility-banner.png" alt="Unity Scene Navigation Utility Overview Banner" style="width: 100%; height: auto; aspect-ratio: 16/9; object-fit: cover;">
+            <div class="gallery-caption">
+              <span><i class="fa-solid fa-cubes"></i> Native Unity Editor Toolbar Dropdown &amp; Cascading File Submenus</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main Content & Case Study Grid -->
+        <div class="project-content-grid">
+          <!-- Left: Deep Dive -->
+          <div class="case-study-body">
+            
+            <div class="case-study-block">
+              <h2><i class="fa-solid fa-bolt"></i> The Problem: Scene Switching Friction in Unity</h2>
+              <p>
+                In professional game projects with dozens of levels, UI flows, and multi-scene architectures, scene navigation is one of the most frequent friction points during daily iteration:
+              </p>
+              <ul>
+                <li><strong>Bootstrap Dependencies:</strong> Many architectures rely on a dedicated initialization or bootloader scene (Scene 0) containing core singletons, network managers, audio mixers, and player state. When testing a feature or level deep down the pipeline, developers often had to boot from the bootstrap scene and manually navigate through menus, wasting cumulative hours every week.</li>
+                <li><strong>Deep Asset Hierarchy Digging:</strong> Locating specific <code>.unity</code> files requires repeatedly digging through multi-level folder trees (<code>Assets/Game/Scenes/Arenas/...</code>) inside the Project view.</li>
+                <li><strong>Incomplete Native Options:</strong> Unity's native <em>File &gt; Open Recent Scene</em> list only tracks scenes that were opened recently in that specific editor session, providing no quick way to navigate through configured Build Settings scenes or custom team bookmarks.</li>
+              </ul>
+            </div>
+
+            <div class="case-study-block">
+              <h2><i class="fa-solid fa-screwdriver-wrench"></i> Architectural Capabilities &amp; Features</h2>
+              <p>
+                <strong>UnitySceneNavigationUtility</strong> was engineered to provide instant, zero-friction scene management without disrupting existing editor layouts:
+              </p>
+
+              <div class="feature-cards-grid">
+                <div class="feature-mini-card">
+                  <div class="feature-mini-icon"><i class="fa-solid fa-window-maximize"></i></div>
+                  <h4>Main Toolbar Dropdown</h4>
+                  <p>Displays the active scene name directly in the primary Unity toolbar (<code>Girik Garg/Scene Navigation</code>) with an instant dropdown to pick any target scene.</p>
+                </div>
+
+                <div class="feature-mini-card">
+                  <div class="feature-mini-icon"><i class="fa-solid fa-folder-tree"></i></div>
+                  <h4>Build Scenes Submenu</h4>
+                  <p>Injects an <code>Open Build Scene</code> submenu directly under <code>File &gt; Open Recent Scene</code>, automatically reflecting scenes defined in Build Settings.</p>
+                </div>
+
+                <div class="feature-mini-card">
+                  <div class="feature-mini-icon"><i class="fa-solid fa-bookmark"></i></div>
+                  <h4>Scene Selection Lists</h4>
+                  <p>Provides an <code>Open Scene Selection List</code> menu to bookmark frequently accessed development sandboxes, greybox testbeds, and staging arenas.</p>
+                </div>
+
+                <div class="feature-mini-card">
+                  <div class="feature-mini-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                  <h4>Save Prompt Guards</h4>
+                  <p>Integrates <code>EditorSceneManager</code> checks to prompt for unsaved modifications before switching scenes, ensuring zero data loss.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="case-study-block">
+              <h2><i class="fa-solid fa-download"></i> Installation via Unity Package Manager (UPM)</h2>
+              <p>
+                The utility is distributed as a lightweight, self-contained Unity Package Manager (UPM) package that can be added via Git URL or downloaded as a release tarball:
+              </p>
+
+              <div class="code-window">
+                <div class="code-window-header">
+                  <div class="window-dots">
+                    <span class="window-dot dot-red"></span>
+                    <span class="window-dot dot-yellow"></span>
+                    <span class="window-dot dot-green"></span>
+                  </div>
+                  <span class="code-window-title">Unity Package Manager — Git URL</span>
+                </div>
+                <pre><code>https://github.com/girikgarg132/UnitySceneNavigationUtility.git</code></pre>
+              </div>
+
+              <p><strong>Step-by-Step Setup:</strong></p>
+              <ul>
+                <li>Open your Unity project and navigate to <strong>Window &gt; Package Manager</strong>.</li>
+                <li>Click the <strong><code>+</code></strong> (plus) icon in the top-left corner and choose <strong>Add package from git URL...</strong></li>
+                <li>Paste the Git URL above and click <strong>Add</strong>.</li>
+                <li>If the toolbar dropdown is not immediately visible in newer Unity versions, right-click an empty space on your top toolbar and ensure <strong>Girik Garg/Scene Navigation</strong> is toggled on.</li>
+              </ul>
+            </div>
+
+            <div class="case-study-block">
+              <h2><i class="fa-solid fa-lightbulb"></i> Developer Impact &amp; Best Practices</h2>
+              <p>
+                By cutting the time required to switch between sandbox levels and gameplay scenes from 15-20 seconds down to a single click, this utility removes constant context-switching friction across game programming, level design, and QA playtesting cycles.
+              </p>
+            </div>
+
+          </div>
+
+          <!-- Right Sidebar: Quick Specs -->
+          <aside class="project-sidebar">
+            <div class="specs-card">
+              <h3>Package Specs</h3>
+              
+              <div class="spec-item">
+                <span class="spec-label">Author</span>
+                <span class="spec-value">Girik Garg</span>
+              </div>
+
+              <div class="spec-item">
+                <span class="spec-label">License</span>
+                <span class="spec-value">MIT Open Source</span>
+              </div>
+
+              <div class="spec-item">
+                <span class="spec-label">Compatibility</span>
+                <span class="spec-value">Unity 2021.3+, 2022.3 LTS, Unity 6</span>
+              </div>
+
+              <div class="spec-item">
+                <span class="spec-label">Integration</span>
+                <span class="spec-value">Main Toolbar &amp; File Menu</span>
+              </div>
+
+              <div class="spec-item">
+                <span class="spec-label">Repository</span>
+                <span class="spec-value">
+                  <a href="https://github.com/girikgarg132/UnitySceneNavigationUtility" target="_blank" style="color: var(--accent-primary); text-decoration: none;">
+                    GitHub <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem;"></i>
+                  </a>
+                </span>
+              </div>
+            </div>
+
+            <div class="specs-card">
+              <h3>Tech Stack &amp; APIs</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">Unity C#</span>
+                <span class="skill-tag">UnityEditor</span>
+                <span class="skill-tag">EditorSceneManager</span>
+                <span class="skill-tag">Toolbar Extender</span>
+                <span class="skill-tag">BuildSettings API</span>
+                <span class="skill-tag">UPM Packaging</span>
+              </div>
+            </div>
+
+            <div class="sidebar-box">
+              <h3 class="sidebar-box-title"><i class="fa-brands fa-github"></i> Open Source Repository</h3>
+              <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 16px;">
+                Explore the codebase, contribute enhancements, or submit issues on the official GitHub repository.
+              </p>
+              <a href="https://github.com/girikgarg132/UnitySceneNavigationUtility" target="_blank" class="btn btn-secondary btn-sm" style="width: 100%; justify-content: center;">
+                <i class="fa-brands fa-github"></i> girikgarg132/UnitySceneNavigationUtility
+              </a>
+            </div>
+          </aside>
+        </div>
+
+        <!-- Next / Prev Pagination -->
+        <div class="project-pagination">
+          <div class="pagination-grid">
+            <a href="ludo-superstar.html" class="pagination-card">
+              <span class="pagination-dir"><i class="fa-solid fa-arrow-left"></i> Previous Project</span>
+              <span class="pagination-title">Ludo Super Star (100M+ Scale)</span>
+            </a>
+            <a href="unity-preferences-utility.html" class="pagination-card next">
+              <span class="pagination-dir">Next Project <i class="fa-solid fa-arrow-right"></i></span>
+              <span class="pagination-title">Unity Preferences Utility</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <div class="footer-info">
+          <p>© Girik Garg • Technical Director &amp; Game Systems Programmer.</p>
+        </div>
+        <div class="footer-social-links">
+          <a href="https://github.com/girikgarg132" target="_blank" class="social-icon-btn" title="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/girik-garg132/" target="_blank" class="social-icon-btn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="mailto:girikgarg1@gmail.com" class="social-icon-btn" title="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="../assets/js/portfolio.js"></script>
+</body>
+</html>
