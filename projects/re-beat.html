@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RE:Beat - Rhythm-Synchronized Platformer | Girik Garg Portfolio</title>
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/portfolio.css">
+  <link rel="stylesheet" href="../assets/css/project-detail.css">
+
+  <!-- Immediate Theme Initialization (prevents flash of wrong theme) -->
+  <script>
+    (function() {
+      var savedTheme = localStorage.getItem('girik_theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+  </script>
+</head>
+<body>
+  
+
+  <div class="site-wrapper">
+    <header class="project-top-bar">
+      <div class="container top-bar-content">
+        <a href="../index.html#projects" class="back-link">
+          <i class="fa-solid fa-arrow-left"></i> <span>Back to All Projects</span>
+        </a>
+        <div class="top-bar-right">
+          <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle Day / Night Mode" title="Toggle Day / Night Mode">
+            <i class="fa-solid fa-sun icon-sun"></i>
+            <i class="fa-solid fa-moon icon-moon"></i>
+          </button>
+          <a href="../index.html" class="brand-logo" style="font-size: 1.05rem;">
+            <div class="brand-icon"><i class="fa-solid fa-gamepad"></i></div>
+            <span>Girik Garg</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="project-hero">
+        <div class="project-hero-header">
+          <div class="project-meta-pills">
+            <span class="badge pulse-badge"><span class="dot"></span> BYOG Game Jam</span>
+            <span class="badge badge-purple">Itch.io</span>
+            <span class="tag-pill">PC / Windows</span>
+            <span class="tag-pill">Audio-Reactive Mechanics</span>
+            <span class="tag-pill">Rhythm Action</span>
+          </div>
+
+          <h1 class="project-hero-title">RE:Beat</h1>
+          <p class="project-hero-tagline">
+            A pulse-pounding rhythm action platformer where movement is locked to the tempo of the music soundtrack. Jump, dash, and evade hazards in strict musical synchronization to survive escalating acoustic obstacles.
+          </p>
+
+          <div class="project-actions-bar">
+            <a href="https://girik-garg.itch.io/" target="_blank" class="btn btn-primary">
+              <i class="fa-brands fa-itch-io"></i> Visit Itch.io Profile
+            </a>
+            <a href="../index.html#projects" class="btn btn-secondary">
+              <i class="fa-solid fa-gamepad"></i> Explore All Projects
+            </a>
+            <a href="../index.html#contact" class="btn btn-primary">
+              <i class="fa-solid fa-envelope"></i> Hire Me / Contact
+            </a>
+          </div>
+        </div>
+
+        <!-- Video & Showcase -->
+        <div class="video-showcase-section">
+          <div class="video-frame-container">
+            <div class="video-poster-placeholder" style="background-image: url('../images/banner.png');">
+              <div class="video-poster-overlay"></div>
+              <button class="video-play-btn-circle" id="play-video-btn" title="Launch Video Preview">
+                <i class="fa-solid fa-play"></i>
+              </button>
+              <div class="video-play-hint">Watch Beat-Quantized Action & Musical Synchronization</div>
+            </div>
+            <iframe id="video-iframe" style="display:none;" allow="autoplay; fullscreen" allowfullscreen></iframe>
+          </div>
+          
+          <div class="video-caption-bar">
+            <span><i class="fa-solid fa-music"></i> Audio-Analysis & FFT Beat Tracking Engine</span>
+            <span><i class="fa-solid fa-trophy"></i> Built for BYOG Game Jam</span>
+          </div>
+        </div>
+
+        <div class="project-content-grid">
+          <div class="case-study-body">
+            <div class="case-study-block">
+              <h2><i class="fa-solid fa-headphones"></i> The Musical Synchronization Core</h2>
+              <p>
+                In <em>RE:Beat</em>, the musical score isn't mere background decoration-it is the heartbeat of gameplay. The player's jumps, enemy laser pulses, and collapsing platforms occur in quantized sync with the song's BPM (beats per minute).
+              </p>
+              <p>
+                Missing a beat drops the player's momentum multiplier, while staying in the groove unlocks high-speed kinetic flow, allowing the player to bounce across impossible chasms.
+              </p>
+            </div>
+
+            <div class="case-study-block">
+              <h2><i class="fa-solid fa-microchip"></i> Audio Engine & Gameplay Programming</h2>
+              <ul>
+                <li><strong>DSP Audio Time Tracking:</strong> Used `AudioSettings.dspTime` to avoid frame-rate dependent audio desynchronization, guaranteeing sub-millisecond precision between audio playback and input judgment windows.</li>
+                <li><strong>Visual Audio Spectrogram Integration:</strong> Visual environments pulse dynamically with frequency band spectrum analysis (FFT), causing level geometry to expand and glow on low-frequency bass drops.</li>
+                <li><strong>Generative Jam Prototyping:</strong> Developed rapidly under strict game jam constraints with high-energy arcade scoring.</li>
+              </ul>
+            </div>
+          </div>
+
+          <aside class="project-sidebar">
+            <div class="specs-card">
+              <h3>Project Specs</h3>
+              
+              <div class="spec-item">
+                <span class="spec-label">Role</span>
+                <span class="spec-value">Solo Developer / Audio Integration</span>
+              </div>
+
+              <div class="spec-item">
+                <span class="spec-label">Engine</span>
+                <span class="spec-value">Unity (C#)</span>
+              </div>
+
+              <div class="spec-item">
+                <span class="spec-label">Platform</span>
+                <span class="spec-value">PC / Windows (Itch.io)</span>
+              </div>
+
+              <div class="spec-item">
+                <span class="spec-label">Event</span>
+                <span class="spec-value">BYOG (Build Your Own Game)</span>
+              </div>
+
+              <div class="spec-item">
+                <span class="spec-label">Key Systems</span>
+                <span class="spec-value">DSP Audio Sync, FFT Frequency Analysis, Beat Quantization</span>
+              </div>
+            </div>
+
+            <div class="specs-card">
+              <h3>Tech Stack</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">Unity C#</span>
+                <span class="skill-tag">DSP Time</span>
+                <span class="skill-tag">Audio FFT</span>
+                <span class="skill-tag">Rhythm Timing</span>
+                <span class="skill-tag">Game Jam</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+
+        <div class="project-pagination">
+          <div class="pagination-grid">
+            <a href="tmkoc-clubhouse.html" class="pagination-card">
+              <span class="pagination-dir"><i class="fa-solid fa-arrow-left"></i> Previous Project</span>
+              <span class="pagination-title">TMKOC Clubhouse (Multi-Game)</span>
+            </a>
+            <a href="elebend.html" class="pagination-card next">
+              <span class="pagination-dir">Next Project <i class="fa-solid fa-arrow-right"></i></span>
+              <span class="pagination-title">Elebend: Elemental RTS</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <div class="footer-info">
+          <p>© Girik Garg. Unity Developer & Systems Programmer.</p>
+        </div>
+        <div class="footer-social-links">
+          <a href="https://github.com/girikgarg8" target="_blank" class="social-icon-btn" title="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/girik-garg132/" target="_blank" class="social-icon-btn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="tel:+918445831464" class="social-icon-btn" title="Phone"><i class="fa-solid fa-phone"></i></a>
+          <a href="mailto:girikgarg1@gmail.com" class="social-icon-btn" title="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="../assets/js/portfolio.js"></script>
+  <script>
+    document.getElementById('play-video-btn')?.addEventListener('click', () => {
+      const wrapper = document.querySelector('.video-poster-placeholder');
+      const iframe = document.getElementById('video-iframe');
+      if (wrapper && iframe) {
+        wrapper.style.display = 'none';
+        iframe.style.display = 'block';
+        iframe.src = "https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1";
+      }
+    });
+  </script>
+</body>
+</html>
+
+
+

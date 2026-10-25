@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hell Racer - Underworld Endless Runner | Girik Garg Portfolio</title>
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/portfolio.css">
+  <link rel="stylesheet" href="../assets/css/project-detail.css">
+
+  <!-- Immediate Theme Initialization (prevents flash of wrong theme) -->
+  <script>
+    (function() {
+      var savedTheme = localStorage.getItem('girik_theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+  </script>
+</head>
+<body>
+  
+
+  <div class="site-wrapper">
+    <header class="project-top-bar">
+      <div class="container top-bar-content">
+        <a href="../index.html#projects" class="back-link">
+          <i class="fa-solid fa-arrow-left"></i> <span>Back to All Projects</span>
+        </a>
+        <div class="top-bar-right">
+          <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle Day / Night Mode" title="Toggle Day / Night Mode">
+            <i class="fa-solid fa-sun icon-sun"></i>
+            <i class="fa-solid fa-moon icon-moon"></i>
+          </button>
+          <a href="../index.html" class="brand-logo" style="font-size: 1.05rem;">
+            <div class="brand-icon"><i class="fa-solid fa-gamepad"></i></div>
+            <span>Girik Garg</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="project-hero">
+        <div class="project-hero-header">
+          <div class="project-meta-pills">
+            <span class="badge pulse-badge"><span class="dot"></span> Indie Release</span>
+            <span class="badge badge-purple">Itch.io</span>
+            <span class="tag-pill">PC / WebGL</span>
+            <span class="tag-pill">Unity 2D</span>
+            <span class="tag-pill">Endless Runner</span>
+          </div>
+
+          <h1 class="project-hero-title">Hell Racer</h1>
+          <p class="project-hero-tagline">
+            Inspired by Chrome's offline dinosaur runner, Hell Racer reimagines reflex arcade gaming with a dark fantasy twist: sprint and leap over demonic aberrations, dodge flying purgatory bats, and climb upward from the fiery underworld toward celestial salvation.
+          </p>
+
+          <div class="project-actions-bar">
+            <a href="https://robok9.itch.io/hell-racer" target="_blank" class="btn btn-primary">
+              <i class="fa-brands fa-itch-io"></i> Play on Itch.io
+            </a>
+            <a href="https://www.youtube.com/watch?v=MKRqOFTuoLQ" target="_blank" class="btn btn-secondary">
+              <i class="fa-brands fa-youtube"></i> Watch on YouTube
+            </a>
+            <a href="../index.html#contact" class="btn btn-outline-cyan">
+              <i class="fa-solid fa-envelope"></i> Hire Me / Contact
+            </a>
+          </div>
+        </div>
+
+        <!-- Video & Showcase -->
+        <div class="video-showcase-section">
+          <div class="video-frame-container">
+            <div class="video-poster-placeholder" style="background-image: url('../images/hell-racer-header.jpg'); background-size: cover; background-position: center;">
+              <div class="video-poster-overlay"></div>
+              <button class="video-play-btn-circle" id="play-video-btn" title="Launch Video Preview">
+                <i class="fa-solid fa-play"></i>
+              </button>
+              <div class="video-play-hint">Watch Fast-Paced Obstacle Dodging & Vertical Climb</div>
+            </div>
+            <iframe id="video-iframe" style="display:none;" allow="autoplay; fullscreen" allowfullscreen></iframe>
+          </div>
+          
+          <div class="video-caption-bar">
+            <span><i class="fa-solid fa-fire"></i> Reflex Platformer • Purgatory Theme</span>
+            <span><i class="fa-solid fa-bolt"></i> 1080p 60FPS Gameplay</span>
+          </div>
+        </div>
+
+        <div class="project-content-grid">
+          <div class="case-study-body">
+            <div class="case-study-block">
+              <h2><i class="fa-solid fa-bolt"></i> Reflex Mechanics & Responsive Input</h2>
+              <p>
+                In high-speed endless runners, input latency is the difference between an exhilarating run and unfair failure. Every millisecond counts.
+              </p>
+              <p>
+                For <em>Hell Racer</em>, I implemented a strict custom physics controller with coyote time (allowing jump inputs for 0.08s after leaving a ledge) and jump buffering (registering jumps tapped right before hitting the ground). This guarantees ultra-crisp responsive jumping that players can trust instinctively.
+              </p>
+            </div>
+
+            <div class="case-study-block">
+              <h2><i class="fa-solid fa-stairs"></i> Dynamic Progression & Difficulty Pacing</h2>
+              <ul>
+                <li><strong>Dynamic World Shift:</strong> As the player survives longer, the visual palette smoothly transitions from molten magma reds to ethereal violet purgatory, ending in golden celestial heaven.</li>
+                <li><strong>Algorithmic Hazard Density:</strong> Obstacle clusters are generated using weighted probability buckets, preventing impossible obstacle combinations while constantly challenging player reflexes.</li>
+                <li><strong>Layered Parallax Scrolling:</strong> Quadruple-layered parallax backgrounds creating deep atmospheric dimension with embers, crumbling ruins, and soaring celestial towers.</li>
+              </ul>
+            </div>
+          </div>
+
+          <aside class="project-sidebar">
+            <div class="specs-card">
+              <h3>Project Specs</h3>
+              
+              <div class="spec-item">
+                <span class="spec-label">Role</span>
+                <span class="spec-value">Solo Game Developer</span>
+              </div>
+
+              <div class="spec-item">
+                <span class="spec-label">Engine</span>
+                <span class="spec-value">Unity 2D (C#)</span>
+              </div>
+
+              <div class="spec-item">
+                <span class="spec-label">Platform</span>
+                <span class="spec-value">PC / WebGL (Itch.io)</span>
+              </div>
+
+              <div class="spec-item">
+                <span class="spec-label">Genre</span>
+                <span class="spec-value">Endless Runner / Reflex Arcade</span>
+              </div>
+
+              <div class="spec-item">
+                <span class="spec-label">Key Systems</span>
+                <span class="spec-value">Coyote Time, Jump Buffering, Parallax Shaders</span>
+              </div>
+            </div>
+
+            <div class="specs-card">
+              <h3>Tech Stack</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">Unity C#</span>
+                <span class="skill-tag">2D Physics</span>
+                <span class="skill-tag">Responsive Controls</span>
+                <span class="skill-tag">WebGL</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+
+        <!-- Screenshot Gallery -->
+        <div class="gallery-section">
+          <div class="section-header" style="margin-bottom: 30px; text-align: left;">
+            <span class="badge">Visual Archive</span>
+            <h2 class="section-title" style="font-size: 1.8rem;">Full HD Gameplay Screenshots</h2>
+          </div>
+
+          <div class="gallery-grid">
+            <div class="gallery-item">
+              <img src="../images/Hell Racer.png" alt="Hell Racer Gameplay 1080p">
+              <div class="gallery-caption">Cover Art & Purgatory Sprint Arena</div>
+            </div>
+            <div class="gallery-item">
+              <img src="../images/hell-racer-screen-1.png" alt="Obstacle Traversal Mechanics">
+              <div class="gallery-caption">Jump Buffering & Coyote-Time Obstacle Evasion</div>
+            </div>
+            <div class="gallery-item">
+              <img src="../images/hell-racer-screen-2.png" alt="Demon Minion Encounters">
+              <div class="gallery-caption">Demonic Aberration Spawns & Airborne Bats</div>
+            </div>
+            <div class="gallery-item">
+              <img src="../images/hell-racer-screen-3.png" alt="Vertical Level Progression">
+              <div class="gallery-caption">Vertical Underworld Climbing & Lava Hazard Timing</div>
+            </div>
+            <div class="gallery-item">
+              <img src="../images/hell-racer-screen-4.png" alt="Reflex Platforming Loops">
+              <div class="gallery-caption">High-Intensity Arcade Reflex Loop & Score Tracking</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-pagination">
+          <div class="pagination-grid">
+            <a href="platform-factory.html" class="pagination-card">
+              <span class="pagination-dir"><i class="fa-solid fa-arrow-left"></i> Previous Project</span>
+              <span class="pagination-title">Platform Factory</span>
+            </a>
+            <a href="tmkoc-clubhouse.html" class="pagination-card next">
+              <span class="pagination-dir">Next Project <i class="fa-solid fa-arrow-right"></i></span>
+              <span class="pagination-title">TMKOC Clubhouse (Multi-Game)</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <div class="footer-info">
+          <p>© Girik Garg. Unity Developer & Systems Programmer.</p>
+        </div>
+        <div class="footer-social-links">
+          <a href="https://github.com/girikgarg8" target="_blank" class="social-icon-btn" title="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://robok9.itch.io/hell-racer" target="_blank" class="social-icon-btn" title="Play Game"><i class="fa-solid fa-play"></i></a>
+          <a href="https://www.linkedin.com/in/girik-garg132/" target="_blank" class="social-icon-btn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="tel:+918445831464" class="social-icon-btn" title="Phone"><i class="fa-solid fa-phone"></i></a>
+          <a href="mailto:girikgarg1@gmail.com" class="social-icon-btn" title="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="../assets/js/portfolio.js"></script>
+  <script>
+    document.getElementById('play-video-btn')?.addEventListener('click', () => {
+      const wrapper = document.querySelector('.video-poster-placeholder');
+      const iframe = document.getElementById('video-iframe');
+      if (wrapper && iframe) {
+        wrapper.style.display = 'none';
+        iframe.style.display = 'block';
+        iframe.src = "https://www.youtube-nocookie.com/embed/MKRqOFTuoLQ?autoplay=1";
+      }
+    });
+  </script>
+</body>
+</html>
+
+
+

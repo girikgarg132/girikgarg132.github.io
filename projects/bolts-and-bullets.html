@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bolts and Bullets - Top-Down Twin-Stick Action | Girik Garg Portfolio</title>
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/portfolio.css">
+  <link rel="stylesheet" href="../assets/css/project-detail.css">
+
+  <!-- Immediate Theme Initialization (prevents flash of wrong theme) -->
+  <script>
+    (function() {
+      var savedTheme = localStorage.getItem('girik_theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+  </script>
+</head>
+<body>
+  
+
+  <div class="site-wrapper">
+    <header class="project-top-bar">
+      <div class="container top-bar-content">
+        <a href="../index.html#projects" class="back-link">
+          <i class="fa-solid fa-arrow-left"></i> <span>Back to All Projects</span>
+        </a>
+        <div class="top-bar-right">
+          <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle Day / Night Mode" title="Toggle Day / Night Mode">
+            <i class="fa-solid fa-sun icon-sun"></i>
+            <i class="fa-solid fa-moon icon-moon"></i>
+          </button>
+          <a href="../index.html" class="brand-logo" style="font-size: 1.05rem;">
+            <div class="brand-icon"><i class="fa-solid fa-gamepad"></i></div>
+            <span>Girik Garg</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="project-hero">
+        <div class="project-hero-header">
+          <div class="project-meta-pills">
+            <span class="badge pulse-badge"><span class="dot"></span> Indie Release</span>
+            <span class="badge badge-purple">Itch.io</span>
+            <span class="tag-pill">PC / WebGL</span>
+            <span class="tag-pill">Unity 2D / C#</span>
+            <span class="tag-pill">Twin-Stick Shooter</span>
+          </div>
+
+          <h1 class="project-hero-title">Bolts and Bullets</h1>
+          <p class="project-hero-tagline">
+            An adrenaline-pumping top-down 2D action shooter set in a gritty post-apocalyptic mechanized wasteland. Battle rogue robotic automatons, manage thermal overheating, collect scrap for live arsenal upgrades, and master bullet-hell swarm evasion.
+          </p>
+
+          <div class="project-actions-bar">
+            <a href="https://girik-garg.itch.io/bolts-and-bullets" target="_blank" class="btn btn-primary">
+              <i class="fa-brands fa-itch-io"></i> Play on Itch.io
+            </a>
+            <a href="https://www.youtube.com/watch?v=HjJfhRMqNFA" target="_blank" class="btn btn-secondary">
+              <i class="fa-brands fa-youtube"></i> Watch on YouTube
+            </a>
+            <a href="../index.html#contact" class="btn btn-outline-cyan">
+              <i class="fa-solid fa-envelope"></i> Hire Me / Contact
+            </a>
+          </div>
+        </div>
+
+        <!-- Video & Gameplay Showcase -->
+        <div class="video-showcase-section">
+          <div class="video-frame-container">
+            <div class="video-poster-placeholder" style="background-image: url('../images/bolts-and-bullets-header.jpg'); background-size: cover; background-position: center;">
+              <div class="video-poster-overlay"></div>
+              <button class="video-play-btn-circle" id="play-video-btn" title="Launch Video Preview">
+                <i class="fa-solid fa-play"></i>
+              </button>
+              <div class="video-play-hint">Watch Wave Combat & Robotic Boss Battle</div>
+            </div>
+            <iframe id="video-iframe" style="display:none;" allow="autoplay; fullscreen" allowfullscreen></iframe>
+          </div>
+          
+          <div class="video-caption-bar">
+            <span><i class="fa-solid fa-crosshairs"></i> Top-Down Wave Shooter • High-Octane Action</span>
+            <span><i class="fa-solid fa-bolt"></i> 1080p 60FPS Gameplay</span>
+          </div>
+        </div>
+
+        <div class="project-content-grid">
+          <div class="case-study-body">
+            <div class="case-study-block">
+              <h2><i class="fa-solid fa-gun"></i> Combat Systems & Game Feel ("Juice")</h2>
+              <p>
+                In <em>Bolts and Bullets</em>, every shot, hit, and explosion was engineered with immense attention to kinetic feedback. To elevate the game beyond typical 2D shooters, I developed a suite of procedural game-feel modules:
+              </p>
+              <ul>
+                <li><strong>Dynamic Screen Shake & Directional Impulse:</strong> Directional camera impulses that scale based on weapon caliber (shotguns trigger backwards kickback, high-caliber railguns induce slow-motion freeze frames).</li>
+                <li><strong>Hit-Stop / Frame-Freeze (Micro-Stutter):</strong> A 3-frame freeze upon delivering critical headshots or dismantling heavy boss armor, creating high visceral impact.</li>
+                <li><strong>Modular Weapon Customization:</strong> Dual-weapon loadouts featuring spread plasma, bounce flak, chain-lightning tasers, and homing swarm rockets.</li>
+                <li><strong>Procedural Particle Explosions:</strong> Shrapnel sparks, lingering neon smoke trails, and physical robotic scraps that bounce off walls.</li>
+              </ul>
+            </div>
+
+            <div class="case-study-block">
+              <h2><i class="fa-solid fa-robot"></i> Enemy AI Architecture</h2>
+              <p>
+                Rogue robots are driven by behavioral tree state machines that execute coordinated pack hunting:
+              </p>
+              <ul>
+                <li><strong>Scout Crawlers:</strong> Swarm the player in erratic zigzag paths to force movement.</li>
+                <li><strong>Shield Bearers:</strong> Form defensive front lines that deflect kinetic projectiles, forcing the player to flank with dash maneuvers.</li>
+                <li><strong>Heavy Goliaths:</strong> High-health walking fortresses firing predictive mortar arcs and sweeping lasers.</li>
+              </ul>
+            </div>
+          </div>
+
+          <aside class="project-sidebar">
+            <div class="specs-card">
+              <h3>Project Specs</h3>
+              
+              <div class="spec-item">
+                <span class="spec-label">Role</span>
+                <span class="spec-value">Solo Game Developer & Designer</span>
+              </div>
+
+              <div class="spec-item">
+                <span class="spec-label">Engine</span>
+                <span class="spec-value">Unity 2D (C#)</span>
+              </div>
+
+              <div class="spec-item">
+                <span class="spec-label">Platform</span>
+                <span class="spec-value">PC / WebGL (Itch.io)</span>
+              </div>
+
+              <div class="spec-item">
+                <span class="spec-label">Genre</span>
+                <span class="spec-value">Top-Down Twin-Stick Shooter</span>
+              </div>
+
+              <div class="spec-item">
+                <span class="spec-label">Key Systems</span>
+                <span class="spec-value">Game Feel, Particle Pooling, State Machine AI</span>
+              </div>
+            </div>
+
+            <div class="specs-card">
+              <h3>Tech Stack</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">Unity C#</span>
+                <span class="skill-tag">2D Particle FX</span>
+                <span class="skill-tag">Audio Spatializer</span>
+                <span class="skill-tag">Object Pooling</span>
+                <span class="skill-tag">Cinemachine</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+
+        <!-- Screenshot Gallery -->
+        <div class="gallery-section">
+          <div class="section-header" style="margin-bottom: 30px; text-align: left;">
+            <span class="badge">Visual Archive</span>
+            <h2 class="section-title" style="font-size: 1.8rem;">Full HD Gameplay Screenshots</h2>
+          </div>
+
+          <div class="gallery-grid">
+            <div class="gallery-item">
+              <img src="../images/Bolts And Bullets.png" alt="Bolts and Bullets Gameplay 1080p">
+              <div class="gallery-caption">Cover Art & Wasteland Combat Arena</div>
+            </div>
+            <div class="gallery-item">
+              <img src="../images/bolts-and-bullets-screen-1.png" alt="Twin-stick Combat Mechanics">
+              <div class="gallery-caption">Directional Fire & Particle Shrapnel System</div>
+            </div>
+            <div class="gallery-item">
+              <img src="../images/bolts-and-bullets-screen-2.png" alt="Automaton Swarm AI">
+              <div class="gallery-caption">State Machine Pack Hunting AI & Flanking Behaviors</div>
+            </div>
+            <div class="gallery-item">
+              <img src="../images/bolts-and-bullets-screen-3.png" alt="Boss Encounter Arena">
+              <div class="gallery-caption">Heavy Armored Boss Combat & Bullet-Hell Evasion</div>
+            </div>
+            <div class="gallery-item">
+              <img src="../images/bolts-and-bullets-screen-4.png" alt="Thermal Overheat & Arsenal Upgrade">
+              <div class="gallery-caption">Modular Weapon Customization & Overheat Mechanics</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-pagination">
+          <div class="pagination-grid">
+            <a href="bhide-scooter-race.html" class="pagination-card">
+              <span class="pagination-dir"><i class="fa-solid fa-arrow-left"></i> Previous Project</span>
+              <span class="pagination-title">Bhide Scooter Race</span>
+            </a>
+            <a href="tower-bizarre-adventure.html" class="pagination-card next">
+              <span class="pagination-dir">Next Project <i class="fa-solid fa-arrow-right"></i></span>
+              <span class="pagination-title">Tower Bizarre Adventure (Tower Defense)</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <div class="footer-info">
+          <p>© Girik Garg. Unity Developer & Systems Programmer.</p>
+        </div>
+        <div class="footer-social-links">
+          <a href="https://github.com/girikgarg8" target="_blank" class="social-icon-btn" title="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/girik-garg132/" target="_blank" class="social-icon-btn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="tel:+918445831464" class="social-icon-btn" title="Phone"><i class="fa-solid fa-phone"></i></a>
+          <a href="mailto:girikgarg1@gmail.com" class="social-icon-btn" title="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="../assets/js/portfolio.js"></script>
+  <script>
+    document.getElementById('play-video-btn')?.addEventListener('click', () => {
+      const wrapper = document.querySelector('.video-poster-placeholder');
+      const iframe = document.getElementById('video-iframe');
+      if (wrapper && iframe) {
+        wrapper.style.display = 'none';
+        iframe.style.display = 'block';
+        iframe.src = "https://www.youtube-nocookie.com/embed/HjJfhRMqNFA?autoplay=1";
+      }
+    });
+  </script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tower Bizarre Adventure - Strategic Anime Tower Defense | Girik Garg Portfolio</title>
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/portfolio.css">
+  <link rel="stylesheet" href="../assets/css/project-detail.css">
+
+  <!-- Immediate Theme Initialization (prevents flash of wrong theme) -->
+  <script>
+    (function() {
+      var savedTheme = localStorage.getItem('girik_theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+  </script>
+</head>
+<body>
+  
+
+  <div class="site-wrapper">
+    <header class="project-top-bar">
+      <div class="container top-bar-content">
+        <a href="../index.html#projects" class="back-link">
+          <i class="fa-solid fa-arrow-left"></i> <span>Back to All Projects</span>
+        </a>
+        <div class="top-bar-right">
+          <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle Day / Night Mode" title="Toggle Day / Night Mode">
+            <i class="fa-solid fa-sun icon-sun"></i>
+            <i class="fa-solid fa-moon icon-moon"></i>
+          </button>
+          <a href="../index.html" class="brand-logo" style="font-size: 1.05rem;">
+            <div class="brand-icon"><i class="fa-solid fa-gamepad"></i></div>
+            <span>Girik Garg</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="project-hero">
+        <div class="project-hero-header">
+          <div class="project-meta-pills">
+            <span class="badge pulse-badge"><span class="dot"></span> Strategy Indie</span>
+            <span class="badge badge-purple">Itch.io</span>
+            <span class="tag-pill">PC / Web</span>
+            <span class="tag-pill">Unity 3D / C#</span>
+            <span class="tag-pill">Tower Defense</span>
+          </div>
+
+          <h1 class="project-hero-title">Tower Bizarre Adventure</h1>
+          <p class="project-hero-tagline">
+            A stylized strategic tower defense game where players position specialized defense sentinels and mystical guardians along intricate paths to shield the sovereign King from relentless waves of demonic invaders.
+          </p>
+
+          <div class="project-actions-bar">
+            <a href="https://girik-garg.itch.io/tower-bizzare-adventure" target="_blank" class="btn btn-primary">
+              <i class="fa-brands fa-itch-io"></i> Play on Itch.io
+            </a>
+            <a href="https://www.youtube.com/watch?v=vjdijjXY5z4" target="_blank" class="btn btn-secondary">
+              <i class="fa-brands fa-youtube"></i> Watch on YouTube
+            </a>
+            <a href="../index.html#contact" class="btn btn-outline-cyan">
+              <i class="fa-solid fa-envelope"></i> Inquire About Strategy Systems
+            </a>
+          </div>
+        </div>
+
+        <!-- Video & Showcase -->
+        <div class="video-showcase-section">
+          <div class="video-frame-container">
+            <div class="video-poster-placeholder" style="background-image: url('../images/tower-bizarre-header.jpg'); background-size: cover; background-position: center;">
+              <div class="video-poster-overlay"></div>
+              <button class="video-play-btn-circle" id="play-video-btn" title="Launch Video Preview">
+                <i class="fa-solid fa-play"></i>
+              </button>
+              <div class="video-play-hint">Watch Wave Defense & Tower Placement Gameplay</div>
+            </div>
+            <iframe id="video-iframe" style="display:none;" allow="autoplay; fullscreen" allowfullscreen></iframe>
+          </div>
+          
+          <div class="video-caption-bar">
+            <span><i class="fa-solid fa-shield-halved"></i> Tower Defense Wave Strategy • Dynamic Pathfinding</span>
+            <span><i class="fa-solid fa-star"></i> 1080p Gameplay Capture</span>
+          </div>
+        </div>
+
+        <div class="project-content-grid">
+          <div class="case-study-body">
+            <div class="case-study-block">
+              <h2><i class="fa-solid fa-chess-rook"></i> Strategic Depth & Gameplay Mechanics</h2>
+              <p>
+                In <em>Tower Bizarre Adventure</em>, the objective transcends simple static turret placement. Every tower features distinct attack tempos, damage types (Piercing, Arcane Burn, Frost Slow, Area Blast), and synergy effects:
+              </p>
+              <ul>
+                <li><strong>Synergy Stacking:</strong> Freezing an enemy increases vulnerability to Arcane shockwaves, encouraging players to construct complementary defense choke points.</li>
+                <li><strong>Dynamic Waypoint Pathfinding:</strong> Enemies follow modular spline and waypoint routes, automatically recalculating paths if obstacles or summon walls are triggered.</li>
+                <li><strong>Multi-Branch Upgrade Trees:</strong> Towers can be promoted along branched specializations (e.g., transforming a single-target sniper tower into a hyper-velocity chain-lightning emitter).</li>
+                <li><strong>Resource Pacing Balance:</strong> Mana gains scale dynamically with kill combos, forcing players to evaluate whether to build new perimeter towers or supercharge existing core sentinels.</li>
+              </ul>
+            </div>
+
+            <div class="case-study-block">
+              <h2><i class="fa-solid fa-code"></i> Engineering Highlights</h2>
+              <p>
+                To handle hundreds of simultaneous enemies and projectile calculations smoothly in WebGL:
+              </p>
+              <ul>
+                <li>Built a lightweight, zero-allocation projectile pooling system for high fire-rate ballistics.</li>
+                <li>Optimized distance calculations using squared distance checks (`sqrMagnitude`) rather than costly square-root calculations during target acquisition loops.</li>
+                <li>Utilized clean ScriptableObject data architecture for defining tower stats, leveling curves, and status effect multipliers.</li>
+              </ul>
+            </div>
+          </div>
+
+          <aside class="project-sidebar">
+            <div class="specs-card">
+              <h3>Project Specs</h3>
+              
+              <div class="spec-item">
+                <span class="spec-label">Role</span>
+                <span class="spec-value">Lead Developer & Systems Designer</span>
+              </div>
+
+              <div class="spec-item">
+                <span class="spec-label">Engine</span>
+                <span class="spec-value">Unity (C#)</span>
+              </div>
+
+              <div class="spec-item">
+                <span class="spec-label">Platform</span>
+                <span class="spec-value">PC / Web (Itch.io)</span>
+              </div>
+
+              <div class="spec-item">
+                <span class="spec-label">Genre</span>
+                <span class="spec-value">Tower Defense / Tactical Strategy</span>
+              </div>
+
+              <div class="spec-item">
+                <span class="spec-label">Key Systems</span>
+                <span class="spec-value">A* Pathfinding, Status Effects, Object Pooling</span>
+              </div>
+            </div>
+
+            <div class="specs-card">
+              <h3>Tech Stack</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">Unity C#</span>
+                <span class="skill-tag">Scriptable Objects</span>
+                <span class="skill-tag">Pathfinding</span>
+                <span class="skill-tag">WebGL Build</span>
+                <span class="skill-tag">Optimization</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+
+        <!-- Screenshot Gallery -->
+        <div class="gallery-section">
+          <div class="section-header" style="margin-bottom: 30px; text-align: left;">
+            <span class="badge">Visual Archive</span>
+            <h2 class="section-title" style="font-size: 1.8rem;">Full HD Gameplay Screenshots</h2>
+          </div>
+
+          <div class="gallery-grid">
+            <div class="gallery-item">
+              <img src="../images/Tower Bizzare Adventure.png" alt="Tower Bizarre Adventure Gameplay 1080p">
+              <div class="gallery-caption">Cover Art & King's Throne Arena</div>
+            </div>
+            <div class="gallery-item">
+              <img src="../images/tower-bizarre-screen-1.png" alt="Dynamic Waypoint Pathfinding">
+              <div class="gallery-caption">Dynamic Waypoint Pathfinding & Enemy Invasions</div>
+            </div>
+            <div class="gallery-item">
+              <img src="../images/tower-bizarre-screen-2.png" alt="Elemental Turret Synergies">
+              <div class="gallery-caption">Elemental Sentinel Placement & Area Defense</div>
+            </div>
+            <div class="gallery-item">
+              <img src="../images/tower-bizarre-screen-3.png" alt="Tower Upgrade Branching">
+              <div class="gallery-caption">Modular Turret Upgrade Paths & Stat Scaling</div>
+            </div>
+            <div class="gallery-item">
+              <img src="../images/tower-bizarre-screen-4.png" alt="Late-Wave Swarm Defense">
+              <div class="gallery-caption">Late-Game Horde Encounters & Particle Combat</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-pagination">
+          <div class="pagination-grid">
+            <a href="bolts-and-bullets.html" class="pagination-card">
+              <span class="pagination-dir"><i class="fa-solid fa-arrow-left"></i> Previous Project</span>
+              <span class="pagination-title">Bolts and Bullets</span>
+            </a>
+            <a href="platform-factory.html" class="pagination-card next">
+              <span class="pagination-dir">Next Project <i class="fa-solid fa-arrow-right"></i></span>
+              <span class="pagination-title">Platform Factory (Survival Puzzle)</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <div class="footer-info">
+          <p>© Girik Garg. Unity Developer & Systems Programmer.</p>
+        </div>
+        <div class="footer-social-links">
+          <a href="https://github.com/girikgarg8" target="_blank" class="social-icon-btn" title="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/girik-garg132/" target="_blank" class="social-icon-btn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="tel:+918445831464" class="social-icon-btn" title="Phone"><i class="fa-solid fa-phone"></i></a>
+          <a href="mailto:girikgarg1@gmail.com" class="social-icon-btn" title="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="../assets/js/portfolio.js"></script>
+  <script>
+    document.getElementById('play-video-btn')?.addEventListener('click', () => {
+      const wrapper = document.querySelector('.video-poster-placeholder');
+      const iframe = document.getElementById('video-iframe');
+      if (wrapper && iframe) {
+        wrapper.style.display = 'none';
+        iframe.style.display = 'block';
+        iframe.src = "https://www.youtube-nocookie.com/embed/vjdijjXY5z4?autoplay=1";
+      }
+    });
+  </script>
+</body>
+</html>
+
+
+

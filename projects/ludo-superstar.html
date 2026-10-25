@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ludo Super Star - 100M+ Scale Live-Ops | Girik Garg Portfolio</title>
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/portfolio.css">
+  <link rel="stylesheet" href="../assets/css/project-detail.css">
+
+  <!-- Immediate Theme Initialization (prevents flash of wrong theme) -->
+  <script>
+    (function() {
+      var savedTheme = localStorage.getItem('girik_theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+  </script>
+</head>
+<body>
+  
+
+  <div class="site-wrapper">
+    <!-- Top Bar Navigation -->
+    <header class="project-top-bar">
+      <div class="container top-bar-content">
+        <a href="../index.html#projects" class="back-link">
+          <i class="fa-solid fa-arrow-left"></i> <span>Back to All Projects</span>
+        </a>
+        <div class="top-bar-right">
+          <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle Day / Night Mode" title="Toggle Day / Night Mode">
+            <i class="fa-solid fa-sun icon-sun"></i>
+            <i class="fa-solid fa-moon icon-moon"></i>
+          </button>
+          <a href="../index.html" class="brand-logo" style="font-size: 1.05rem;">
+            <div class="brand-icon"><i class="fa-solid fa-gamepad"></i></div>
+            <span>Girik Garg</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Project Hero -->
+    <main class="container">
+      <section class="project-hero">
+        <div class="project-hero-header">
+          <div class="project-meta-pills">
+            <span class="badge pulse-badge"><span class="dot"></span> 100M+ Downloads</span>
+            <span class="badge badge-purple">BlackLight Studio Works</span>
+            <span class="tag-pill">Mobile (Android/iOS)</span>
+            <span class="tag-pill">Photon Multiplayer</span>
+            <span class="tag-pill">Live-Service Ops</span>
+          </div>
+
+          <h1 class="project-hero-title">Ludo Super Star: Massive Scale Live-Ops</h1>
+          <p class="project-hero-tagline">
+            High-performance UI/UX engineering and multiplayer live-service architecture serving over 100 million players worldwide with sub-second board synchronization, voice chat, blitz game modes, and rock-solid low-end device stability.
+          </p>
+
+          <div class="project-actions-bar">
+            <a href="https://play.google.com/store/apps/details?id=com.blacklightsw.ludo" target="_blank" class="btn btn-primary">
+              <i class="fa-brands fa-google-play"></i> View on Play Store
+            </a>
+            <a href="https://apps.apple.com/app/ludo-superstar/id1314264574" target="_blank" class="btn btn-primary">
+              <i class="fa-brands fa-apple"></i> View on App Store
+            </a>
+            <a href="../index.html#contact" class="btn btn-secondary">
+              <i class="fa-solid fa-envelope"></i> Contact Me About Scale
+            </a>
+          </div>
+        </div>
+
+        <!-- Gameplay Video Showcase -->
+        <div class="video-showcase-section">
+          <div class="video-frame-container">
+            <div class="video-poster-placeholder" style="background-image: url('../images/ludo-play-screen-1.jpg'); background-size: cover; background-position: center;">
+              <div class="video-poster-overlay"></div>
+              <button class="video-play-btn-circle" id="play-video-btn" title="Launch Video Preview">
+                <i class="fa-solid fa-play"></i>
+              </button>
+              <div class="video-play-hint">UI/UX Architecture & Massive Concurrency Showcase</div>
+            </div>
+            <iframe id="video-iframe" style="display:none;" allow="autoplay; fullscreen" allowfullscreen></iframe>
+          </div>
+          
+          <div class="video-caption-bar">
+            <span><i class="fa-solid fa-mobile-screen"></i> 100M+ Downloads Milestone • BlackLight Studio Works</span>
+            <span><i class="fa-solid fa-gauge-high"></i> High-Throughput Photon Networking</span>
+          </div>
+        </div>
+
+        <!-- Main Content & Case Study Grid -->
+        <div class="project-content-grid">
+          <!-- Left: Deep Dive -->
+          <div class="case-study-body">
+            <div class="case-study-block">
+              <h2><i class="fa-solid fa-users"></i> Scaling for 100M+ Users</h2>
+              <p>
+                Ludo Super Star is one of the world's most popular digital board games, downloaded by over 100,000,000 users across India, the Middle East, Southeast Asia, and globally. At this unprecedented scale, performance margins are razor thin: games must run buttery smooth on \$50 entry-level smartphones with 2GB RAM while maintaining stable network connection over 3G/4G networks.
+              </p>
+              <p>
+                My contributions focused on architecting responsive UI workflows, eliminating garbage-collection memory hitches, optimizing real-time multiplayer board synchronization, and integrating monetization & social features seamlessly.
+              </p>
+            </div>
+
+            <div class="case-study-block">
+              <h2><i class="fa-solid fa-microchip"></i> Engineering Highlights & Architecture</h2>
+              <ul>
+                <li><strong>Dynamic Multi-Resolution UI System:</strong> Engineered custom canvas render pools and layout rebuild limiters, preventing expensive canvas re-batching during complex token dice animations and board transitions.</li>
+                <li><strong>Real-Time Multiplayer Room Synchronization:</strong> Implemented state reconciliation and reconnection buffers using Photon PUN / Custom Sockets, allowing players who experience momentary cellular signal drops to reconnect within seconds without losing their match state.</li>
+                <li><strong>Live-Service Feature Integration:</strong> Integrated Blitz timer modes, real-time in-game voice chat rooms, social buddy invites, and seasonal tournament leaderboards.</li>
+                <li><strong>Monetization & Ad Mediation Pipelines:</strong> Integrated hybrid ad monetization (Rewarded Video, Interstitial, Native Banners) and Google Play In-App Billing with fraud prevention checks and fallback caching.</li>
+              </ul>
+            </div>
+
+            <div class="case-study-block">
+              <h2><i class="fa-solid fa-chart-line"></i> Optimization Results & Impact</h2>
+              <p>
+                <strong>Memory Footprint Reduction:</strong> Reduced peak RAM usage by 24% by converting runtime texture instantiations into pre-cached sprite atlases and implementing texture streaming.
+              </p>
+              <p>
+                <strong>Zero Crash ANRs on Low-End Profiles:</strong> Re-architected asynchronous asset loading and socket callbacks onto background task queues, virtually eliminating Application Not Responding (ANR) occurrences during intense network handshakes.
+              </p>
+            </div>
+          </div>
+
+          <!-- Right Sidebar: Quick Specs -->
+          <aside class="project-sidebar">
+            <div class="specs-card">
+              <h3>Project Specs</h3>
+              
+              <div class="spec-item">
+                <span class="spec-label">Role</span>
+                <span class="spec-value">Game Developer / UI-UX & Live Ops</span>
+              </div>
+
+              <div class="spec-item">
+                <span class="spec-label">Studio</span>
+                <span class="spec-value">BlackLight Studio Works</span>
+              </div>
+
+              <div class="spec-item">
+                <span class="spec-label">Scale / Downloads</span>
+                <span class="spec-value" style="color: var(--accent-cyan); font-weight: 700;">100 Million+ Players</span>
+              </div>
+
+              <div class="spec-item">
+                <span class="spec-label">Game Engine</span>
+                <span class="spec-value">Unity (C#)</span>
+              </div>
+
+              <div class="spec-item">
+                <span class="spec-label">Networking</span>
+                <span class="spec-value">Photon Multiplayer / WebSockets</span>
+              </div>
+
+              <div class="spec-item">
+                <span class="spec-label">Key Systems</span>
+                <span class="spec-value">Real-Time Sync, Voice Chat, IAP, AdMob</span>
+              </div>
+            </div>
+
+            <div class="specs-card">
+              <h3>Tech Stack</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">Unity C#</span>
+                <span class="skill-tag">Photon Multiplayer</span>
+                <span class="skill-tag">Unity UI Profiler</span>
+                <span class="skill-tag">AdMob Mediation</span>
+                <span class="skill-tag">Google Play IAP</span>
+                <span class="skill-tag">Voice Chat SDK</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+
+        <!-- Screenshot Gallery -->
+        <div class="gallery-section">
+          <div class="section-header" style="margin-bottom: 30px; text-align: left;">
+            <span class="badge">Visual Archive</span>
+            <h2 class="section-title" style="font-size: 1.8rem;">Store Showcase & Game Visuals (Google Play & App Store)</h2>
+          </div>
+
+          <div class="gallery-grid">
+            <div class="gallery-item">
+              <img src="../images/ludo-play-screen-1.jpg" alt="Ludo Super Star - Live Match Board Gameplay">
+              <div class="gallery-caption">Google Play: Real-Time Board Mechanics & Visual Feedback</div>
+            </div>
+            <div class="gallery-item">
+              <img src="../images/ludo-play-screen-2.jpg" alt="Ludo Super Star - Multiplayer Matchmaking & Lobby">
+              <div class="gallery-caption">Google Play: Photon Multiplayer Matchmaking & Social Lobbies</div>
+            </div>
+            <div class="gallery-item">
+              <img src="../images/ludo-play-screen-3.jpg" alt="Ludo Super Star - Quick Blitz Mode">
+              <div class="gallery-caption">Google Play: Blitz Speed Mode with Low-Latency Synchronization</div>
+            </div>
+            <div class="gallery-item">
+              <img src="../images/ludo-play-screen-4.jpg" alt="Ludo Super Star - Live Voice Chat & Social Hub">
+              <div class="gallery-caption">Google Play: Integrated Real-Time Voice Chat & Emote Reactions</div>
+            </div>
+            <div class="gallery-item">
+              <img src="../images/ludo-apple-screen-1.png" alt="Ludo Super Star - Apple App Store Classic & Master Mode">
+              <div class="gallery-caption">Apple App Store: High-DPI Classic & Master Board Modes</div>
+            </div>
+            <div class="gallery-item">
+              <img src="../images/ludo-apple-screen-2.jpg" alt="Ludo Super Star - Apple App Store Online Arena">
+              <div class="gallery-caption">Apple App Store: 4-Player International Competitive Arena</div>
+            </div>
+            <div class="gallery-item">
+              <img src="../images/ludo-apple-screen-3.png" alt="Ludo Super Star - Apple App Store Custom Boards & Dice">
+              <div class="gallery-caption">Apple App Store: Unlockable Dice Themes & Board Visual Customization</div>
+            </div>
+            <div class="gallery-item">
+              <img src="../images/Ludo.png" alt="Ludo Super Star - Branding Icon">
+              <div class="gallery-caption">Global Branding: 100M+ Downloads Official App Icon</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Next / Prev Pagination -->
+        <div class="project-pagination">
+          <div class="pagination-grid">
+            <a href="elebend.html" class="pagination-card">
+              <span class="pagination-dir"><i class="fa-solid fa-arrow-left"></i> Previous Project</span>
+              <span class="pagination-title">Elebend: Elemental RTS</span>
+            </a>
+            <a href="bhide-scooter-race.html" class="pagination-card next">
+              <span class="pagination-dir">Next Project <i class="fa-solid fa-arrow-right"></i></span>
+              <span class="pagination-title">Bhide Scooter Race (Physics Racing)</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <div class="footer-info">
+          <p>© Girik Garg. Unity Developer & Systems Programmer.</p>
+        </div>
+        <div class="footer-social-links">
+          <a href="https://github.com/girikgarg8" target="_blank" class="social-icon-btn" title="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://play.google.com/store/apps/details?id=com.blacklightsw.ludo" target="_blank" class="social-icon-btn" title="Google Play Store"><i class="fa-brands fa-google-play"></i></a>
+          <a href="https://apps.apple.com/app/ludo-superstar/id1314264574" target="_blank" class="social-icon-btn" title="Apple App Store"><i class="fa-brands fa-apple"></i></a>
+          <a href="https://www.linkedin.com/in/girik-garg132/" target="_blank" class="social-icon-btn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="tel:+918445831464" class="social-icon-btn" title="Phone"><i class="fa-solid fa-phone"></i></a>
+          <a href="mailto:girikgarg1@gmail.com" class="social-icon-btn" title="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="../assets/js/portfolio.js"></script>
+  <script>
+    document.getElementById('play-video-btn')?.addEventListener('click', () => {
+      const wrapper = document.querySelector('.video-poster-placeholder');
+      const iframe = document.getElementById('video-iframe');
+      if (wrapper && iframe) {
+        wrapper.style.display = 'none';
+        iframe.style.display = 'block';
+        iframe.src = "https://www.youtube-nocookie.com/embed/LunR5Lscy1E?autoplay=1";
+      }
+    });
+  </script>
+</body>
+</html>
+
+
+

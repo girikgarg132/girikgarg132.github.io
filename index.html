@@ -1,554 +1,781 @@
-<!DOCTYPE HTML>
-<!--
-	Read Only by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Girik Garg | Portfolio Website</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Girik Garg - Technical Director & Unity Systems Programmer</title>
+  <meta name="description" content="Portfolio of Girik Garg, Technical Director & Unity Systems Programmer with 4+ years of industry experience. Specializing in authoritative multiplayer, deterministic physics, and 60 FPS mobile optimization at 100M+ scale.">
 
-		<!-- Header -->
-			<section id="header">
-				<header>
-					<span class="image avatar"><img src="images/avatar.png" alt="" /></span>
-					<h1 id="logo">Girik Garg</h1>
-					<p>
-                        Game Developer crafting virtual wonders,
-                        <br/>
-                        one line of code at a time
-                    </p>
-				</header>
-				<nav id="nav">
-					<ul>
-						<li><a href="#one" class="active">About</a></li>
-						<li><a href="#two">Things I Know</a></li>
-						<li><a href="#three">Professional Projects</a></li>
-						<li><a href="#four">Personal Projects</a></li>
-						<li><a href="#five">Contact</a></li>
-					</ul>
-				</nav>
-				<footer>
-					<ul class="icons">
-						<li><a href="https://www.linkedin.com/in/girik-garg132/" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-						<li><a href="https://girik-garg.itch.io/" target="_blank" class="icon brands fa-itch-io"><span class="label">ItchIo</span></a></li>
-                        <li><a href="tel:+918445831464" target="_blank" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
-						<li><a href="mailto:girikgarg1@gmail.com" target="_blank" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-					</ul>
-				</footer>
-			</section>
+  <!-- Clean, Modern Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-				<!-- Main -->
-					<div id="main">
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="assets/css/portfolio.css">
 
-						<!-- One -->
-							<section id="one">
-								<!--<div class="image main" data-position="center">
-									<img src="images/banner.png" alt="" />
-								</div>-->
-								<div class="container">
-									<header class="major">
-										<h2>Game Developer</h2>
-										<p>Architect of Virtual Realities and <br>
-                                            Master of Interactive Imagination.</p>
-									</header>
-									<p>
-                                        Passionate about crafting captivating gaming experiences, I aspire to excel as a 
-                                        <b>Game Developer proficient in Unity development.</b> With a Computer Science degree and extensive Unity expertise, 
-                                        I specialize in mechanics, physics, and both 2D and 3D game development. Eager to learn and stay current, 
-                                        I contribute to Unity's community, shaping innovative, thrilling games.
-                                        <br><br>
-                                        Proficient in <b>multiplayer programming with Photon</b>, 
-                                        I adeptly implement <b>APIs for diverse functionalities</b>, 
-                                        including ads, in-app purchases, and analytics to optimize user experience.
-                                    </p>
-								</div>
-							</section>
+  <!-- Immediate Theme Initialization (prevents flash of wrong theme) -->
+  <script>
+    (function() {
+      var savedTheme = localStorage.getItem('girik_theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+  </script>
+</head>
+<body>
 
-						<!-- Two -->
-							<section id="two">
-								<div class="container">
-									<h3>Things I Know</h3>
-                                    <br><br>
-									<ul class="feature-icons">
-										<li class="icon solid fa-code">C++</li>
-										<li class="icon brands fa-unity">Unity Engine</li>
-										<li class="icon solid fa-money-check-dollar">IAP, Ad monetization</li>
-										<li class="icon solid fa-users">Multiplayer Programming</li>
-										<li class="icon solid fa-screwdriver-wrench">Tool Development</li>
-										<li class="icon solid fa-book">Documentation</li>
-									</ul>
-								</div>
-							</section>
+  <!-- Top Navigation Bar -->
+  <header class="site-nav">
+    <div class="container nav-inner">
+      <a href="#hero" class="nav-brand">
+        <div class="brand-symbol">GG</div>
+        <div class="brand-details">
+          <span class="brand-name">Girik Garg</span>
+          <span class="brand-role">Game Systems Programmer</span>
+        </div>
+      </a>
 
-						<!-- Three -->
-							<section id="three">
-								<div class="container">
-									<h3>Professional Projects</h3>
-                                    <br>
-									<div class="features">
-										<article>
-											<a href="https://store.steampowered.com/app/4525340/Elebend/" target="_blank" class="image"><img src="images/Elebend Header.jpg" alt="" /></a>
-											<div class="inner">
-												<h4><a href="https://store.steampowered.com/app/4525340/Elebend/" target="_blank">Elebend</a></h4>
-												<p>Elebend is an elemental RTS by Astrode Studio built for PC and Mobile. This portfolio piece highlights cross-platform architecture, blending lane-based strategy with real-time mana mechanics for competitive play.</p>
-											</div>
-										</article>
-										<article>
-											<a href="https://play.google.com/store/apps/details?id=com.blacklightsw.ludo" target="_blank" class="image"><img src="images/Ludo.png" alt="" /></a>
-											<div class="inner">
-												<h4><a href="https://play.google.com/store/apps/details?id=com.blacklightsw.ludo" target="_blank">Ludo Super Star</a></h4>
-												<p>Ludo SuperStar features a high-performance UI/UX design optimized for massive scale. Developed by BlackLight Studio Works, it integrates intuitive navigation for real-time multiplayer, social features, and Blitz modes. The interface balances complex live-service elements—like voice chat and social syncing—with a clean, user-centric layout that supports a seamless experience for 100M+ users.</p>
-											</div>
-										</article>
-										<article>
-											<a href="https://tinyurl.com/bhide-scooter-race" target="_blank" class="image"><img src="images/Bhide Scooter Race.webp" alt="" /></a>
-											<div class="inner">
-												<h4><a href="https://tinyurl.com/bhide-scooter-race" target="_blank">Bhide Scooter Race</a></h4>
-												<p>Trending game where players embody bhide riding a scooter, navigating tough terrains, collecting coins for upgrades, and unlocking characters/terrains. Fast-paced, strategic race for victory</p>
-											</div>
-										</article>
-										<article>
-											<a href="" class="image"><img src="images/locked.jpg" alt="" /></a>
-											<div class="inner">
-												<h4><a href="">Unreleased Game</a></h4>
-												<p>It is a mobile gaming platform that offers a diverse collection of skill-based games. Players can engage in a variety of exciting games across genres, competing with opponents to showcase their skills and achieve high scores. The platform provides a competitive and entertaining gaming experience for users of all ages.</p>
-											</div>
-										</article>
-									</div>
-								</div>
-							</section>
-                        
-                        <!-- Four -->
-							<section id="four">
-								<div class="container">
-									<h3>Personal Projects</h3>
-                                    <br>
-									<div class="features">
-										<article>
-											<a href="https://girik-garg.itch.io/bolts-and-bullets" target="_blank" class="image"><img src="images/Bolts And Bullets.png" alt="" /></a>
-											<div class="inner">
-												<h4><a href="https://girik-garg.itch.io/bolts-and-bullets" target="_blank">Bolts and Bullets</a></h4>
-												<p>A top-down 2D shooting game with a robotic post-apocalyptic theme</p>
-											</div>
-										</article>
-										<article>
-											<a href="https://girik-garg.itch.io/tower-bizzare-adventure" target="_blank" class="image"><img src="images/Tower Bizzare Adventure.png" alt="" /></a>
-											<div class="inner">
-												<h4><a href="https://girik-garg.itch.io/tower-bizzare-adventure" target="_blank">TOWER BIZZARE ADVENTURE</a></h4>
-												<p>A Tower Defence game where player need to stop enemies from reaching the King</p>
-											</div>
-										</article>
-										<article>
-											<a href="https://dragoryu.itch.io/platform-factory" target="_blank" class="image"><img src="images/Platform Factory.png" alt="" /></a>
-											<div class="inner">
-												<h4><a href="https://dragoryu.itch.io/platform-factory" target="_blank">Platform Factory</a></h4>
-												<p>A Side Scroller 2D Endless survival game where you have to create and align platforms to ensure your survival.</p>
-											</div>
-										</article>
-										<article>
-											<a href="https://robok9.itch.io/hell-racer" target="_blank" class="image"><img src="images/Hell Racer.png" alt="" /></a>
-											<div class="inner">
-												<h4><a href="https://robok9.itch.io/hell-racer" target="_blank">Hell Racer</a></h4>
-												<p>Inspired by chrome's dinosaur game you need to dodge the incoming monsters and make your way up to heaven.</p>
-											</div>
-										</article>
-										<article>
-											<a href="https://girik-garg.itch.io/object-creation-game" target="_blank" class="image"><img src="images/Object Creation Game.png" alt="" /></a>
-											<div class="inner">
-												<h4><a href="https://girik-garg.itch.io/object-creation-game" target="_blank">Object Creation Game</a></h4>
-												<p>A VR Game where you will be provided with parts of an object and you need to complete the object.</p>
-											</div>
-										</article>
-									</div>
-								</div>
-							</section>
+      <ul class="nav-links">
+        <li><a href="#hero" class="nav-link active">Home</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#architecture" class="nav-link">Architecture</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
 
-						<!-- Five -->
-							<section id="five">
-								<div class="container">
-									<h3>Contact Me</h3>
-									<form method="POST" action="https://api.web3forms.com/submit">
-										<input type="hidden" name="access_key" value="b02dd5d3-4bc2-4a1b-9339-7e2bfa0473e2">
-										<div class="row gtr-uniform">
-											<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
-											<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
-											<div class="col-12"><input type="text" name="subject" id="subject" placeholder="Subject" /></div>
-											<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="6"></textarea></div>
-											<div class="h-captcha" data-captcha="true"></div>
-											<div class="col-12">
-												<ul class="actions">
-													<li><input type="submit" class="primary" value="Send Message" /></li>
-													<li><input type="reset" value="Reset Form" /></li>
-												</ul>
-											</div>
-										</div>
-									</form>
-								</div>
-							</section>
+      <div class="nav-cta-group">
+        <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle Day / Night Mode" title="Toggle Day / Night Mode">
+          <i class="fa-solid fa-sun icon-sun"></i>
+          <i class="fa-solid fa-moon icon-moon"></i>
+        </button>
+        <a href="#contact" class="btn btn-primary btn-sm">Get In Touch</a>
+        <button class="mobile-toggle" aria-label="Toggle navigation menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
 
-						<!-- Five -->
-						<!--
-							<section id="five">
-								<div class="container">
-									<h3>Elements</h3>
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        
+        <!-- Left: Introduction -->
+        <div class="hero-content">
+          <div class="hero-status-pill">
+            <span class="status-dot-pulse"></span>
+            <span>Available for Technical Leadership & Client Projects</span>
+          </div>
 
-									<section>
-										<h4>Text</h4>
-										<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-										This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-										This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-										<hr />
-										<header>
-											<h4>Heading with a Subtitle</h4>
-											<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
-										</header>
-										<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-										<header>
-											<h5>Heading with a Subtitle</h5>
-											<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
-										</header>
-										<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-										<hr />
-										<h2>Heading Level 2</h2>
-										<h3>Heading Level 3</h3>
-										<h4>Heading Level 4</h4>
-										<h5>Heading Level 5</h5>
-										<h6>Heading Level 6</h6>
-										<hr />
-										<h5>Blockquote</h5>
-										<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-										<h5>Preformatted</h5>
-										<pre><code>i = 0;
+          <h1 class="hero-headline">
+            Crafting high-scale game systems, <span class="text-gradient">authoritative multiplayer</span> & playable worlds.
+          </h1>
 
-while (!deck.isInOrder()) {
-    print 'Iteration ' + i;
-    deck.shuffle();
-    i++;
-}
+          <p class="hero-lead">
+            Hi, I'm <strong>Girik Garg</strong> - Technical Director & Unity Systems Programmer with 4+ years of industry experience. Leading engineering for <em>Elebend</em> (Steam & Mobile RTS) and previously scaled <em>Ludo Super Star</em> to <strong>100M+ downloads</strong>.
+          </p>
 
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-									</section>
+          <p class="hero-bio">
+            I specialize in building deterministic multiplayer architectures, zero-allocation C# memory pipelines, and locking 60 FPS on low-end mobile hardware. Proficient in <strong>Netcode for GameObjects (NGO)</strong>, <strong>Photon PUN</strong>, Universal Render Pipeline (URP), and over-the-air Addressables deployment.
+          </p>
 
-									<section>
-										<h4>Lists</h4>
-										<div class="row">
-											<div class="col-6 col-12-xsmall">
-												<h5>Unordered</h5>
-												<ul>
-													<li>Dolor pulvinar etiam magna etiam.</li>
-													<li>Sagittis adipiscing lorem eleifend.</li>
-													<li>Felis enim feugiat dolore viverra.</li>
-												</ul>
-												<h5>Alternate</h5>
-												<ul class="alt">
-													<li>Dolor pulvinar etiam magna etiam.</li>
-													<li>Sagittis adipiscing lorem eleifend.</li>
-													<li>Felis enim feugiat dolore viverra.</li>
-												</ul>
-											</div>
-											<div class="col-6 col-12-xsmall">
-												<h5>Ordered</h5>
-												<ol>
-													<li>Dolor pulvinar etiam magna etiam.</li>
-													<li>Etiam vel felis at lorem sed viverra.</li>
-													<li>Felis enim feugiat dolore viverra.</li>
-													<li>Dolor pulvinar etiam magna etiam.</li>
-													<li>Etiam vel felis at lorem sed viverra.</li>
-													<li>Felis enim feugiat dolore viverra.</li>
-												</ol>
-												<h5>Icons</h5>
-												<ul class="icons">
-													<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-													<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-													<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-													<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-													<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-													<li><a href="#" class="icon brands fa-tumblr"><span class="label">Tumblr</span></a></li>
-												</ul>
-											</div>
-										</div>
-										<h5>Actions</h5>
-										<ul class="actions">
-											<li><a href="#" class="button primary">Default</a></li>
-											<li><a href="#" class="button">Default</a></li>
-											<li><a href="#" class="button alt">Default</a></li>
-										</ul>
-										<ul class="actions small">
-											<li><a href="#" class="button primary small">Small</a></li>
-											<li><a href="#" class="button small">Small</a></li>
-											<li><a href="#" class="button alt small">Small</a></li>
-										</ul>
-										<div class="row">
-											<div class="col-3 col-6-medium col-12-xsmall">
-												<ul class="actions stacked">
-													<li><a href="#" class="button primary">Default</a></li>
-													<li><a href="#" class="button">Default</a></li>
-													<li><a href="#" class="button alt">Default</a></li>
-												</ul>
-											</div>
-											<div class="col-3 col-6 col-12-xsmall">
-												<ul class="actions stacked">
-													<li><a href="#" class="button primary small">Small</a></li>
-													<li><a href="#" class="button small">Small</a></li>
-													<li><a href="#" class="button alt small">Small</a></li>
-												</ul>
-											</div>
-											<div class="col-3 col-6-medium col-12-xsmall">
-												<ul class="actions stacked">
-													<li><a href="#" class="button primary fit">Default</a></li>
-													<li><a href="#" class="button fit">Default</a></li>
-													<li><a href="#" class="button alt fit">Default</a></li>
-												</ul>
-											</div>
-											<div class="col-3 col-6-medium col-12-xsmall">
-												<ul class="actions stacked">
-													<li><a href="#" class="button primary small fit">Small</a></li>
-													<li><a href="#" class="button small fit">Small</a></li>
-													<li><a href="#" class="button alt small fit">Small</a></li>
-												</ul>
-											</div>
-										</div>
-									</section>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              <i class="fa-solid fa-gamepad"></i> Explore Shipped Games
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <i class="fa-regular fa-envelope"></i> Let's Talk
+            </a>
+            <button class="btn btn-outline btn-copy-email">
+              <i class="fa-regular fa-copy"></i> Copy Email
+            </button>
+          </div>
+        </div>
 
-									<section>
-										<h4>Table</h4>
-										<h5>Default</h5>
-										<div class="table-wrapper">
-											<table>
-												<thead>
-													<tr>
-														<th>Name</th>
-														<th>Description</th>
-														<th>Price</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>Item One</td>
-														<td>Ante turpis integer aliquet porttitor.</td>
-														<td>29.99</td>
-													</tr>
-													<tr>
-														<td>Item Two</td>
-														<td>Vis ac commodo adipiscing arcu aliquet.</td>
-														<td>19.99</td>
-													</tr>
-													<tr>
-														<td>Item Three</td>
-														<td> Morbi faucibus arcu accumsan lorem.</td>
-														<td>29.99</td>
-													</tr>
-													<tr>
-														<td>Item Four</td>
-														<td>Vitae integer tempus condimentum.</td>
-														<td>19.99</td>
-													</tr>
-													<tr>
-														<td>Item Five</td>
-														<td>Ante turpis integer aliquet porttitor.</td>
-														<td>29.99</td>
-													</tr>
-												</tbody>
-												<tfoot>
-													<tr>
-														<td colspan="2"></td>
-														<td>100.00</td>
-													</tr>
-												</tfoot>
-											</table>
-										</div>
+        <!-- Right: Profile Card -->
+        <div class="hero-portrait-card">
+          <div class="portrait-photo-box">
+            <img src="images/avatar.png" alt="Girik Garg - Technical Director & Game Programmer" class="portrait-photo">
+          </div>
+          <div class="portrait-meta-info">
+            <h3 class="portrait-meta-name">Girik Garg</h3>
+            <p class="portrait-meta-role">Technical Director • Astrode Studio</p>
+            <div class="portrait-quick-badges">
+              <span class="portrait-tag">Unity 3D & C#</span>
+              <span class="portrait-tag">Netcode & Photon</span>
+              <span class="portrait-tag">100M+ Scale</span>
+              <span class="portrait-tag">Agra, India</span>
+            </div>
+          </div>
+        </div>
 
-										<h5>Alternate</h5>
-										<div class="table-wrapper">
-											<table class="alt">
-												<thead>
-													<tr>
-														<th>Name</th>
-														<th>Description</th>
-														<th>Price</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>Item One</td>
-														<td>Ante turpis integer aliquet porttitor.</td>
-														<td>29.99</td>
-													</tr>
-													<tr>
-														<td>Item Two</td>
-														<td>Vis ac commodo adipiscing arcu aliquet.</td>
-														<td>19.99</td>
-													</tr>
-													<tr>
-														<td>Item Three</td>
-														<td> Morbi faucibus arcu accumsan lorem.</td>
-														<td>29.99</td>
-													</tr>
-													<tr>
-														<td>Item Four</td>
-														<td>Vitae integer tempus condimentum.</td>
-														<td>19.99</td>
-													</tr>
-													<tr>
-														<td>Item Five</td>
-														<td>Ante turpis integer aliquet porttitor.</td>
-														<td>29.99</td>
-													</tr>
-												</tbody>
-												<tfoot>
-													<tr>
-														<td colspan="2"></td>
-														<td>100.00</td>
-													</tr>
-												</tfoot>
-											</table>
-										</div>
-									</section>
+      </div>
 
-									<section>
-										<h4>Buttons</h4>
-										<ul class="actions">
-											<li><a href="#" class="button primary">Primary</a></li>
-											<li><a href="#" class="button">Default</a></li>
-											<li><a href="#" class="button alt">Alternate</a></li>
-										</ul>
-										<ul class="actions">
-											<li><a href="#" class="button primary large">Large</a></li>
-											<li><a href="#" class="button">Default</a></li>
-											<li><a href="#" class="button alt small">Small</a></li>
-										</ul>
-										<ul class="actions fit">
-											<li><a href="#" class="button primary fit">Fit</a></li>
-											<li><a href="#" class="button fit">Fit</a></li>
-											<li><a href="#" class="button alt fit">Fit</a></li>
-										</ul>
-										<ul class="actions fit small">
-											<li><a href="#" class="button primary fit small">Fit + Small</a></li>
-											<li><a href="#" class="button fit small">Fit + Small</a></li>
-											<li><a href="#" class="button alt fit small">Fit + Small</a></li>
-										</ul>
-										<ul class="actions">
-											<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
-											<li><a href="#" class="button icon solid fa-download">Icon</a></li>
-											<li><a href="#" class="button alt icon solid fa-check">Icon</a></li>
-										</ul>
-										<ul class="actions">
-											<li><span class="button primary disabled">Primary</span></li>
-											<li><span class="button disabled">Default</span></li>
-											<li><span class="button alt disabled">Alternate</span></li>
-										</ul>
-									</section>
+      <!-- Quick Metrics Banner -->
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <div class="metric-value">100M<span>+</span></div>
+          <div class="metric-label">Mobile Players Reached Worldwide</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">4<span>+</span></div>
+          <div class="metric-label">Years in Professional Game Dev</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">15<span>+</span></div>
+          <div class="metric-label">Commercial & Indie Titles Shipped</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">60<span>FPS</span></div>
+          <div class="metric-label">High-Performance Mobile Profiling</div>
+        </div>
+      </div>
 
-									<section>
-										<h4>Form</h4>
-										<form method="post" action="#">
-											<div class="row gtr-uniform">
-												<div class="col-6 col-12-xsmall">
-													<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
-												</div>
-												<div class="col-6 col-12-xsmall">
-													<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
-												</div>
-												<div class="col-12">
-													<select name="demo-category" id="demo-category">
-														<option value="">- Category -</option>
-														<option value="1">Manufacturing</option>
-														<option value="1">Shipping</option>
-														<option value="1">Administration</option>
-														<option value="1">Human Resources</option>
-													</select>
-												</div>
-												<div class="col-4 col-12-medium">
-													<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-													<label for="demo-priority-low">Low Priority</label>
-												</div>
-												<div class="col-4 col-12-medium">
-													<input type="radio" id="demo-priority-normal" name="demo-priority">
-													<label for="demo-priority-normal">Normal Priority</label>
-												</div>
-												<div class="col-4 col-12-medium">
-													<input type="radio" id="demo-priority-high" name="demo-priority">
-													<label for="demo-priority-high">High Priority</label>
-												</div>
-												<div class="col-6 col-12-medium">
-													<input type="checkbox" id="demo-copy" name="demo-copy">
-													<label for="demo-copy">Email me a copy of this message</label>
-												</div>
-												<div class="col-6 col-12-medium">
-													<input type="checkbox" id="demo-human" name="demo-human" checked>
-													<label for="demo-human">I am a human and not a robot</label>
-												</div>
-												<div class="col-12">
-													<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-												</div>
-												<div class="col-12">
-													<ul class="actions">
-														<li><input type="submit" value="Send Message" /></li>
-														<li><input type="reset" value="Reset" class="alt" /></li>
-													</ul>
-												</div>
-											</div>
-										</form>
-									</section>
+    </div>
+  </section>
 
-									<section>
-										<h4>Image</h4>
-										<h5>Fit</h5>
-										<span class="image fit"><img src="images/banner.jpg" alt="" /></span>
-										<div class="box alt">
-											<div class="row gtr-50 gtr-uniform">
-												<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-											</div>
-										</div>
-										<h5>Left &amp; Right</h5>
-										<p><span class="image left"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-										<p><span class="image right"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-									</section>
+  <!-- Projects Section (Cinematic Cards) -->
+  <section id="projects" class="section">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-cube"></i> Portfolio Showcase</span>
+        <h2 class="section-title">Shipped Titles & Case Studies</h2>
+        <p class="section-subtitle">
+          Commercial studio titles, massive live-ops ecosystems, and indie prototypes. Click any card to explore its dedicated deep-dive case study with gameplay video breakdowns.
+        </p>
+      </div>
 
-								</div>
-							</section>
-						-->
+      <!-- Category Filter -->
+      <div class="projects-filter-bar">
+        <div class="filter-group">
+          <button class="filter-btn active" data-filter="all">All Projects (8)</button>
+          <button class="filter-btn" data-filter="commercial">Commercial & Studio (4)</button>
+          <button class="filter-btn" data-filter="indie">Indie & Prototypes (4)</button>
+        </div>
+      </div>
 
-					</div>
+      <!-- Projects Grid -->
+      <div class="projects-grid">
 
-				<!-- Footer -->
-					<section id="footer">
-						<div class="container">
-							<ul class="copyright">
-								<li>&copy; Girik Garg. All rights reserved.</li>
-							</ul>
-						</div>
-					</section>
+        <!-- 1. Elebend -->
+        <a href="projects/elebend.html" class="project-card" data-category="commercial">
+          <div class="project-thumb-box">
+            <img src="images/Elebend Header.jpg" alt="Elebend RTS" class="project-thumb">
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-top-meta">
+              <span class="badge-pill badge-theme-accent">STEAM / PC & MOBILE</span>
+            </div>
+            <div class="project-title-row">
+              <h3 class="project-title">Elebend: Elemental RTS</h3>
+              <i class="fa-solid fa-arrow-up-right-from-square" style="color: var(--text-muted); font-size: 0.9rem;"></i>
+            </div>
+            <p class="project-card-desc">
+              High-concurrency elemental RTS by Astrode Studio. Engineered with authoritative Netcode for GameObjects (NGO), Cloud Code backend, Addressables over-the-air content, and fluid mana physics.
+            </p>
+            <div class="project-tags-strip">
+              <span class="tech-tag">Netcode (NGO)</span>
+              <span class="tech-tag">Cloud Code</span>
+              <span class="tech-tag">Addressables</span>
+              <span class="tech-tag">Cross-Platform</span>
+            </div>
+            <div class="project-card-footer">
+              <span class="case-study-cta">Read Case Study & Video <i class="fa-solid fa-arrow-right"></i></span>
+              <div class="card-store-links">
+                <span onclick="event.stopPropagation(); window.open('https://store.steampowered.com/app/4525340/Elebend/', '_blank');" class="ext-store-link" title="Steam Store">
+                  <i class="fa-brands fa-steam"></i>
+                </span>
+                <span onclick="event.stopPropagation(); window.open('https://play.google.com/store/apps/details?id=com.AstrodeStudio.Elebend', '_blank');" class="ext-store-link" title="Google Play Store">
+                  <i class="fa-brands fa-google-play"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+        </a>
 
-			</div>
+        <!-- 2. Ludo Super Star -->
+        <a href="projects/ludo-superstar.html" class="project-card" data-category="commercial">
+          <div class="project-thumb-box">
+            <img src="images/Ludo.png" alt="Ludo Super Star" class="project-thumb">
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-top-meta">
+              <span class="badge-pill badge-theme-accent">100M+ DOWNLOADS</span>
+            </div>
+            <div class="project-title-row">
+              <h3 class="project-title">Ludo Super Star</h3>
+              <i class="fa-solid fa-arrow-up-right-from-square" style="color: var(--text-muted); font-size: 0.9rem;"></i>
+            </div>
+            <p class="project-card-desc">
+              High-performance modernization and live-service engineering by Blacklight Studio Works. Spearheaded URP migration, memory profiling, and social SDK integrations serving millions of concurrent players.
+            </p>
+            <div class="project-tags-strip">
+              <span class="tech-tag">100M+ Scale</span>
+              <span class="tech-tag">URP Modernization</span>
+              <span class="tech-tag">Memory Profiler</span>
+              <span class="tech-tag">Social SDKs</span>
+            </div>
+            <div class="project-card-footer">
+              <span class="case-study-cta">Read Case Study & Video <i class="fa-solid fa-arrow-right"></i></span>
+              <div class="card-store-links">
+                <span onclick="event.stopPropagation(); window.open('https://play.google.com/store/apps/details?id=com.blacklightsw.ludo', '_blank');" class="ext-store-link" title="Google Play Store">
+                  <i class="fa-brands fa-google-play"></i>
+                </span>
+                <span onclick="event.stopPropagation(); window.open('https://apps.apple.com/us/app/ludo-superstar/id1314264574', '_blank');" class="ext-store-link" title="Apple App Store">
+                  <i class="fa-brands fa-apple"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+        </a>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			<script src="https://web3forms.com/client/script.js" async defer></script>
+        <!-- 3. Bhide Scooter Race -->
+        <a href="projects/bhide-scooter-race.html" class="project-card" data-category="commercial">
+          <div class="project-thumb-box">
+            <img src="images/Bhide Scooter Race.webp" alt="Bhide Scooter Race" class="project-thumb">
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-top-meta">
+              <span class="badge-pill badge-theme-accent">PHOTON PVP</span>
+            </div>
+            <div class="project-title-row">
+              <h3 class="project-title">Bhide Scooter Race</h3>
+              <i class="fa-solid fa-arrow-up-right-from-square" style="color: var(--text-muted); font-size: 0.9rem;"></i>
+            </div>
+            <p class="project-card-desc">
+              Real-time multiplayer 2D racing game using Photon framework. Features synchronized PvP networking, 2D Rigidbody suspension physics, in-game virtual economy, and responsive UGUI.
+            </p>
+            <div class="project-tags-strip">
+              <span class="tech-tag">Photon PUN</span>
+              <span class="tech-tag">WheelJoint2D</span>
+              <span class="tech-tag">IAP & Ads</span>
+              <span class="tech-tag">2D Physics</span>
+            </div>
+            <div class="project-card-footer">
+              <span class="case-study-cta">Read Case Study & Video <i class="fa-solid fa-arrow-right"></i></span>
+              <div class="card-store-links">
+                <span onclick="event.stopPropagation(); window.open('https://play.google.com/store/apps/details?id=com.neelamediatech.bhidescooterrace', '_blank');" class="ext-store-link" title="Google Play Store">
+                  <i class="fa-brands fa-google-play"></i>
+                </span>
+                <span onclick="event.stopPropagation(); window.open('https://apps.apple.com/app/bhide-scooter-race/id6446998597', '_blank');" class="ext-store-link" title="Apple App Store">
+                  <i class="fa-brands fa-apple"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+        </a>
 
-	</body>
+        <!-- 4. TMKOC Clubhouse -->
+        <a href="projects/tmkoc-clubhouse.html" class="project-card" data-category="commercial">
+          <div class="project-thumb-box">
+            <img src="images/tmkoc-clubhouse-banner.jpg" alt="TMKOC Clubhouse Platform" class="project-thumb">
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-top-meta">
+              <span class="badge-pill badge-theme-accent">15+ TITLES PLATFORM</span>
+            </div>
+            <div class="project-title-row">
+              <h3 class="project-title">TMKOC Clubhouse (Multi-Game)</h3>
+              <i class="fa-solid fa-arrow-up-right-from-square" style="color: var(--text-muted); font-size: 0.9rem;"></i>
+            </div>
+            <p class="project-card-desc">
+              Engineered a custom cross-platform native bridge between Flutter and Unity for Android and iOS. Integrated in-house APIs and scaled the ecosystem to 15+ game titles with zero memory leaks.
+            </p>
+            <div class="project-tags-strip">
+              <span class="tech-tag">Flutter-Unity Bridge</span>
+              <span class="tech-tag">In-House APIs</span>
+              <span class="tech-tag">Memory Unload</span>
+              <span class="tech-tag">15+ Titles</span>
+            </div>
+            <div class="project-card-footer">
+              <span class="case-study-cta">Read Case Study <i class="fa-solid fa-arrow-right"></i></span>
+              <div class="card-store-links">
+                <span onclick="event.stopPropagation(); window.open('https://play.google.com/store/apps/details?id=com.neelamediatech.Clubhouse', '_blank');" class="ext-store-link" title="Google Play Store">
+                  <i class="fa-brands fa-google-play"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- 5. Bolts and Bullets -->
+        <a href="projects/bolts-and-bullets.html" class="project-card" data-category="indie">
+          <div class="project-thumb-box">
+            <img src="images/bolts-and-bullets-header.jpg" alt="Bolts and Bullets" class="project-thumb">
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-top-meta">
+              <span class="badge-pill badge-theme-accent">ACTION SHOOTER</span>
+            </div>
+            <div class="project-title-row">
+              <h3 class="project-title">Bolts and Bullets</h3>
+              <i class="fa-solid fa-arrow-up-right-from-square" style="color: var(--text-muted); font-size: 0.9rem;"></i>
+            </div>
+            <p class="project-card-desc">
+              Fast-paced top-down twin-stick 2D shooter with a mechanized post-apocalyptic aesthetic. Features wave-based robotic AI state machines, screen shake juice, and weapon upgrade paths.
+            </p>
+            <div class="project-tags-strip">
+              <span class="tech-tag">Twin-Stick</span>
+              <span class="tech-tag">AI State Machine</span>
+              <span class="tech-tag">Game Feel</span>
+              <span class="tech-tag">Particle Pooling</span>
+            </div>
+            <div class="project-card-footer">
+              <span class="case-study-cta">Read Case Study & Video <i class="fa-solid fa-arrow-right"></i></span>
+              <span onclick="event.stopPropagation(); window.open('https://girik-garg.itch.io/bolts-and-bullets', '_blank');" class="ext-store-link" title="Play on Itch.io">
+                <i class="fa-brands fa-itch-io"></i>
+              </span>
+            </div>
+          </div>
+        </a>
+
+        <!-- 6. Tower Bizarre Adventure -->
+        <a href="projects/tower-bizarre-adventure.html" class="project-card" data-category="indie">
+          <div class="project-thumb-box">
+            <img src="images/tower-bizarre-header.jpg" alt="Tower Bizarre Adventure" class="project-thumb">
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-top-meta">
+              <span class="badge-pill badge-theme-accent">STRATEGY TD</span>
+            </div>
+            <div class="project-title-row">
+              <h3 class="project-title">Tower Bizarre Adventure</h3>
+              <i class="fa-solid fa-arrow-up-right-from-square" style="color: var(--text-muted); font-size: 0.9rem;"></i>
+            </div>
+            <p class="project-card-desc">
+              Tactical tower defense game. Defend the sovereign King using elemental turret synergies, dynamic waypoint pathfinding, and branched upgrade trees with zero-allocation pooling.
+            </p>
+            <div class="project-tags-strip">
+              <span class="tech-tag">A* Pathfinding</span>
+              <span class="tech-tag">ScriptableObjects</span>
+              <span class="tech-tag">Object Pooling</span>
+            </div>
+            <div class="project-card-footer">
+              <span class="case-study-cta">Read Case Study & Video <i class="fa-solid fa-arrow-right"></i></span>
+              <span onclick="event.stopPropagation(); window.open('https://girik-garg.itch.io/tower-bizzare-adventure', '_blank');" class="ext-store-link" title="Play on Itch.io">
+                <i class="fa-brands fa-itch-io"></i>
+              </span>
+            </div>
+          </div>
+        </a>
+
+        <!-- 7. Platform Factory -->
+        <a href="projects/platform-factory.html" class="project-card" data-category="indie">
+          <div class="project-thumb-box">
+            <img src="images/platform-factory-header.jpg" alt="Platform Factory" class="project-thumb">
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-top-meta">
+              <span class="badge-pill badge-theme-accent">JAM WINNER</span>
+            </div>
+            <div class="project-title-row">
+              <h3 class="project-title">Platform Factory</h3>
+              <i class="fa-solid fa-arrow-up-right-from-square" style="color: var(--text-muted); font-size: 0.9rem;"></i>
+            </div>
+            <p class="project-card-desc">
+              Innovative 2D side-scrolling survival puzzle. Instead of jumping, you dynamically spawn, rotate, and align platforms in real time beneath a continuously sprinting runner.
+            </p>
+            <div class="project-tags-strip">
+              <span class="tech-tag">Jam Winner</span>
+              <span class="tech-tag">Raycasting</span>
+              <span class="tech-tag">Mechanic Design</span>
+              <span class="tech-tag">Physics Puzzle</span>
+            </div>
+            <div class="project-card-footer">
+              <span class="case-study-cta">Read Case Study & Video <i class="fa-solid fa-arrow-right"></i></span>
+              <span onclick="event.stopPropagation(); window.open('https://dragoryu.itch.io/platform-factory', '_blank');" class="ext-store-link" title="Play on Itch.io">
+                <i class="fa-brands fa-itch-io"></i>
+              </span>
+            </div>
+          </div>
+        </a>
+
+        <!-- 8. Hell Racer -->
+        <a href="projects/hell-racer.html" class="project-card" data-category="indie">
+          <div class="project-thumb-box">
+            <img src="images/hell-racer-header.jpg" alt="Hell Racer" class="project-thumb">
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-top-meta">
+              <span class="badge-pill badge-theme-accent">ENDLESS RUNNER</span>
+            </div>
+            <div class="project-title-row">
+              <h3 class="project-title">Hell Racer</h3>
+              <i class="fa-solid fa-arrow-up-right-from-square" style="color: var(--text-muted); font-size: 0.9rem;"></i>
+            </div>
+            <p class="project-card-desc">
+              Reflex runner built with custom coyote-time mechanics and jump buffering. Dodge incoming purgatory monsters and race from the depths of hell toward heaven.
+            </p>
+            <div class="project-tags-strip">
+              <span class="tech-tag">Coyote Time</span>
+              <span class="tech-tag">Jump Buffering</span>
+              <span class="tech-tag">Input Tuning</span>
+              <span class="tech-tag">Parallax 2D</span>
+            </div>
+            <div class="project-card-footer">
+              <span class="case-study-cta">Read Case Study & Video <i class="fa-solid fa-arrow-right"></i></span>
+              <span onclick="event.stopPropagation(); window.open('https://robok9.itch.io/hell-racer', '_blank');" class="ext-store-link" title="Play on Itch.io">
+                <i class="fa-brands fa-itch-io"></i>
+              </span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Architecture (4 Pillars) -->
+  <section id="architecture" class="section" style="background: rgba(16, 18, 26, 0.4);">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-layer-group"></i> Engineering Standards</span>
+        <h2 class="section-title">How I Build Game Systems That Scale</h2>
+        <p class="section-subtitle">
+          Proven architectural principles forged across 4+ years of shipping commercial products under device fragmentation, server spikes, and strict mobile memory budgets.
+        </p>
+      </div>
+
+      <div class="arch-grid">
+        <!-- 01 Multiplayer -->
+        <div class="arch-card">
+          <div class="arch-icon-wrap"><i class="fa-solid fa-network-wired"></i></div>
+          <h3 class="arch-title">Authoritative Multiplayer & State Sync</h3>
+          <p class="arch-desc">
+            Deterministic client-side prediction, latency compensation, lag-buffered state interpolation, and server reconciliation. Built using Unity Netcode for GameObjects (NGO) and Photon PUN to prevent desyncs and cheat vectors in competitive environments.
+          </p>
+          <div class="arch-pills">
+            <span class="tech-tag">Netcode for GameObjects</span>
+            <span class="tech-tag">Client Prediction</span>
+            <span class="tech-tag">Photon PUN</span>
+            <span class="tech-tag">Delta Compression</span>
+          </div>
+        </div>
+
+        <!-- 02 Memory & GC -->
+        <div class="arch-card">
+          <div class="arch-icon-wrap"><i class="fa-solid fa-microchip"></i></div>
+          <h3 class="arch-title">Zero-Allocation Loops & Profiling</h3>
+          <p class="arch-desc">
+            Strict 0 Bytes/frame garbage collection allocation policy in <code>Update()</code> and <code>FixedUpdate()</code> loops. Architected with custom generic object pools, struct arrays, avoiding boxing/unboxing, and rigorous verification in the Unity Memory Profiler.
+          </p>
+          <div class="arch-pills">
+            <span class="tech-tag">0 GC Allocations</span>
+            <span class="tech-tag">Generic Object Pooling</span>
+            <span class="tech-tag">Memory Profiler</span>
+            <span class="tech-tag">Burst & SIMD</span>
+          </div>
+        </div>
+
+        <!-- 03 Mobile & Rendering -->
+        <div class="arch-card">
+          <div class="arch-icon-wrap"><i class="fa-solid fa-gauge-high"></i></div>
+          <h3 class="arch-title">Draw-Call Batching & URP Modernization</h3>
+          <p class="arch-desc">
+            Migrating legacy pipelines to the Universal Render Pipeline (URP). Combining materials into texture atlases, enabling dynamic batching and GPU instancing to keep total draw calls under 45, locking a consistent 60 FPS on low-tier 2018 Snapdragon devices.
+          </p>
+          <div class="arch-pills">
+            <span class="tech-tag">URP Migration</span>
+            <span class="tech-tag">GPU Instancing</span>
+            <span class="tech-tag">Draw-Call Profiling</span>
+            <span class="tech-tag">Shader Graph</span>
+          </div>
+        </div>
+
+        <!-- 04 Live-Ops & Bridges -->
+        <div class="arch-card">
+          <div class="arch-icon-wrap"><i class="fa-solid fa-cloud-arrow-down"></i></div>
+          <h3 class="arch-title">Addressables, Cloud Code & Native Bridges</h3>
+          <p class="arch-desc">
+            Decoupling binary sizes via Unity Addressables for smooth over-the-air content delivery. Developing native two-way bridges between Flutter/native OS and the Unity runtime, integrating Cloud Code for serverless backend actions, and automated CI/CD builds.
+          </p>
+          <div class="arch-pills">
+            <span class="tech-tag">Addressables OTA</span>
+            <span class="tech-tag">Flutter-Unity Bridge</span>
+            <span class="tech-tag">Unity Cloud Code</span>
+            <span class="tech-tag">CI/CD Pipelines</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Career Experience Timeline -->
+  <section id="experience" class="section">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-briefcase"></i> Track Record</span>
+        <h2 class="section-title">Professional Experience (4+ Years)</h2>
+        <p class="section-subtitle">
+          Engineering roles across live-ops platforms, massive-scale commercial casual games, and independent studio titles.
+        </p>
+      </div>
+
+      <div class="experience-list">
+
+        <!-- Role 1: Astrode Studio -->
+        <div class="experience-card">
+          <div class="exp-head">
+            <div>
+              <h3 class="exp-role">Technical Director and Architect</h3>
+              <div class="exp-company">
+                <i class="fa-solid fa-building"></i> Astrode Studio • Remote
+              </div>
+            </div>
+            <span class="exp-time-badge">Mar 2025 – Present</span>
+          </div>
+          <ul class="exp-bullets">
+            <li>Pioneering the architecture of a high-concurrency, live-service multiplayer RTS title in Unity (<em>Elebend</em> on Steam), leveraging <strong>Netcode for GameObjects (NGO)</strong>, <strong>Cloud Code</strong>, and <strong>Addressables</strong> for scalable over-the-air deployment.</li>
+            <li>Engineering end-to-end technical infrastructure, encompassing custom multiplayer networking, authoritative unit combat logic, automated build pipelines, and deep-data telemetry.</li>
+            <li>Directing the engineering team via high-standard code reviews and CI/CD workflows, enforcing architecture consistency across client and server layers.</li>
+            <li>Optimizing rendering and memory budgets for legacy hardware, maintaining a consistent 60 FPS on mobile chips dating back to 2018.</li>
+          </ul>
+          <div class="exp-tags">
+            <span class="tech-tag">Netcode for GameObjects</span>
+            <span class="tech-tag">Cloud Code</span>
+            <span class="tech-tag">Addressables</span>
+            <span class="tech-tag">CI/CD Pipelines</span>
+            <span class="tech-tag">Steamworks SDK</span>
+          </div>
+        </div>
+
+        <!-- Role 2: Blacklight Studio Works -->
+        <div class="experience-card">
+          <div class="exp-head">
+            <div>
+              <h3 class="exp-role">Unity Developer</h3>
+              <div class="exp-company">
+                <i class="fa-solid fa-building"></i> Blacklight Studio Works • Noida
+              </div>
+            </div>
+            <span class="exp-time-badge">May 2024 – Mar 2025</span>
+          </div>
+          <ul class="exp-bullets">
+            <li>Optimized high-scale gameplay for low-end hardware on <em>Ludo Super Star</em> (<strong>100M+ Downloads Milestone</strong>), implementing strict memory budgeting and draw-call management across a fragmented device landscape.</li>
+            <li>Spearheaded technical modernization leading the migration to the <strong>Universal Render Pipeline (URP)</strong> and refactored legacy systems across engine version upgrades.</li>
+            <li>Engineered critical high-scale integrations, including <strong>Facebook Limited Login for iOS</strong> and automated social reward systems, while fixing live production-tier issues.</li>
+            <li>Managed live-service updates for analytics, security compliance, and gameplay stability ensuring 100% compatibility with evolving Google Play OS policies.</li>
+          </ul>
+          <div class="exp-tags">
+            <span class="tech-tag">100M+ Scale</span>
+            <span class="tech-tag">URP Modernization</span>
+            <span class="tech-tag">Draw-Call Profiling</span>
+            <span class="tech-tag">Facebook iOS SDK</span>
+          </div>
+        </div>
+
+        <!-- Role 3: Nilee Games -->
+        <div class="experience-card">
+          <div class="exp-head">
+            <div>
+              <h3 class="exp-role">Unity Developer</h3>
+              <div class="exp-company">
+                <i class="fa-solid fa-building"></i> Nilee Games and Future Technologies
+              </div>
+            </div>
+            <span class="exp-time-badge">Jul 2022 – Nov 2023</span>
+          </div>
+          <ul class="exp-bullets">
+            <li>Led full-cycle game development from prototyping to production deployment, achieving <strong>500k+ downloads</strong> collaborating with cross-functional art and design teams.</li>
+            <li>Architected high-performance modular systems that <strong>reduced load times and binary build sizes by 25%</strong> while managing version control, code reviews, and monetization SDKs.</li>
+            <li>Engineered a custom cross-platform native bridge between <strong>Flutter and Unity for Android and iOS</strong>, integrating internal APIs to scale an interactive platform to 15+ titles.</li>
+          </ul>
+          <div class="exp-tags">
+            <span class="tech-tag">Flutter-Unity Native Bridge</span>
+            <span class="tech-tag">15+ Titles Platform</span>
+            <span class="tech-tag">500k+ Downloads</span>
+            <span class="tech-tag">Monetization SDKs</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Technical Arsenal (Skills) -->
+  <section id="skills" class="section" style="background: rgba(16, 18, 26, 0.4);">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-screwdriver-wrench"></i> Technical Arsenal</span>
+        <h2 class="section-title">Core Skills & Engineering Capabilities</h2>
+        <p class="section-subtitle">
+          Verified production capabilities across game engines, network protocols, tool development, and cloud services.
+        </p>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Category 1 -->
+        <div class="skill-category-card">
+          <h4 class="skill-category-title"><i class="fa-brands fa-unity"></i> Engines & Code</h4>
+          <div class="skill-tags-group">
+            <span class="skill-pill">Unity 3D / 2D</span>
+            <span class="skill-pill">C# .NET</span>
+            <span class="skill-pill">C++</span>
+            <span class="skill-pill">Burst Compiler</span>
+            <span class="skill-pill">Rigidbody Physics</span>
+            <span class="skill-pill">ScriptableObjects</span>
+            <span class="skill-pill">State Machines</span>
+          </div>
+        </div>
+
+        <!-- Category 2 -->
+        <div class="skill-category-card">
+          <h4 class="skill-category-title"><i class="fa-solid fa-network-wired"></i> Multiplayer & Backend</h4>
+          <div class="skill-tags-group">
+            <span class="skill-pill">Netcode for GameObjects</span>
+            <span class="skill-pill">Photon PUN & Quantum</span>
+            <span class="skill-pill">Unity Gaming Services</span>
+            <span class="skill-pill">Unity Cloud Code</span>
+            <span class="skill-pill">Addressables OTA</span>
+            <span class="skill-pill">Client Prediction</span>
+            <span class="skill-pill">Lobby & Relay</span>
+          </div>
+        </div>
+
+        <!-- Category 3 -->
+        <div class="skill-category-card">
+          <h4 class="skill-category-title"><i class="fa-solid fa-gauge-high"></i> Optimization</h4>
+          <div class="skill-tags-group">
+            <span class="skill-pill">Unity Memory Profiler</span>
+            <span class="skill-pill">Frame Debugger</span>
+            <span class="skill-pill">Zero-Allocation Loops</span>
+            <span class="skill-pill">Draw-Call Batching</span>
+            <span class="skill-pill">URP Modernization</span>
+            <span class="skill-pill">Texture Atlasing</span>
+            <span class="skill-pill">Legacy Mobile Silicon</span>
+          </div>
+        </div>
+
+        <!-- Category 4 -->
+        <div class="skill-category-card">
+          <h4 class="skill-category-title"><i class="fa-solid fa-gears"></i> Tools & SDKs</h4>
+          <div class="skill-tags-group">
+            <span class="skill-pill">Unity Editor Scripting</span>
+            <span class="skill-pill">Flutter-Unity Bridge</span>
+            <span class="skill-pill">Steamworks SDK</span>
+            <span class="skill-pill">Google Play Billing</span>
+            <span class="skill-pill">AdMob & Unity Ads</span>
+            <span class="skill-pill">Facebook iOS SDK</span>
+            <span class="skill-pill">Git / CI/CD</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact & Direct Inquiries -->
+  <section id="contact" class="section">
+    <div class="container">
+      
+      <div class="contact-card-banner">
+        <h2 class="contact-headline">Let's build your next game together.</h2>
+        <p class="contact-subtext">
+          Available for technical leadership, freelance systems programming, multiplayer netcode architecture, and mobile performance optimization contracts. Remote contracts worldwide.
+        </p>
+
+        <div class="contact-quick-buttons">
+          <a href="mailto:girikgarg1@gmail.com" class="btn btn-primary">
+            <i class="fa-regular fa-envelope"></i> Email: girikgarg1@gmail.com
+          </a>
+          <a href="tel:+918445831464" class="btn btn-secondary">
+            <i class="fa-solid fa-phone"></i> Call / WhatsApp: +91 844 583 1464
+          </a>
+          <button class="btn btn-outline btn-copy-email">
+            <i class="fa-regular fa-copy"></i> Copy Email Address
+          </button>
+        </div>
+
+        <!-- Direct Channels Grid -->
+        <div class="contact-channels-grid">
+          <a href="mailto:girikgarg1@gmail.com" class="contact-channel-item">
+            <div class="channel-icon"><i class="fa-regular fa-envelope"></i></div>
+            <div class="channel-info">
+              <h4>Direct Email</h4>
+              <p>girikgarg1@gmail.com</p>
+            </div>
+          </a>
+
+          <a href="tel:+918445831464" class="contact-channel-item">
+            <div class="channel-icon"><i class="fa-solid fa-phone"></i></div>
+            <div class="channel-info">
+              <h4>Phone & WhatsApp</h4>
+              <p>+91 844 583 1464</p>
+            </div>
+          </a>
+
+          <a href="https://www.linkedin.com/in/girik-garg132/" target="_blank" class="contact-channel-item">
+            <div class="channel-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+            <div class="channel-info">
+              <h4>LinkedIn</h4>
+              <p>in/girik-garg132</p>
+            </div>
+          </a>
+
+          <a href="https://github.com/girikgarg132" target="_blank" class="contact-channel-item">
+            <div class="channel-icon"><i class="fa-brands fa-github"></i></div>
+            <div class="channel-info">
+              <h4>GitHub</h4>
+              <p>github.com/girikgarg132</p>
+            </div>
+          </a>
+
+          <div class="contact-channel-item" style="cursor: default;">
+            <div class="channel-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div class="channel-info">
+              <h4>Education</h4>
+              <p>B.Tech CSE (Gaming Spl.) • VIT</p>
+            </div>
+          </div>
+
+          <div class="contact-channel-item" style="cursor: default;">
+            <div class="channel-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="channel-info">
+              <h4>Location & Base</h4>
+              <p>Agra, India • Remote Global</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-text">
+        © Girik Garg • Technical Director & Game Systems Programmer. All rights reserved.
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/girikgarg132" target="_blank" class="footer-social-icon" title="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/girik-garg132/" target="_blank" class="footer-social-icon" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://store.steampowered.com/app/4525340/Elebend/" target="_blank" class="footer-social-icon" title="Steam"><i class="fa-brands fa-steam"></i></a>
+        <a href="tel:+918445831464" class="footer-social-icon" title="Phone"><i class="fa-solid fa-phone"></i></a>
+        <a href="mailto:girikgarg1@gmail.com" class="footer-social-icon" title="Email"><i class="fa-regular fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div class="toast-notice" id="toast-notice">
+    <i class="fa-solid fa-circle-check"></i>
+    <span>Email copied to clipboard: <strong>girikgarg1@gmail.com</strong></span>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/portfolio.js"></script>
+</body>
 </html>
+

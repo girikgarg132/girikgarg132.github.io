@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Platform Factory - Real-Time Construction Survival | Girik Garg Portfolio</title>
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/portfolio.css">
+  <link rel="stylesheet" href="../assets/css/project-detail.css">
+
+  <!-- Immediate Theme Initialization (prevents flash of wrong theme) -->
+  <script>
+    (function() {
+      var savedTheme = localStorage.getItem('girik_theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+  </script>
+</head>
+<body>
+  
+
+  <div class="site-wrapper">
+    <header class="project-top-bar">
+      <div class="container top-bar-content">
+        <a href="../index.html#projects" class="back-link">
+          <i class="fa-solid fa-arrow-left"></i> <span>Back to All Projects</span>
+        </a>
+        <div class="top-bar-right">
+          <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle Day / Night Mode" title="Toggle Day / Night Mode">
+            <i class="fa-solid fa-sun icon-sun"></i>
+            <i class="fa-solid fa-moon icon-moon"></i>
+          </button>
+          <a href="../index.html" class="brand-logo" style="font-size: 1.05rem;">
+            <div class="brand-icon"><i class="fa-solid fa-gamepad"></i></div>
+            <span>Girik Garg</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="project-hero">
+        <div class="project-hero-header">
+          <div class="project-meta-pills">
+            <span class="badge pulse-badge"><span class="dot"></span> Game Jam Innovation</span>
+            <span class="badge badge-purple">Itch.io</span>
+            <span class="tag-pill">PC / WebGL</span>
+            <span class="tag-pill">Unity 2D</span>
+            <span class="tag-pill">Puzzle Platformer</span>
+          </div>
+
+          <h1 class="project-hero-title">Platform Factory</h1>
+          <p class="project-hero-tagline">
+            An inventive 2D side-scrolling survival platformer with an inverted mechanic: you don't just jump across platforms-you actively spawn, rotate, and align them in real time beneath a constantly sprinting character to prevent fatal drops.
+          </p>
+
+          <div class="project-actions-bar">
+            <a href="https://dragoryu.itch.io/platform-factory" target="_blank" class="btn btn-primary">
+              <i class="fa-brands fa-itch-io"></i> Play on Itch.io
+            </a>
+            <a href="https://www.youtube.com/watch?v=2hlZRTyGrAc" target="_blank" class="btn btn-secondary">
+              <i class="fa-brands fa-youtube"></i> Watch on YouTube
+            </a>
+            <a href="../index.html#contact" class="btn btn-outline-cyan">
+              <i class="fa-solid fa-envelope"></i> Hire Me / Contact
+            </a>
+          </div>
+        </div>
+
+        <!-- Video & Showcase -->
+        <div class="video-showcase-section">
+          <div class="video-frame-container">
+            <div class="video-poster-placeholder" style="background-image: url('../images/platform-factory-header.jpg'); background-size: cover; background-position: center;">
+              <div class="video-poster-overlay"></div>
+              <button class="video-play-btn-circle" id="play-video-btn" title="Launch Video Preview">
+                <i class="fa-solid fa-play"></i>
+              </button>
+              <div class="video-play-hint">Watch Fast-Paced Construction & Survival Mechanics</div>
+            </div>
+            <iframe id="video-iframe" style="display:none;" allow="autoplay; fullscreen" allowfullscreen></iframe>
+          </div>
+          
+          <div class="video-caption-bar">
+            <span><i class="fa-solid fa-cubes"></i> Dynamic Real-Time Platform Construction</span>
+            <span><i class="fa-solid fa-stopwatch"></i> Game Jam Innovation Project</span>
+          </div>
+        </div>
+
+        <div class="project-content-grid">
+          <div class="case-study-body">
+            <div class="case-study-block">
+              <h2><i class="fa-solid fa-lightbulb"></i> The Inverted Platformer Concept</h2>
+              <p>
+                Created during a rapid game development jam, <em>Platform Factory</em> flipped standard platformer conventions on their head. Rather than controlling player jump timing directly, the player takes control of the factory constructor tool.
+              </p>
+              <p>
+                As the character sprints relentlessly rightward, the screen fills with lethal abysses, spikes, and shifting barriers. The player must drag, click, and snap geometric platforms into place milliseconds before the runner steps onto thin air.
+              </p>
+            </div>
+
+            <div class="case-study-block">
+              <h2><i class="fa-solid fa-microchip"></i> Technical Execution</h2>
+              <ul>
+                <li><strong>Snap-Grid & Freeform Physics Placement:</strong> Developed a responsive raycast positioning system allowing seamless drag-to-spawn interactions with smart alignment indicators.</li>
+                <li><strong>Dynamic RigidBody & Kinematic State Swapping:</strong> Platforms smoothly transition from kinematic placement ghosts into solid colliders upon drop, maintaining player velocity without clipping.</li>
+                <li><strong>Procedural Hazard Spawning:</strong> Designed an algorithmic difficulty curve that dynamically mixes spikes, moving buzzsaws, and laser walls based on survivor distance.</li>
+                <li><strong>Rapid 48-Hour Prototyping:</strong> Built and shipped the game in under 48 hours with full menu systems, leaderboards, and audio reactive juice.</li>
+              </ul>
+            </div>
+          </div>
+
+          <aside class="project-sidebar">
+            <div class="specs-card">
+              <h3>Project Specs</h3>
+              
+              <div class="spec-item">
+                <span class="spec-label">Role</span>
+                <span class="spec-value">Core Gameplay Programmer</span>
+              </div>
+
+              <div class="spec-item">
+                <span class="spec-label">Engine</span>
+                <span class="spec-value">Unity 2D (C#)</span>
+              </div>
+
+              <div class="spec-item">
+                <span class="spec-label">Platform</span>
+                <span class="spec-value">Web (WebGL) / PC</span>
+              </div>
+
+              <div class="spec-item">
+                <span class="spec-label">Event</span>
+                <span class="spec-value">Game Jam Submission</span>
+              </div>
+
+              <div class="spec-item">
+                <span class="spec-label">Key Systems</span>
+                <span class="spec-value">Real-Time Object Spawning, 2D Raycasting, Procedural Curves</span>
+              </div>
+            </div>
+
+            <div class="specs-card">
+              <h3>Tech Stack</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">Unity C#</span>
+                <span class="skill-tag">Rapid Prototyping</span>
+                <span class="skill-tag">2D Physics</span>
+                <span class="skill-tag">Procedural Gen</span>
+                <span class="skill-tag">Game Jam</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+
+        <!-- Screenshot Gallery -->
+        <div class="gallery-section">
+          <div class="section-header" style="margin-bottom: 30px; text-align: left;">
+            <span class="badge">Visual Archive</span>
+            <h2 class="section-title" style="font-size: 1.8rem;">Full HD Gameplay Screenshots</h2>
+          </div>
+
+          <div class="gallery-grid">
+            <div class="gallery-item">
+              <img src="../images/Platform Factory.png" alt="Platform Factory 1080p Gameplay">
+              <div class="gallery-caption">Cover Art & Side-Scrolling Platform Runner</div>
+            </div>
+            <div class="gallery-item">
+              <img src="../images/platform-factory-screen-1.png" alt="Dynamic Platform Construction">
+              <div class="gallery-caption">Real-Time Platform Spawning & Dual-Block Constraint</div>
+            </div>
+            <div class="gallery-item">
+              <img src="../images/platform-factory-screen-2.png" alt="Orientation & Rotation Mechanics">
+              <div class="gallery-caption">Platform Rotation & Vertical Wall Alignments</div>
+            </div>
+            <div class="gallery-item">
+              <img src="../images/platform-factory-screen-3.png" alt="Hazard Navigation">
+              <div class="gallery-caption">Obstacle Timing & Continuous Velocity Tuning</div>
+            </div>
+            <div class="gallery-item">
+              <img src="../images/platform-factory-screen-4.png" alt="High-Speed Survival Loops">
+              <div class="gallery-caption">Late-Stage Survival Pacing & Kinetic Traversal</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-pagination">
+          <div class="pagination-grid">
+            <a href="tower-bizarre-adventure.html" class="pagination-card">
+              <span class="pagination-dir"><i class="fa-solid fa-arrow-left"></i> Previous Project</span>
+              <span class="pagination-title">Tower Bizarre Adventure</span>
+            </a>
+            <a href="hell-racer.html" class="pagination-card next">
+              <span class="pagination-dir">Next Project <i class="fa-solid fa-arrow-right"></i></span>
+              <span class="pagination-title">Hell Racer (Endless Runner)</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <div class="footer-info">
+          <p>© Girik Garg. Unity Developer & Systems Programmer.</p>
+        </div>
+        <div class="footer-social-links">
+          <a href="https://github.com/girikgarg8" target="_blank" class="social-icon-btn" title="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://dragoryu.itch.io/platform-factory" target="_blank" class="social-icon-btn" title="Play Game"><i class="fa-solid fa-play"></i></a>
+          <a href="https://www.linkedin.com/in/girik-garg132/" target="_blank" class="social-icon-btn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="tel:+918445831464" class="social-icon-btn" title="Phone"><i class="fa-solid fa-phone"></i></a>
+          <a href="mailto:girikgarg1@gmail.com" class="social-icon-btn" title="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="../assets/js/portfolio.js"></script>
+  <script>
+    document.getElementById('play-video-btn')?.addEventListener('click', () => {
+      const wrapper = document.querySelector('.video-poster-placeholder');
+      const iframe = document.getElementById('video-iframe');
+      if (wrapper && iframe) {
+        wrapper.style.display = 'none';
+        iframe.style.display = 'block';
+        iframe.src = "https://www.youtube-nocookie.com/embed/2hlZRTyGrAc?autoplay=1";
+      }
+    });
+  </script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TMKOC Clubhouse - Cross-Platform Flutter-Unity Bridge | Girik Garg Portfolio</title>
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/portfolio.css">
+  <link rel="stylesheet" href="../assets/css/project-detail.css">
+
+  <!-- Immediate Theme Initialization (prevents flash of wrong theme) -->
+  <script>
+    (function() {
+      var savedTheme = localStorage.getItem('girik_theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+  </script>
+</head>
+<body>
+  
+
+  <div class="site-wrapper">
+    <header class="project-top-bar">
+      <div class="container top-bar-content">
+        <a href="../index.html#projects" class="back-link">
+          <i class="fa-solid fa-arrow-left"></i> <span>Back to All Projects</span>
+        </a>
+        <div class="top-bar-right">
+          <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle Day / Night Mode" title="Toggle Day / Night Mode">
+            <i class="fa-solid fa-sun icon-sun"></i>
+            <i class="fa-solid fa-moon icon-moon"></i>
+          </button>
+          <a href="../index.html" class="brand-logo" style="font-size: 1.05rem;">
+            <div class="brand-icon"><i class="fa-solid fa-gamepad"></i></div>
+            <span>Girik Garg</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="project-hero">
+        <div class="project-hero-header">
+          <div class="project-meta-pills">
+            <span class="badge pulse-badge"><span class="dot"></span> Live on Google Play</span>
+            <span class="badge badge-purple">Nilee Games / Commercial</span>
+            <span class="tag-pill">Flutter-Unity Bridge</span>
+            <span class="tag-pill">Android & iOS</span>
+            <span class="tag-pill">Custom In-House APIs</span>
+          </div>
+
+          <h1 class="project-hero-title">TMKOC Clubhouse: Multi-Game Platform</h1>
+          <p class="project-hero-tagline">
+            Architecture and development of a scalable mobile gaming platform hosting 15+ titles, featuring a bidirectional native bridge between Flutter and Unity, high-performance in-house API integrations, and 100% OS security compliance.
+          </p>
+
+          <div class="project-actions-bar">
+            <a href="https://play.google.com/store/apps/details?id=com.neelamediatech.Clubhouse" target="_blank" class="btn btn-primary">
+              <i class="fa-brands fa-google-play"></i> View on Google Play
+            </a>
+            <a href="../index.html#contact" class="btn btn-secondary">
+              <i class="fa-solid fa-envelope"></i> Discuss Platform Architecture
+            </a>
+          </div>
+        </div>
+
+        <!-- Feature Showcase Banner -->
+        <div class="gallery-section" style="margin-top: 25px; margin-bottom: 45px;">
+          <div class="gallery-item" style="max-height: 460px;">
+            <img src="../images/tmkoc-clubhouse-banner.jpg" alt="TMKOC Clubhouse Official Banner" style="height: 420px; object-fit: cover;">
+            <div class="gallery-caption">Official Google Play Store Feature Banner • TMKOCPlay & Neela Mediatech</div>
+          </div>
+        </div>
+
+        <div class="project-content-grid">
+          <div class="case-study-body">
+            <div class="case-study-block">
+              <h2><i class="fa-solid fa-cubes"></i> Platform Overview & Scalability</h2>
+              <p>
+                TMKOC Clubhouse was developed as a comprehensive mobile skill and casual gaming hub for millions of players. The platform required embedding multiple independently developed Unity games seamlessly inside a responsive Flutter host application without causing high memory spikes or lifecycle desynchronizations.
+              </p>
+              <p>
+                As a lead Unity developer on this platform, I engineered the cross-platform bridge and unified communication layers, scaling the ecosystem to over 15 high-quality game titles across Android and iOS.
+              </p>
+            </div>
+
+            <div class="case-study-block">
+              <h2><i class="fa-solid fa-microchip"></i> Engineering Highlights & Architecture</h2>
+              <ul>
+                <li><strong>Custom Flutter-Unity Native Bridge:</strong> Engineered a robust inter-process communication (IPC) channel between the native Flutter application shell and embedded Unity runtime, managing seamless context passing, player authentication, and state management.</li>
+                <li><strong>Modular Multi-Game Architecture:</strong> Designed a decoupled architecture allowing 15+ distinct game titles to be dynamically loaded, initialized, and cleanly unloaded from memory without memory leaks.</li>
+                <li><strong>In-House API & Economy Integration:</strong> Integrated proprietary backend APIs for live user profile syncing, wallet balances, match analytics, and anti-tamper security checks.</li>
+                <li><strong>Platform Security & Lifecycle Compliance:</strong> Maintained strict adherence to evolving Google Play and Apple App Store compliance guidelines, managing deep background pause/resume events and crash-free OS transitions.</li>
+              </ul>
+            </div>
+
+            <div class="case-study-block">
+              <h2><i class="fa-solid fa-chart-line"></i> Technical Impact</h2>
+              <p>
+                <strong>25% Reduction in Load Times:</strong> Optimized asset bundling and dynamic loading routines, reducing time-to-first-frame when launching game sub-modules from the Flutter hub.
+              </p>
+              <p>
+                <strong>Zero Crash Unload Pipeline:</strong> Resolved native iOS/Android thread conflicts during Unity engine suspension and resume cycles, ensuring 100% crash-free transitions back to the main Flutter feed.
+              </p>
+            </div>
+          </div>
+
+          <aside class="project-sidebar">
+            <div class="specs-card">
+              <h3>Project Specs</h3>
+              
+              <div class="spec-item">
+                <span class="spec-label">Role</span>
+                <span class="spec-value">Unity Developer & Bridge Architect</span>
+              </div>
+
+              <div class="spec-item">
+                <span class="spec-label">Company</span>
+                <span class="spec-value">Nilee Games & Technologies</span>
+              </div>
+
+              <div class="spec-item">
+                <span class="spec-label">Platform Scope</span>
+                <span class="spec-value">15+ Integrated Game Titles</span>
+              </div>
+
+              <div class="spec-item">
+                <span class="spec-label">Key Tech</span>
+                <span class="spec-value">Flutter-Unity IPC, In-House APIs, Dynamic Loading</span>
+              </div>
+
+              <div class="spec-item">
+                <span class="spec-label">OS Targets</span>
+                <span class="spec-value">Android & iOS</span>
+              </div>
+            </div>
+
+            <div class="specs-card">
+              <h3>Tech Stack</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">Unity C#</span>
+                <span class="skill-tag">Flutter Bridge</span>
+                <span class="skill-tag">Android / iOS Native</span>
+                <span class="skill-tag">REST APIs</span>
+                <span class="skill-tag">Memory Profiling</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+
+        <!-- Screenshot Gallery -->
+        <div class="gallery-section">
+          <div class="section-header" style="margin-bottom: 30px; text-align: left;">
+            <span class="badge">Visual Archive</span>
+            <h2 class="section-title" style="font-size: 1.8rem;">Official Play Store Marketing & In-Game Hub</h2>
+          </div>
+
+          <div class="gallery-grid">
+            <div class="gallery-item">
+              <img src="../images/tmkoc-clubhouse-screen-1.jpg" alt="TMKOC Clubhouse Mini-Games Hub">
+              <div class="gallery-caption">Multi-Game Selection Hub & Live Contests</div>
+            </div>
+            <div class="gallery-item">
+              <img src="../images/tmkoc-clubhouse-screen-2.jpg" alt="TMKOC Clubhouse Quiz & Game Modes">
+              <div class="gallery-caption">Interactive Episode Trivia & Quiz Challenges</div>
+            </div>
+            <div class="gallery-item">
+              <img src="../images/tmkoc-clubhouse-screen-3.jpg" alt="TMKOC Clubhouse Tournaments">
+              <div class="gallery-caption">Live Tournaments & Real-Time Leaderboards</div>
+            </div>
+            <div class="gallery-item">
+              <img src="../images/tmkoc-clubhouse-screen-4.jpg" alt="TMKOC Clubhouse Rewards">
+              <div class="gallery-caption">Player Progression, Rewards & Digital Collectibles</div>
+            </div>
+            <div class="gallery-item">
+              <img src="../images/tmkoc-clubhouse-screen-5.jpg" alt="TMKOC Clubhouse Social & Events">
+              <div class="gallery-caption">Special Festive Events & Themed Seasonal Game Modes</div>
+            </div>
+            <div class="gallery-item">
+              <img src="../images/tmkoc-clubhouse-screen-6.jpg" alt="TMKOC Clubhouse Profiles">
+              <div class="gallery-caption">User Profiles & Cross-Game Wallet Integration</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-pagination">
+          <div class="pagination-grid">
+            <a href="bhide-scooter-race.html" class="pagination-card">
+              <span class="pagination-dir"><i class="fa-solid fa-arrow-left"></i> Previous Project</span>
+              <span class="pagination-title">Bhide Scooter Race</span>
+            </a>
+            <a href="elebend.html" class="pagination-card next">
+              <span class="pagination-dir">Next Project <i class="fa-solid fa-arrow-right"></i></span>
+              <span class="pagination-title">Elebend: Elemental RTS</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <div class="footer-info">
+          <p>© Girik Garg. Unity Developer & Systems Programmer.</p>
+        </div>
+        <div class="footer-social-links">
+          <a href="https://github.com/girikgarg8" target="_blank" class="social-icon-btn" title="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://play.google.com/store/apps/details?id=com.neelamediatech.Clubhouse" target="_blank" class="social-icon-btn" title="Google Play Store"><i class="fa-brands fa-google-play"></i></a>
+          <a href="https://www.linkedin.com/in/girik-garg132/" target="_blank" class="social-icon-btn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="tel:+918445831464" class="social-icon-btn" title="Phone"><i class="fa-solid fa-phone"></i></a>
+          <a href="mailto:girikgarg1@gmail.com" class="social-icon-btn" title="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="../assets/js/portfolio.js"></script>
+</body>
+</html>
+
+
+

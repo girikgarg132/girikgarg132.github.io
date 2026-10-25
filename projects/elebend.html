@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elebend - Real-Time Elemental RTS | Girik Garg Portfolio</title>
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/portfolio.css">
+  <link rel="stylesheet" href="../assets/css/project-detail.css">
+
+  <!-- Immediate Theme Initialization (prevents flash of wrong theme) -->
+  <script>
+    (function() {
+      var savedTheme = localStorage.getItem('girik_theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+  </script>
+</head>
+<body>
+  
+
+  <div class="site-wrapper">
+    <!-- Top Bar Navigation -->
+    <header class="project-top-bar">
+      <div class="container top-bar-content">
+        <a href="../index.html#projects" class="back-link">
+          <i class="fa-solid fa-arrow-left"></i> <span>Back to All Projects</span>
+        </a>
+        <div class="top-bar-right">
+          <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle Day / Night Mode" title="Toggle Day / Night Mode">
+            <i class="fa-solid fa-sun icon-sun"></i>
+            <i class="fa-solid fa-moon icon-moon"></i>
+          </button>
+          <a href="../index.html" class="brand-logo" style="font-size: 1.05rem;">
+            <div class="brand-icon"><i class="fa-solid fa-gamepad"></i></div>
+            <span>Girik Garg</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Project Hero -->
+    <main class="container">
+      <section class="project-hero">
+        <div class="project-hero-header">
+          <div class="project-meta-pills">
+            <span class="badge pulse-badge"><span class="dot"></span> Commercial Release</span>
+            <span class="badge badge-purple">Astrode Studio</span>
+            <span class="tag-pill">PC / Steam</span>
+            <span class="tag-pill">Mobile (Android/iOS)</span>
+            <span class="tag-pill">Unity 2022 LTS</span>
+          </div>
+
+          <h1 class="project-hero-title">Elebend: Elemental RTS</h1>
+          <p class="project-hero-tagline">
+            A fast-paced real-time tactical RTS blending lane-based territory control with fluid elemental mana physics, cross-platform architecture, and competitive live-service multiplayer.
+          </p>
+
+          <div class="project-actions-bar">
+            <a href="https://store.steampowered.com/app/4525340/Elebend/" target="_blank" class="btn btn-primary">
+              <i class="fa-brands fa-steam"></i> View on Steam Store
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.AstrodeStudio.Elebend" target="_blank" class="btn btn-primary">
+              <i class="fa-brands fa-google-play"></i> View on Play Store
+            </a>
+            <a href="https://astrodestudio.com" target="_blank" class="btn btn-secondary">
+              <i class="fa-solid fa-globe"></i> Astrode Studio Website
+            </a>
+            <a href="../index.html#contact" class="btn btn-outline-cyan">
+              <i class="fa-solid fa-envelope"></i> Discuss This Project
+            </a>
+          </div>
+        </div>
+
+        <!-- Gameplay Video Showcase -->
+        <div class="video-showcase-section">
+          <div class="video-frame-container" id="video-wrapper">
+            <!-- Video Poster Showcase with interactive trailer trigger -->
+            <div class="video-poster-placeholder" style="background-image: url('../images/Elebend Header.jpg');">
+              <div class="video-poster-overlay"></div>
+              <button class="video-play-btn-circle" id="play-video-btn" title="Launch Video Preview">
+                <i class="fa-solid fa-play"></i>
+              </button>
+              <div class="video-play-hint">Gameplay Trailer & Combat Mechanics Breakdown</div>
+            </div>
+            
+            <!-- Hidden iframe for YouTube or HTML5 Video container -->
+            <iframe id="video-iframe" style="display:none;" allow="autoplay; fullscreen" allowfullscreen></iframe>
+          </div>
+          
+          <div class="video-caption-bar">
+            <span><i class="fa-solid fa-film"></i> Official Gameplay Footage • Astrode Studio</span>
+            <span><i class="fa-solid fa-check"></i> Cross-Platform PC & Mobile Real-Time Sync</span>
+          </div>
+        </div>
+
+        <!-- Main Content & Case Study Grid -->
+        <div class="project-content-grid">
+          <!-- Left: Deep Dive -->
+          <div class="case-study-body">
+            <div class="case-study-block">
+              <h2><i class="fa-solid fa-crosshairs"></i> The Vision & Core Loop</h2>
+              <p>
+                Elebend was conceptualized to solve a major issue in traditional mobile and PC real-time strategy games: balancing high-ceiling APM (actions per minute) mechanics with accessible touch and mouse-driven controls.
+              </p>
+              <p>
+                Players command primordial elemental deities embodying Fire, Water, Earth, Wind, Thunder, and Gravity. Combat takes place across dynamic elemental conduits where units must be deployed to capture mana streams, react to terrain hazards, and time synergistic skill triggers against opponent counters.
+              </p>
+            </div>
+
+            <div class="case-study-block">
+              <h2><i class="fa-solid fa-microchip"></i> Technical Architecture & Engineering</h2>
+              <p>
+                My work on Elebend centered around core gameplay architecture, cross-platform input abstraction, and real-time state synchronization:
+              </p>
+              <ul>
+                <li><strong>Cross-Platform Input Abstraction:</strong> Unified input pipeline in Unity handling dual touch-gestures, drag-and-drop targeting on mobile, alongside precise click-and-drag box selection and keyboard shortcuts on Steam PC.</li>
+                <li><strong>Real-Time Mana Flow & Conduit Mechanics:</strong> Engineered a custom grid-and-node flow calculation system representing elemental currents, optimized to update seamlessly without GC (garbage collection) frame spikes.</li>
+                <li><strong>Deterministic Unit State Machines:</strong> Built modular state machines for diverse unit archetypes (melee vanguard, elemental casters, siege guardians) using decoupled ScriptableObject event architectures.</li>
+                <li><strong>Performance Profiling on Mobile:</strong> Optimized draw calls through sprite atlasing, dynamic batching, and custom shader LODs to maintain a steady 60 FPS on mid-range Android devices.</li>
+              </ul>
+            </div>
+
+            <div class="case-study-block">
+              <h2><i class="fa-solid fa-triangle-exclamation"></i> Key Challenges & Solutions</h2>
+              <p>
+                <strong>Challenge: Maintaining High Responsiveness Over Variable Latency.</strong><br>
+                In competitive RTS matches, players expect immediate feedback when issuing move or spell commands. By implementing client-side prediction for unit path previews combined with authoritative server state reconciliation, we ensured that players never felt sluggish delay even under unsteady network jitter.
+              </p>
+              <p>
+                <strong>Challenge: Asset & Memory Management for Live-Service.</strong><br>
+                With ongoing updates of seasonal skins, new elemental abilities, and arenas, memory bloat was an initial risk. We structured the game around Addressables, lazy-loading audio assets and character VFX bundles strictly when required in the match scene.
+              </p>
+            </div>
+          </div>
+
+          <!-- Right Sidebar: Quick Specs -->
+          <aside class="project-sidebar">
+            <div class="specs-card">
+              <h3>Project Specs</h3>
+              
+              <div class="spec-item">
+                <span class="spec-label">Role</span>
+                <span class="spec-value">Game Developer / Systems Programmer</span>
+              </div>
+
+              <div class="spec-item">
+                <span class="spec-label">Studio / Team</span>
+                <span class="spec-value">Astrode Studio</span>
+              </div>
+
+              <div class="spec-item">
+                <span class="spec-label">Game Engine</span>
+                <span class="spec-value">Unity 2022 LTS (C#)</span>
+              </div>
+
+              <div class="spec-item">
+                <span class="spec-label">Target Platforms</span>
+                <span class="spec-value">Steam (PC), Android, iOS</span>
+              </div>
+
+              <div class="spec-item">
+                <span class="spec-label">Key Systems</span>
+                <span class="spec-value">Real-Time Networking, Lane AI, Mana Physics, Addressables</span>
+              </div>
+
+              <div class="spec-item">
+                <span class="spec-label">Status</span>
+                <span class="spec-value" style="color: var(--accent-emerald);">Wishlist on Steam / Soft-Launch</span>
+              </div>
+            </div>
+
+            <div class="specs-card">
+              <h3>Tech Stack</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">Unity C#</span>
+                <span class="skill-tag">Cross-Platform</span>
+                <span class="skill-tag">Shader Graph</span>
+                <span class="skill-tag">Addressables</span>
+                <span class="skill-tag">Profiler / Memory</span>
+                <span class="skill-tag">Steamworks API</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+
+        <!-- Screenshot Gallery -->
+        <div class="gallery-section">
+          <div class="section-header" style="margin-bottom: 30px; text-align: left;">
+            <span class="badge">Visual Archive</span>
+            <h2 class="section-title" style="font-size: 1.8rem;">Official Steam & Play Store Media</h2>
+          </div>
+
+          <div class="gallery-grid">
+            <div class="gallery-item">
+              <img src="../images/elebend-steam-screen-1.jpg" alt="Elebend Steam Full HD Gameplay">
+              <div class="gallery-caption">Steam PC Build • High-Resolution Tactical Battle Arena</div>
+            </div>
+            <div class="gallery-item">
+              <img src="../images/elebend-steam-capsule.jpg" alt="Elebend Steam Artwork Capsule">
+              <div class="gallery-caption">Steam Store Official Artwork & Deity Showcase</div>
+            </div>
+            <div class="gallery-item">
+              <img src="../images/elebend-play-screen-1.jpg" alt="Elebend Mobile Combat Lane">
+              <div class="gallery-caption">Google Play Store • Elemental Conduit Mana Flow & Unit Deployment</div>
+            </div>
+            <div class="gallery-item">
+              <img src="../images/elebend-play-screen-2.jpg" alt="Elebend Deities and Units">
+              <div class="gallery-caption">Google Play Store • Primordial Elemental Gods & Synergistic Counters</div>
+            </div>
+            <div class="gallery-item">
+              <img src="../images/elebend-play-screen-3.jpg" alt="Elebend Tactical Battles">
+              <div class="gallery-caption">Google Play Store • Real-Time Territory Control & Skill Triggers</div>
+            </div>
+            <div class="gallery-item">
+              <img src="../images/elebend-play-screen-4.jpg" alt="Elebend Mobile Optimization">
+              <div class="gallery-caption">Google Play Store • 60 FPS Mobile Optimization & Touch Controls</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Next / Prev Pagination -->
+        <div class="project-pagination">
+          <div class="pagination-grid">
+            <a href="tmkoc-clubhouse.html" class="pagination-card">
+              <span class="pagination-dir"><i class="fa-solid fa-arrow-left"></i> Previous Project</span>
+              <span class="pagination-title">TMKOC Clubhouse (Multi-Game)</span>
+            </a>
+            <a href="ludo-superstar.html" class="pagination-card next">
+              <span class="pagination-dir">Next Project <i class="fa-solid fa-arrow-right"></i></span>
+              <span class="pagination-title">Ludo Super Star (100M+ Scale)</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <div class="footer-info">
+          <p>© Girik Garg. Unity Developer & Systems Programmer.</p>
+        </div>
+        <div class="footer-social-links">
+          <a href="https://github.com/girikgarg8" target="_blank" class="social-icon-btn" title="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://store.steampowered.com/app/4525340/Elebend/" target="_blank" class="social-icon-btn" title="Steam Store"><i class="fa-brands fa-steam"></i></a>
+          <a href="https://play.google.com/store/apps/details?id=com.AstrodeStudio.Elebend" target="_blank" class="social-icon-btn" title="Google Play Store"><i class="fa-brands fa-google-play"></i></a>
+          <a href="https://www.linkedin.com/in/girik-garg132/" target="_blank" class="social-icon-btn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="tel:+918445831464" class="social-icon-btn" title="Phone"><i class="fa-solid fa-phone"></i></a>
+          <a href="mailto:girikgarg1@gmail.com" class="social-icon-btn" title="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="../assets/js/portfolio.js"></script>
+  <script>
+    // Video play trigger
+    document.getElementById('play-video-btn')?.addEventListener('click', () => {
+      const wrapper = document.querySelector('.video-poster-placeholder');
+      const iframe = document.getElementById('video-iframe');
+      if (wrapper && iframe) {
+        wrapper.style.display = 'none';
+        iframe.style.display = 'block';
+        // Official Elebend gameplay trailer embed
+        iframe.src = "https://www.youtube-nocookie.com/embed/0ul-g1xLiA0?autoplay=1";
+      }
+    });
+  </script>
+</body>
+</html>
+
+
+

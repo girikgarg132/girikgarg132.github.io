@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bhide Scooter Race - Physics Vehicle Mechanics | Girik Garg Portfolio</title>
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/portfolio.css">
+  <link rel="stylesheet" href="../assets/css/project-detail.css">
+
+  <!-- Immediate Theme Initialization (prevents flash of wrong theme) -->
+  <script>
+    (function() {
+      var savedTheme = localStorage.getItem('girik_theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+  </script>
+</head>
+<body>
+  
+
+  <div class="site-wrapper">
+    <header class="project-top-bar">
+      <div class="container top-bar-content">
+        <a href="../index.html#projects" class="back-link">
+          <i class="fa-solid fa-arrow-left"></i> <span>Back to All Projects</span>
+        </a>
+        <div class="top-bar-right">
+          <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle Day / Night Mode" title="Toggle Day / Night Mode">
+            <i class="fa-solid fa-sun icon-sun"></i>
+            <i class="fa-solid fa-moon icon-moon"></i>
+          </button>
+          <a href="../index.html" class="brand-logo" style="font-size: 1.05rem;">
+            <div class="brand-icon"><i class="fa-solid fa-gamepad"></i></div>
+            <span>Girik Garg</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="project-hero">
+        <div class="project-hero-header">
+          <div class="project-meta-pills">
+            <span class="badge pulse-badge"><span class="dot"></span> Mobile Release</span>
+            <span class="badge badge-emerald">Physics 2D</span>
+            <span class="tag-pill">Mobile (Android/iOS)</span>
+            <span class="tag-pill">Unity 2D</span>
+            <span class="tag-pill">Vehicle Dynamics</span>
+          </div>
+
+          <h1 class="project-hero-title">Bhide Scooter Race</h1>
+          <p class="project-hero-tagline">
+            A fast-paced, physics-driven 2D hill-climb racer featuring the iconic pop-culture scooter "Sakharam", realistic wheel suspension joints, procedural slope terrain generation, coin upgrade progression, and hilarious ragdoll crash physics.
+          </p>
+
+          <div class="project-actions-bar">
+            <a href="https://play.google.com/store/apps/details?id=com.neelamediatech.bhidescooterrace" target="_blank" class="btn btn-primary">
+              <i class="fa-brands fa-google-play"></i> View on Play Store
+            </a>
+            <a href="https://apps.apple.com/app/bhide-scooter-race/id6446998597" target="_blank" class="btn btn-primary">
+              <i class="fa-brands fa-apple"></i> View on App Store
+            </a>
+            <a href="../index.html#contact" class="btn btn-secondary">
+              <i class="fa-solid fa-envelope"></i> Discuss Physics Tuning
+            </a>
+          </div>
+        </div>
+
+        <!-- Video Showcase -->
+        <div class="video-showcase-section">
+          <div class="video-frame-container">
+            <div class="video-poster-placeholder" style="background-image: url('../images/bhide-apple-screen-1.png'); background-size: cover; background-position: center;">
+              <div class="video-poster-overlay"></div>
+              <button class="video-play-btn-circle" id="play-video-btn" title="Launch Video Preview">
+                <i class="fa-solid fa-play"></i>
+              </button>
+              <div class="video-play-hint">Vehicle Physics Simulation & Hill Climb Gameplay</div>
+            </div>
+            <iframe id="video-iframe" style="display:none;" allow="autoplay; fullscreen" allowfullscreen></iframe>
+          </div>
+          
+          <div class="video-caption-bar">
+            <span><i class="fa-solid fa-car-side"></i> 2D Rigidbody & Suspension Mechanics</span>
+            <span><i class="fa-solid fa-trophy"></i> Viral Mobile Casual Hit</span>
+          </div>
+        </div>
+
+        <div class="project-content-grid">
+          <div class="case-study-body">
+            <div class="case-study-block">
+              <h2><i class="fa-solid fa-flag-checkered"></i> The Gameplay Core</h2>
+              <p>
+                Inspired by cult-classic 2D racers like <em>Hill Climb Racing</em>, Bhide Scooter Race centers around momentum conservation, center-of-mass balancing, and throttle control. Players pilot the legendary vintage scooter through unpredictable hill curves, dodging potholes, pulling off mid-air backflips, and collecting coins to fuel upgrades.
+              </p>
+            </div>
+
+            <div class="case-study-block">
+              <h2><i class="fa-solid fa-gear"></i> Physics Engine & Gameplay Programming</h2>
+              <ul>
+                <li><strong>Dual Wheel-Joint 2D Suspension:</strong> Modeled realistic front-fork and rear spring suspension using configured Unity WheelJoint2D components, damping spring oscillations to prevent unnatural vehicle flipping.</li>
+                <li><strong>Center-of-Mass & Air Torque Controls:</strong> Implemented responsive air-pitch torque allowing players to adjust their vehicle angle mid-jump to land cleanly on downhill slopes, rewarding skillful balance with turbo boost bursts.</li>
+                <li><strong>Procedural Spline Terrain & Collision Smoothing:</strong> Leveraged 2D sprite shape controllers and edge colliders with optimized physics materials (friction & bounciness) to deliver silky smooth rolling without tire edge snagging.</li>
+                <li><strong>Economy & Upgrade Shop Loop:</strong> Engineered an intuitive upgrade loop for Engine Power, Tire Grip, Suspension Damping, and Fuel Capacity with persistent cloud saves.</li>
+              </ul>
+            </div>
+
+            <div class="case-study-block">
+              <h2><i class="fa-solid fa-lightbulb"></i> Key Takeaway</h2>
+              <p>
+                Achieving satisfying "game feel" in physics-based racers requires meticulous micro-tuning. A fraction of a millisecond difference in joint spring damping transforms a frustrating rollover into an exhilarating near-miss landing that keeps players hooked on "just one more run".
+              </p>
+            </div>
+          </div>
+
+          <aside class="project-sidebar">
+            <div class="specs-card">
+              <h3>Project Specs</h3>
+              
+              <div class="spec-item">
+                <span class="spec-label">Role</span>
+                <span class="spec-value">Gameplay Programmer & Physics Tuning</span>
+              </div>
+
+              <div class="spec-item">
+                <span class="spec-label">Engine</span>
+                <span class="spec-value">Unity 2D (C#)</span>
+              </div>
+
+              <div class="spec-item">
+                <span class="spec-label">Platform</span>
+                <span class="spec-value">Android (Play Store) & iOS (App Store)</span>
+              </div>
+
+              <div class="spec-item">
+                <span class="spec-label">Physics Tech</span>
+                <span class="spec-value">WheelJoint2D, SpringDampers, EdgeColliders</span>
+              </div>
+
+              <div class="spec-item">
+                <span class="spec-label">Monetization</span>
+                <span class="spec-value">Unity Ads & In-Game Shop</span>
+              </div>
+            </div>
+
+            <div class="specs-card">
+              <h3>Tech Stack</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">Unity 2D</span>
+                <span class="skill-tag">2D Physics</span>
+                <span class="skill-tag">SpriteShape</span>
+                <span class="skill-tag">Game Feel</span>
+                <span class="skill-tag">Juice & FX</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+
+        <!-- Screenshot Gallery -->
+        <div class="gallery-section">
+          <div class="section-header" style="margin-bottom: 30px; text-align: left;">
+            <span class="badge">Visual Archive</span>
+            <h2 class="section-title" style="font-size: 1.8rem;">Store Showcase & Game Visuals (Google Play & App Store)</h2>
+          </div>
+
+          <div class="gallery-grid">
+            <div class="gallery-item">
+              <img src="../images/bhide-play-screen-1.jpg" alt="Bhide Scooter Race - Hill Climb Physics Gameplay">
+              <div class="gallery-caption">Google Play: 2D Suspension Simulation & Steep Incline Climb</div>
+            </div>
+            <div class="gallery-item">
+              <img src="../images/bhide-play-screen-2.jpg" alt="Bhide Scooter Race - Stunt & Flip Mechanics">
+              <div class="gallery-caption">Google Play: Aerial Stunts & Dynamic Torque Pitch Balancing</div>
+            </div>
+            <div class="gallery-item">
+              <img src="../images/bhide-play-screen-3.jpg" alt="Bhide Scooter Race - Scooter Upgrades & Garage">
+              <div class="gallery-caption">Google Play: Vehicle Engine, Grip & Suspension Upgrade Progression</div>
+            </div>
+            <div class="gallery-item">
+              <img src="../images/bhide-apple-screen-1.png" alt="Bhide Scooter Race - Apple App Store Gokuldham Route">
+              <div class="gallery-caption">Apple App Store: High-Resolution Environment & Procedural Obstacles</div>
+            </div>
+            <div class="gallery-item">
+              <img src="../images/bhide-apple-screen-2.png" alt="Bhide Scooter Race - Apple App Store Ramp Jump">
+              <div class="gallery-caption">Apple App Store: Massive Air Jump & Landing Shock Absorber Tuning</div>
+            </div>
+            <div class="gallery-item">
+              <img src="../images/bhide-apple-screen-3.png" alt="Bhide Scooter Race - Apple App Store Garage Tuning">
+              <div class="gallery-caption">Apple App Store: Scooter Customization & Coin Economy System</div>
+            </div>
+            <div class="gallery-item">
+              <img src="../images/Bhide Scooter Race.webp" alt="Bhide Scooter Race Artwork">
+              <div class="gallery-caption">Key Visual: Promotional Poster & Character Art</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-pagination">
+          <div class="pagination-grid">
+            <a href="ludo-superstar.html" class="pagination-card">
+              <span class="pagination-dir"><i class="fa-solid fa-arrow-left"></i> Previous Project</span>
+              <span class="pagination-title">Ludo Super Star (100M+ Scale)</span>
+            </a>
+            <a href="tmkoc-clubhouse.html" class="pagination-card next">
+              <span class="pagination-dir">Next Project <i class="fa-solid fa-arrow-right"></i></span>
+              <span class="pagination-title">TMKOC Clubhouse (Multi-Game Platform)</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <div class="footer-info">
+          <p>© Girik Garg. Unity Developer & Systems Programmer.</p>
+        </div>
+        <div class="footer-social-links">
+          <a href="https://github.com/girikgarg8" target="_blank" class="social-icon-btn" title="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://play.google.com/store/apps/details?id=com.neelamediatech.bhidescooterrace" target="_blank" class="social-icon-btn" title="Google Play Store"><i class="fa-brands fa-google-play"></i></a>
+          <a href="https://apps.apple.com/app/bhide-scooter-race/id6446998597" target="_blank" class="social-icon-btn" title="Apple App Store"><i class="fa-brands fa-apple"></i></a>
+          <a href="https://www.linkedin.com/in/girik-garg132/" target="_blank" class="social-icon-btn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="tel:+918445831464" class="social-icon-btn" title="Phone"><i class="fa-solid fa-phone"></i></a>
+          <a href="mailto:girikgarg1@gmail.com" class="social-icon-btn" title="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="../assets/js/portfolio.js"></script>
+  <script>
+    document.getElementById('play-video-btn')?.addEventListener('click', () => {
+      const wrapper = document.querySelector('.video-poster-placeholder');
+      const iframe = document.getElementById('video-iframe');
+      if (wrapper && iframe) {
+        wrapper.style.display = 'none';
+        iframe.style.display = 'block';
+        iframe.src = "https://www.youtube-nocookie.com/embed/szTKdGV1JDE?autoplay=1";
+      }
+    });
+  </script>
+</body>
+</html>
+
+
+
