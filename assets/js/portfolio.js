@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCopyEmail();
   initMobileNav();
   initSmoothScroll();
+  initContactForm();
 });
 
 /* ==========================================================================
@@ -208,5 +209,73 @@ function initSmoothScroll() {
         });
       }
     });
+  });
+}
+
+/* ==========================================================================
+   7. CONTACT FORM SUBMISSION (Web3Forms AJAX)
+   ========================================================================== */
+function initContactForm() {
+  const form = document.getElementById('contact-form');
+  const status = document.getElementById('form-status');
+  const submitBtn = document.getElementById('form-submit-btn');
+
+  if (!form || !status || !submitBtn) return;
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    // Verify hCaptcha challenge completion
+    const hCaptchaResponse = form.querySelector('[name="h-captcha-response"]')?.value;
+    if (!hCaptchaResponse) {
+      status.textContent = 'Please complete the hCaptcha verification challenge above.';
+      status.className = 'form-status error';
+      status.style.display = 'block';
+      return;
+    }
+
+    const originalBtnContent = submitBtn.innerHTML;
+
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+    status.style.display = 'none';
+    status.className = 'form-status';
+
+    try {
+      const formData = new FormData(form);
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json'
+        },
+        body: formData
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        status.textContent = "Thank you! Your message has been sent successfully. I'll get back to you soon.";
+        status.className = 'form-status success';
+        status.style.display = 'block';
+        form.reset();
+        if (typeof hcaptcha !== 'undefined') {
+          try { hcaptcha.reset(); } catch (err) {}
+        }
+      } else {
+        status.textContent = data.message || 'Something went wrong. Please complete the captcha and try again.';
+        status.className = 'form-status error';
+        status.style.display = 'block';
+        if (typeof hcaptcha !== 'undefined') {
+          try { hcaptcha.reset(); } catch (err) {}
+        }
+      }
+    } catch (err) {
+      status.textContent = 'Network error. Please try again or email directly at girikgarg1@gmail.com.';
+      status.className = 'form-status error';
+      status.style.display = 'block';
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalBtnContent;
+    }
   });
 }

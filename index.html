@@ -67,10 +67,10 @@
         
         <!-- Left: Introduction -->
         <div class="hero-content">
-          <div class="hero-status-pill">
+          <a href="#contact" class="hero-status-pill">
             <span class="status-dot-pulse"></span>
             <span>Available for Technical Leadership & Client Projects</span>
-          </div>
+          </a>
 
           <h1 class="hero-headline">
             Crafting high-scale game systems, <span class="text-gradient">authoritative multiplayer</span> & playable worlds.
@@ -579,7 +579,7 @@
             <div>
               <h3 class="exp-role">Unity Developer</h3>
               <div class="exp-company">
-                <i class="fa-solid fa-building"></i> Nilee Games and Future Technologies
+                <i class="fa-solid fa-building"></i> Nilee Games and Future Technologies • Mumbai
               </div>
             </div>
             <span class="exp-time-badge">Jul 2022 – Nov 2023</span>
@@ -680,72 +680,117 @@
     <div class="container">
       
       <div class="contact-card-banner">
-        <h2 class="contact-headline">Let's build your next game together.</h2>
-        <p class="contact-subtext">
-          Available for technical leadership, freelance systems programming, multiplayer netcode architecture, and mobile performance optimization contracts. Remote contracts worldwide.
-        </p>
+        <div class="contact-grid-layout">
 
-        <div class="contact-quick-buttons">
-          <a href="mailto:girikgarg1@gmail.com" class="btn btn-primary">
-            <i class="fa-regular fa-envelope"></i> Email: girikgarg1@gmail.com
-          </a>
-          <a href="tel:+918445831464" class="btn btn-secondary">
-            <i class="fa-solid fa-phone"></i> Call / WhatsApp: +91 844 583 1464
-          </a>
-          <button class="btn btn-outline btn-copy-email">
-            <i class="fa-regular fa-copy"></i> Copy Email Address
-          </button>
-        </div>
+          <!-- Left: Contact Details & Channels -->
+          <div class="contact-info-column">
+            <h2 class="contact-headline">Let's build your next game together.</h2>
+            <p class="contact-subtext">
+              Available for technical leadership, freelance systems programming, multiplayer netcode architecture, and mobile performance optimization contracts. Remote contracts worldwide.
+            </p>
 
-        <!-- Direct Channels Grid -->
-        <div class="contact-channels-grid">
-          <a href="mailto:girikgarg1@gmail.com" class="contact-channel-item">
-            <div class="channel-icon"><i class="fa-regular fa-envelope"></i></div>
-            <div class="channel-info">
-              <h4>Direct Email</h4>
-              <p>girikgarg1@gmail.com</p>
+            <div class="contact-quick-buttons">
+              <a href="mailto:girikgarg1@gmail.com" class="btn btn-primary">
+                <i class="fa-regular fa-envelope"></i> Email: girikgarg1@gmail.com
+              </a>
+              <button class="btn btn-outline btn-copy-email">
+                <i class="fa-regular fa-copy"></i> Copy Email Address
+              </button>
             </div>
-          </a>
 
-          <a href="tel:+918445831464" class="contact-channel-item">
-            <div class="channel-icon"><i class="fa-solid fa-phone"></i></div>
-            <div class="channel-info">
-              <h4>Phone & WhatsApp</h4>
-              <p>+91 844 583 1464</p>
+            <!-- Direct Channels Grid -->
+            <div class="contact-channels-grid">
+              <a href="mailto:girikgarg1@gmail.com" class="contact-channel-item">
+                <div class="channel-icon"><i class="fa-regular fa-envelope"></i></div>
+                <div class="channel-info">
+                  <h4>Direct Email</h4>
+                  <p>girikgarg1@gmail.com</p>
+                </div>
+              </a>
+
+              <a href="https://www.linkedin.com/in/girik-garg132/" target="_blank" class="contact-channel-item">
+                <div class="channel-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+                <div class="channel-info">
+                  <h4>LinkedIn</h4>
+                  <p>in/girik-garg132</p>
+                </div>
+              </a>
+
+              <a href="https://github.com/girikgarg132" target="_blank" class="contact-channel-item">
+                <div class="channel-icon"><i class="fa-brands fa-github"></i></div>
+                <div class="channel-info">
+                  <h4>GitHub</h4>
+                  <p>github.com/girikgarg132</p>
+                </div>
+              </a>
+
+              <div class="contact-channel-item" style="cursor: default;">
+                <div class="channel-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                <div class="channel-info">
+                  <h4>Education</h4>
+                  <p>B.Tech CSE (Gaming Spl.) • VIT</p>
+                </div>
+              </div>
+
+              <div class="contact-channel-item" style="cursor: default;">
+                <div class="channel-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div class="channel-info">
+                  <h4>Location & Base</h4>
+                  <p>Agra, India • Remote Global</p>
+                </div>
+              </div>
             </div>
-          </a>
+          </div>
 
-          <a href="https://www.linkedin.com/in/girik-garg132/" target="_blank" class="contact-channel-item">
-            <div class="channel-icon"><i class="fa-brands fa-linkedin-in"></i></div>
-            <div class="channel-info">
-              <h4>LinkedIn</h4>
-              <p>in/girik-garg132</p>
-            </div>
-          </a>
+          <!-- Right: Interactive Contact Form -->
+          <div class="contact-form-column">
+            <div class="contact-form-card">
+              <h3 class="contact-form-title">
+                <i class="fa-regular fa-paper-plane"></i> Send a Direct Message
+              </h3>
+              <p class="contact-form-desc">
+                Have a project or leadership inquiry? Drop a message here and I'll get back to you promptly.
+              </p>
 
-          <a href="https://github.com/girikgarg132" target="_blank" class="contact-channel-item">
-            <div class="channel-icon"><i class="fa-brands fa-github"></i></div>
-            <div class="channel-info">
-              <h4>GitHub</h4>
-              <p>github.com/girikgarg132</p>
-            </div>
-          </a>
+              <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="b02dd5d3-4bc2-4a1b-9339-7e2bfa0473e2">
+                <input type="hidden" name="from_name" value="Girik Garg Portfolio Inquiry">
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
-          <div class="contact-channel-item" style="cursor: default;">
-            <div class="channel-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-            <div class="channel-info">
-              <h4>Education</h4>
-              <p>B.Tech CSE (Gaming Spl.) • VIT</p>
+                <div class="form-group">
+                  <label for="form-name">Your Name</label>
+                  <input type="text" id="form-name" name="name" class="form-input" placeholder="e.g. John Doe" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="form-email">Email Address</label>
+                  <input type="email" id="form-email" name="email" class="form-input" placeholder="e.g. john@studio.com" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="form-subject">Subject / Project Scope</label>
+                  <input type="text" id="form-subject" name="subject" class="form-input" placeholder="e.g. Technical Leadership / Multiplayer Netcode" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="form-message">Message</label>
+                  <textarea id="form-message" name="message" class="form-textarea" rows="4" placeholder="Briefly describe your project, platform, timeline, and requirements..." required></textarea>
+                </div>
+
+                <!-- hCaptcha Spam Protection -->
+                <div class="h-captcha-wrapper">
+                  <div class="h-captcha" data-captcha="true" data-theme="dark"></div>
+                </div>
+
+                <button type="submit" id="form-submit-btn" class="btn btn-primary btn-submit-message">
+                  <i class="fa-solid fa-paper-plane"></i> Send Message
+                </button>
+
+                <div id="form-status" class="form-status" style="display: none;"></div>
+              </form>
             </div>
           </div>
 
-          <div class="contact-channel-item" style="cursor: default;">
-            <div class="channel-icon"><i class="fa-solid fa-location-dot"></i></div>
-            <div class="channel-info">
-              <h4>Location & Base</h4>
-              <p>Agra, India • Remote Global</p>
-            </div>
-          </div>
         </div>
       </div>
 
@@ -762,7 +807,6 @@
         <a href="https://github.com/girikgarg132" target="_blank" class="footer-social-icon" title="GitHub"><i class="fa-brands fa-github"></i></a>
         <a href="https://www.linkedin.com/in/girik-garg132/" target="_blank" class="footer-social-icon" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
         <a href="https://store.steampowered.com/app/4525340/Elebend/" target="_blank" class="footer-social-icon" title="Steam"><i class="fa-brands fa-steam"></i></a>
-        <a href="tel:+918445831464" class="footer-social-icon" title="Phone"><i class="fa-solid fa-phone"></i></a>
         <a href="mailto:girikgarg1@gmail.com" class="footer-social-icon" title="Email"><i class="fa-regular fa-envelope"></i></a>
       </div>
     </div>
@@ -776,6 +820,7 @@
 
   <!-- Scripts -->
   <script src="assets/js/portfolio.js"></script>
+  <script src="https://web3forms.com/client/script.js" async defer></script>
 </body>
 </html>
 
